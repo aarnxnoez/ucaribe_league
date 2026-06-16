@@ -1,0 +1,534 @@
+/* ==========================================================================
+   RESET GENERAL Y BASE (IDÉNTICO A TU BASE DE REFERENCIA DE ORO)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --base-bg: #0a0a0c;          /* Negro profundo absoluto */
+    --card-bg: #121216;          /* Gris oscuro/negro para contenedores y tarjetas */
+    --brand-teal: #4dae9a;       /* Tu color de resaltado exacto para textos y acentos */
+    --brand-teal-hover: #3d8f7e;  /* Variación más oscura para efectos hover */
+    --text-white: #ffffff;       /* Blanco puro para títulos principales */
+    --text-secondary: #94a3b8;   /* Gris suave limpio para párrafos descriptivos */
+}
+
+body {
+    background-color: var(--base-bg);
+    color: var(--text-white);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   1. HEADER NAVBAR (MEDIDAS ORIGINALES RESPETADAS AL 100%)
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(10, 10, 12, 0.95);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(77, 174, 154, 0.15);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--brand-teal);
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--text-white);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    font-size: 1.1rem; 
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--brand-teal);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after, .nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--brand-teal);
+}
+
+.phone-link {
+    border: 1px solid var(--brand-teal);
+    color: var(--brand-teal) !important;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-left: 10px !important;
+}
+
+.phone-link:hover {
+    background-color: var(--brand-teal);
+    color: var(--base-bg) !important;
+}
+
+/* ==========================================================================
+   2. DISTRIBUCIÓN DEL CUERPO (DOS COLUMNAS: FORMULARIO + FOTO DERECHA)
+   ========================================================================== */
+.inscripcion-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* 2 celdas: Formulario un poco más ancho que la foto */
+    gap: 40px;                 /* Espacio limpio entre el formulario y la foto */
+    max-width: 1300px;         /* Limita el ancho total para que no se estire al infinito */
+    margin: 0 auto;            /* Centra perfectamente el div padre en la pantalla */
+    padding: 40px 5% 60px 5%; 
+    align-items: stretch;      /* Ambas celdas tendrán exactamente la misma altura */
+}
+
+/* COLUMNA IZQUIERDA: CONTENIDO */
+.inscripcion-content-side {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inscripcion-header {
+    margin-bottom: 35px;
+}
+
+.badge {
+    background-color: rgba(77, 174, 154, 0.1);
+    color: var(--brand-teal);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    margin-bottom: 20px;
+    border: 1px solid rgba(77, 174, 154, 0.2);
+}
+
+.inscripcion-header h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 4.2rem;
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.inscripcion-header h1 span {
+    color: var(--brand-teal);
+}
+
+.inscripcion-header p {
+    color: var(--text-secondary);
+    font-size: 1.15rem;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+/* DISEÑO PREMIUM DEL RELOJ REGRESIVO */
+.countdown-container {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(77, 174, 154, 0.15);
+    padding: 20px 25px;
+    border-radius: 8px;
+    margin: 130px auto 0 auto; 
+    max-width: 600px;
+    width: fit-content; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.countdown-title {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.countdown-timer {
+    display: flex;
+    gap: 20px;
+}
+
+.timer-block {
+    text-align: center;
+    background-color: rgba(10, 10, 12, 0.6);
+    padding: 10px 15px;
+    border-radius: 6px;
+    min-width: 75px;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.timer-block span {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--brand-teal);
+    display: block;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.timer-block p {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.closed-badge {
+    color: #ef4444;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+/* CAMPOS DEL FORMULARIO */
+.inscripcion-form {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-white);
+}
+
+.form-group input, .form-group select {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-white);
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: var(--brand-teal);
+    box-shadow: 0 0 10px rgba(77, 174, 154, 0.15);
+}
+
+/* NUEVOS ELEMENTOS (TÍTULOS, RADIOS Y ARCHIVO) */
+.form-section-title {
+    color: var(--brand-teal);
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.15rem;
+    margin-top: 8px;
+    margin-bottom: 2px;
+    border-bottom: 1px solid rgba(77, 174, 154, 0.2);
+    padding-bottom: 4px;
+    letter-spacing: 0.5px;
+}
+
+.team-title {
+    margin-top: 15px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 2px;
+    padding: 2px 0;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.radio-label:hover {
+    color: var(--text-white);
+}
+
+.radio-label input[type="radio"] {
+    accent-color: var(--brand-teal);
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background-color: var(--card-bg);
+}
+
+/* Botón de subir archivo (Escudo) */
+.file-input {
+    background-color: rgba(255, 255, 255, 0.01) !important;
+    padding: 8px !important;
+    border: 1px dashed rgba(77, 174, 154, 0.4) !important;
+    color: var(--text-secondary) !important;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.file-input:hover {
+    border-color: var(--brand-teal) !important;
+    background-color: rgba(77, 174, 154, 0.05) !important;
+}
+
+.file-input::file-selector-button {
+    background-color: var(--brand-teal);
+    color: var(--base-bg);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    margin-right: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.file-input::file-selector-button:hover {
+    background-color: var(--brand-teal-hover);
+}
+
+.form-help-text {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 2px;
+}
+
+/* BOTÓN DE ENVIAR */
+.btn-submit-form {
+    background-color: var(--brand-teal);
+    color: var(--base-bg);
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    cursor: pointer; 
+    margin-top: 5px;
+    box-shadow: 0 5px 20px rgba(77, 174, 154, 0.25);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-submit-form:hover {
+    background-color: var(--brand-teal-hover);
+    transform: translateY(-2px);
+}
+
+/* COLUMNA DERECHA: IMAGEN (ESCRITORIO) */
+.inscripcion-image-side {
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;       
+    justify-content: center;   
+    overflow: hidden;
+    border-radius: 12px; 
+    position: relative;
+}
+
+.side-photo {
+    width: 100%;
+    height: 100%;            
+    object-fit: cover; 
+    transition: transform 0.6s ease;
+}
+
+.image-overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 25px; 
+    background: linear-gradient(to top, rgba(10,10,12,0.95) 0%, rgba(10,10,12,0.6) 70%, transparent 100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.image-overlay-text h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: var(--text-white);
+}
+
+.image-overlay-text p {
+    color: var(--brand-teal);
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   3. FOOTER
+   ========================================================================== */
+.footer-section {
+    padding: 40px 6%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    background-color: var(--base-bg);
+}
+
+.footer-section p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   4. RESPONSIVIDAD INTEGRAL Y AJUSTES DE COLAPSO (CORREGIDO)
+   ========================================================================== */
+
+@media (max-width: 1100px) {
+    .inscripcion-container {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+    }
+    
+    /* 1. CENTRADO PERFECTO EN TABLET */
+    .inscripcion-content-side {
+        text-align: center; /* Centra el título y subtítulo */
+    }
+    .inscripcion-header p {
+        margin: 0 auto; /* Centra el párrafo */
+    }
+    .inscripcion-form {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto; /* Centra el bloque del formulario */
+        text-align: left; /* Mantiene los inputs alineados a la izquierda */
+    }
+
+    /* 2. IMAGEN A LA PAR DEL FORMULARIO Y COMPLETA */
+    .inscripcion-image-side {
+        width: 100%;
+        max-width: 600px; /* Obliga a la imagen a ser exactamente del mismo ancho que el formulario */
+        margin: 40px auto 0 auto; /* Centra el bloque de la imagen */
+        height: 500px; /* Fija una altura estéticamente agradable */
+        background-color: rgba(10, 10, 12, 0.4); /* Fondo sutil si la imagen es transparente */
+        border: 1px solid rgba(77, 174, 154, 0.15); /* Marco ligero para combinar */
+    }
+    
+    .side-photo {
+        object-fit: contain; /* Muestra al personaje entero de pies a cabeza sin recortar */
+        object-position: center top; /* Lo pega hacia arriba para que el texto de abajo no lo tape */
+        padding-bottom: 0; 
+    }
+
+    .inscripcion-header h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 2%;
+    }
+    .countdown-container {
+        margin-top: 180px; 
+    }
+    .inscripcion-container {
+        padding-top: 40px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    .nav-links a {
+        margin: 0 6px;
+        font-size: 0.85rem;
+    }
+    .inscripcion-content-side {
+        padding: 40px 0; /* Remueve el padding lateral excesivo en móviles */
+    }
+    .inscripcion-header h1 {
+        font-size: 2.4rem;
+    }
+    .countdown-timer {
+        gap: 10px;
+    }
+    .timer-block {
+        min-width: 65px;
+        padding: 8px;
+    }
+    .timer-block span {
+        font-size: 1.8rem;
+    }
+    .form-row {
+        grid-template-columns: 1fr; /* Apila en móvil */
+        gap: 20px;
+    }
+    
+    /* ALTURA PROPORCIONAL PARA CELULARES */
+    .inscripcion-image-side {
+        height: 400px; /* Ligeramente más bajo para que no ocupe todo el alto del móvil */
+    }
+}

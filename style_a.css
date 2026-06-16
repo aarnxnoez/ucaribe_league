@@ -1,0 +1,603 @@
+/* ==========================================================================
+   RESET GENERAL Y BASE (REPOSITORIO DE ORO - COHERENCIA 100%)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --base-bg: #0a0a0c;          /* Negro profundo absoluto */
+    --card-bg: #121216;          /* Gris oscuro premium */
+    --brand-teal: #4dae9a;       /* Color base identificador */
+    --brand-teal-hover: #3d8f7e;  /* Hover del botón */
+    --text-white: #ffffff;       /* Títulos puros */
+    --text-secondary: #94a3b8;   /* Párrafos e informativos */
+    --tag-soccer: #15803d;       /* Verde sutil para fútbol */
+    --tag-basket: #b45309;       /* Naranja sutil para básquet */
+}
+
+body {
+    background-color: var(--base-bg);
+    color: var(--text-white);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   1. NAVBAR REUTILIZABLE AL 100%
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(10, 10, 12, 0.95);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(77, 174, 154, 0.15);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--brand-teal);
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--text-white);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    font-size: 1.1rem; 
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--brand-teal);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after, .nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--brand-teal);
+}
+
+.phone-link {
+    border: 1px solid var(--brand-teal);
+    color: var(--brand-teal) !important;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-left: 10px !important;
+}
+
+.phone-link:hover {
+    background-color: var(--brand-teal);
+    color: var(--base-bg) !important;
+}
+
+/* ==========================================================================
+   2. CONTENEDOR MAESTRO (MÁRGENES DE CONTROL DE PANTALLA)
+   ========================================================================== */
+.main-wrapper {
+    max-width: 1200px;
+    margin: 140px auto 60px auto; /* Compensa la altura fija del menú superior */
+    padding: 0 4%;
+}
+
+/* ==========================================================================
+   3. SECCIÓN DEL FORMULARIO PREMIUM
+   ========================================================================== */
+.form-section {
+    width: 100%;
+    max-width: 750px; /* Un poco más espacioso debido al selector de posiciones */
+    margin: 0 auto 80px auto; /* Centrado absoluto */
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.badge {
+    background-color: rgba(77, 174, 154, 0.1);
+    color: var(--brand-teal);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    margin-bottom: 20px;
+    border: 1px solid rgba(77, 174, 154, 0.2);
+}
+
+.section-header h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 3.8rem;
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.section-header h1 span {
+    color: var(--brand-teal);
+}
+
+.section-header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* LOGICA DE CAMPOS */
+.agentes-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-white);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-white);
+    padding: 12px 14px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: var(--brand-teal);
+    box-shadow: 0 0 10px rgba(77, 174, 154, 0.15);
+}
+
+.form-section-title {
+    color: var(--brand-teal);
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: 4px;
+    border-bottom: 1px solid rgba(77, 174, 154, 0.2);
+    padding-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.spacing-top {
+    margin-top: 20px;
+}
+
+/* CHECKBOXES DE DEPORTE */
+.sport-checkbox-group {
+    display: flex;
+    gap: 30px;
+    padding: 6px 0;
+}
+
+.check-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.check-label input[type="checkbox"] {
+    accent-color: var(--brand-teal);
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* SELECTOR MULTIPLE DE POSICIONES INTERACTIVO */
+.positions-selector-box {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    padding: 15px;
+    max-height: 280px;
+    overflow-y: auto; /* Hace que tenga scroll vertical si se desborda */
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Estilo para la barra de scroll del selector */
+.positions-selector-box::-webkit-scrollbar {
+    width: 6px;
+}
+.positions-selector-box::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+.positions-selector-box::-webkit-scrollbar-thumb {
+    background: var(--brand-teal);
+    border-radius: 4px;
+}
+
+.position-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.group-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--brand-teal);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.position-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding-left: 6px;
+}
+
+.position-item:hover {
+    color: var(--text-white);
+}
+
+.position-item input[type="checkbox"] {
+    accent-color: var(--brand-teal);
+    width: 15px;
+    height: 15px;
+}
+
+.border-top-group {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 12px;
+}
+
+/* BOTÓN DE SUBIR ARCHIVOS */
+.file-input {
+    background-color: rgba(255, 255, 255, 0.01) !important;
+    padding: 10px !important;
+    border: 1px dashed rgba(77, 174, 154, 0.4) !important;
+    color: var(--text-secondary) !important;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.file-input::file-selector-button {
+    background-color: var(--brand-teal);
+    color: var(--base-bg);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-right: 12px;
+}
+
+.form-help-text {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: -6px;
+}
+
+/* BOTÓN REGISTRO */
+.btn-submit-form {
+    background-color: var(--brand-teal);
+    color: var(--base-bg);
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 5px 20px rgba(77, 174, 154, 0.25);
+    transition: all 0.3s ease;
+}
+
+.btn-submit-form:hover {
+    background-color: var(--brand-teal-hover);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   4. SECCIÓN GRID DE TARJETAS DE JUGADORES (2 COLUMNAS)
+   ========================================================================== */
+.players-section {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 60px;
+}
+
+.players-main-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.players-main-header h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.players-main-header p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    line-height: 1.5;
+}
+
+.contact-info-block {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(77, 174, 154, 0.15);
+    padding: 12px 25px;
+    border-radius: 6px;
+    display: inline-flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+    color: var(--text-white);
+}
+
+.contact-info-block strong {
+    color: var(--brand-teal);
+}
+
+.separator {
+    color: rgba(255, 255, 255, 0.1);
+}
+
+/* ESTRUCTURA DEL GRID */
+.players-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Exactamente 2 columnas */
+    gap: 25px;
+}
+
+/* DISEÑO DE LA TARJETA (FOTO IZQUIERDA, DATOS DERECHA) */
+.player-card {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+    display: flex; /* Alineación lado a lado */
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Lado izquierdo de la tarjeta: Foto Cuadrada */
+.card-left {
+    width: 160px; /* Ancho fijo para garantizar consistencia */
+    min-width: 160px;
+    height: 100%;
+}
+
+.player-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorte perfecto sin deformar */
+    display: block;
+}
+
+/* Lado derecho de la tarjeta: Información */
+.card-right {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.card-top-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.sport-tag {
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+
+.tag-futbol { background-color: rgba(21, 128, 61, 0.15); color: #4ade80; }
+.tag-basquet { background-color: rgba(180, 83, 9, 0.15); color: #fb923c; }
+.tag-multi { background-color: rgba(77, 174, 154, 0.15); color: var(--brand-teal); }
+
+.status-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--brand-teal);
+    background-color: rgba(77, 174, 154, 0.05);
+    border: 1px solid rgba(77, 174, 154, 0.2);
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.player-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    color: var(--text-white);
+}
+
+.player-meta {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    margin-bottom: 4px;
+}
+
+.player-meta strong {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.phone-box {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.phone-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 2px;
+}
+
+.player-phone-number {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--brand-teal);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.player-phone-number:hover {
+    color: #fff;
+}
+
+/* ==========================================================================
+   5. FOOTER COMPARTIDO
+   ========================================================================== */
+.footer-section {
+    padding: 40px 6%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    background-color: var(--base-bg);
+    margin-top: 8px;
+}
+
+.footer-section p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   6. RESPONSIVIDAD INTEGRAL (COLAPSOS Y ADAPTACIÓN MOVIL)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 2%;
+    }
+    .main-wrapper {
+        margin-top: 190px; /* Margen superior amplio para la navbar colapsada en tablets */
+    }
+    .players-grid {
+        grid-template-columns: 1fr; /* Las tarjetas se apilan de 1 en 1 en tablets */
+        max-width: 650px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    .nav-links a {
+        margin: 0 6px;
+        font-size: 0.85rem;
+    }
+    .section-header h1 {
+        font-size: 2.6rem;
+    }
+    .form-row {
+        grid-template-columns: 1fr; /* Las filas de dos columnas se apilan verticalmente */
+        gap: 14px;
+    }
+    .contact-info-block {
+        flex-direction: column;
+        gap: 8px;
+        padding: 15px;
+    }
+    .separator {
+        display: none; /* Desaparece la barra separadora en celulares */
+    }
+    .player-card {
+        flex-direction: column; /* La foto se coloca arriba y el texto abajo en móviles chicos */
+    }
+    .card-left {
+        width: 100%;
+        height: 180px; /* Altura controlada de la foto para el celular */
+    }
+}

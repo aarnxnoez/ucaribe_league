@@ -1,0 +1,459 @@
+/* ==========================================================================
+   RESET GENERAL Y BASE (IDÉNTICO A TU BASE DE REFERENCIA)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --base-bg: #0a0a0c;          /* Negro profundo absoluto */
+    --card-bg: #121216;          /* Gris oscuro/negro para contenedores y tarjetas */
+    --brand-teal: #4dae9a;       /* Tu color de resaltado exacto para textos y acentos */
+    --brand-teal-hover: #3d8f7e;  /* Variación más oscura para efectos hover */
+    --text-white: #ffffff;       /* Blanco puro para títulos principales */
+    --text-secondary: #94a3b8;   /* Gris suave limpio para párrafos descriptivos */
+}
+
+body {
+    background-color: var(--base-bg);
+    color: var(--text-white);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   1. HEADER (LOGO IZQUIERDA Y MENÚ DER) - INTEGRAL DE TU BASE
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(10, 10, 12, 0.95);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(77, 174, 154, 0.15);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--brand-teal);
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--text-white);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    font-size: 1.1rem; 
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--brand-teal);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after, .nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--brand-teal);
+}
+
+.phone-link {
+    border: 1px solid var(--brand-teal);
+    color: var(--brand-teal) !important;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-left: 10px !important;
+}
+
+.phone-link:hover {
+    background-color: var(--brand-teal);
+    color: var(--base-bg) !important;
+}
+
+/* ==========================================================================
+   2. CONTENIDO PROPIO DEL BODY DE TORNEOS (ESTRUCTURADO MODULARMENTE)
+   ========================================================================== */
+
+/* Contenedor envolvente de la página completa */
+.torneos-page-content {
+    padding-top: 140px; /* Margen superior exacto para no solapar el header */
+    width: 100%;
+}
+
+/* Sección de Bienvenida */
+.torneos-welcome {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.torneos-welcome h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 5.8rem; /* Consistencia milimétrica con tus títulos */
+    font-weight: 900;
+    line-height: 1.05;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.torneos-welcome h1 span {
+    color: var(--brand-teal);
+}
+
+.torneos-welcome p {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    line-height: 1.7;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+/* GRID DE LAS 3 TARJETAS */
+.torneos-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 Columnas balanceadas en PC */
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto 100px auto;
+    padding: 0 20px;
+}
+
+.torneo-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 0;            /* Mantenlo en 0 para que la imagen se pegue al borde */
+    overflow: hidden;      /* Respeta el redondeado de las esquinas de la tarjeta */
+}
+
+/* Caja contenedora para las imágenes cuadradas premium */
+.torneo-card-img-wrapper {
+    width: 100%;           /* Abárcalo de esquina a esquina */
+    height: auto;          /* <--- AÑADE ESTA LÍNEA: Obliga a calcular el alto dinámicamente */
+    aspect-ratio: 1 / 1;   /* Proporción cuadrada de oro */
+    overflow: hidden;     
+    margin: 0;             
+    border-bottom: 2px solid rgba(77, 174, 154, 0.3); 
+}
+
+.torneo-card-img {
+    width: 100%;
+    height: 100%;          /* <--- CAMBIA O AGREGA ESTA LÍNEA: Rellena el alto completo del cuadrado */
+    object-fit: cover;     /* <--- REVISA QUE ESTÉ ESTA LÍNEA: Evita que la foto se aplaste o se estire feo */
+    display: block;        /* Elimina espacios fantasmas inferiores en HTML */
+}
+
+.torneo-card-info {
+    padding: 20px 22px;   /* <-- Reducido para recortar la altura de la tarjeta */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 12px;            /* <-- Espaciado más compacto entre títulos y cajas */
+}
+
+/* Textos informativos de las tarjetas */
+.torneo-card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 5px;   
+    color: var(--text-white);
+    text-align: center;
+}
+
+.podium-box {
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 12px 14px;   /* <-- Relleno más compacto */
+    border-radius: 6px;
+    margin-bottom: 0;
+}
+
+.podium-box p {
+    font-size: 0.9rem;    /* <-- Letra ligeramente más pequeña para ahorrar altura */
+    color: var(--text-white);
+    line-height: 1.5;
+    margin-bottom: 2px;
+}
+
+.podium-box p:last-child {
+    margin-bottom: 0;
+}
+
+.date-box {
+    border-left: 3px solid var(--brand-teal);
+    padding-left: 10px;
+    margin-bottom: 5px;   /* <-- Reducido de 25px a solo 5px */
+    text-align: left;
+}
+
+.date-box p {
+    font-size: 0.88rem;   /* <-- Proporción ideal y estilizada */
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.upcoming-text {
+    color: var(--text-secondary);
+    font-size: 0.9rem;    /* <-- Más compacto */
+    line-height: 1.5;
+    margin-bottom: 5px;   /* <-- Reducido para acortar la tarjeta */
+    text-align: center;
+}
+
+/* Botones dentro de las tarjetas */
+.btn-ver-torneo {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--brand-teal);
+    color: var(--brand-teal);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: auto; /* Empuja el botón al fondo si las tarjetas difieren en texto */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-ver-torneo:hover {
+    background-color: var(--brand-teal);
+    color: var(--base-bg);
+}
+
+.live-badge {
+    background-color: rgba(77, 174, 154, 0.1);
+    color: var(--brand-teal);
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: table;
+    margin: 0 auto 15px auto;
+    border: 1px solid rgba(77, 174, 154, 0.2);
+}
+
+/* SECCIÓN DEL REGLAMENTO OFICIAL */
+.reglamento-section {
+    padding: 100px 6%;
+    background-color: #0d0d11; /* Contraste sutil idéntico a tu base */
+}
+
+.reglamento-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.reglamento-title h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+}
+
+.reglamento-content-box {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--base-bg);
+    padding: 50px 40px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.reglamento-list {
+    padding-left: 25px;
+}
+
+.reglamento-list li {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.reglamento-nota-importante {
+    margin-top: 35px;
+    background-color: rgba(77, 174, 154, 0.04);
+    border: 1px dashed rgba(77, 174, 154, 0.3);
+    padding: 20px 25px;
+    border-radius: 6px;
+}
+
+.reglamento-nota-importante p {
+    color: var(--text-white);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   3. FOOTER - INTEGRAL DE TU BASE
+   ========================================================================== */
+.footer-section {
+    padding: 40px 6%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    background-color: var(--base-bg);
+}
+
+.footer-section p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* ANIMACIÓN DE ENTRADA */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   4. DESIGN RESPONSIVO - ADAPTACIÓN MATEMÁTICA COHERENTE
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 2%;
+    }
+    .torneos-page-content {
+        padding-top: 160px;
+    }
+    .torneos-welcome h1 {
+        font-size: 4rem;
+    }
+}
+
+/* --- ADAPTACIÓN ESPECÍFICA PARA TABLETS --- */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .navbar {
+        padding: 20px 4%;
+    }
+    
+    .nav-links a {
+        margin: 0 10px;
+        font-size: 1rem;
+    }
+
+    .torneos-welcome h1 {
+        font-size: 4.5rem;
+    }
+
+    .torneos-welcome p {
+        font-size: 1.15rem;
+        max-width: 600px;
+    }
+
+    .torneos-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .reglamento-title h2 {
+        font-size: 2.8rem;
+    }
+}
+
+/* --- ADAPTACIÓN MÁXIMA PARA CELULARES --- */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    .nav-links a {
+        margin: 0 6px;
+        font-size: 0.85rem;
+    }
+    .torneos-welcome h1 {
+        font-size: 2.4rem;
+    }
+    .torneos-welcome p {
+        font-size: 1rem;
+    }
+    
+    .reglamento-section {
+        padding: 40px 5%;
+    }
+
+    .reglamento-title h2 {
+        font-size: 1.8rem;
+        letter-spacing: 0px;
+        line-height: 1.2;
+    }
+
+    .torneos-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .torneo-card {
+        padding: 0; /* Cambiado de '25px 20px' a '0' para que no rompa el diseño cuadrado superior */
+    }
+
+    .torneo-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    .reglamento-content-box {
+        padding: 25px 20px;
+    }
+    
+    .reglamento-list li {
+        font-size: 0.98rem;
+    }
+}

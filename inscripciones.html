@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción - Ucaribe League</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_i.css"> 
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="imagenes_ucaribe/logos_ucaribe/logo_ucaribe.png" alt="Logo" class="logo-img">
+            UCARIBE<span>LEAGUE</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="torneos.html">Torneos</a>
+            <a href="#" class="active">Inscripción</a>
+            <a href="agentes.html">Agentes Libres</a>
+            <a href="https://wa.me/529982335568" target="_blank" class="phone-link">
+                +52 998 233 5568
+            </a>
+        </nav>
+    </header>
+
+    <div class="countdown-container">
+        <p class="countdown-title">El registro de inscripción cierra en:</p>
+        <div class="countdown-timer">
+            <div class="timer-block">
+                <span id="days">00</span>
+                <p>Días</p>
+            </div>
+            <div class="timer-block">
+                <span id="hours">00</span>
+                <p>Hrs</p>
+            </div>
+            <div class="timer-block">
+                <span id="minutes">00</span>
+                <p>Min</p>
+            </div>
+            <div class="timer-block">
+                <span id="seconds">00</span>
+                <p>Seg</p>
+            </div>
+        </div>
+    </div>
+
+    <main class="inscripcion-container">
+        
+        <div class="inscripcion-content-side">
+            <div class="inscripcion-header">
+                <span class="badge">🔥 CUPO LIMITADO</span>
+                <h1>Registra a tu <span>Equipo</span></h1>
+                <p>Completa el registro oficial para asegurar el lugar de tu escuadra en el Torneo Apertura 2026. ¡No te quedes fuera!</p>
+            </div>
+
+            <form class="inscripcion-form" action="#" method="POST" enctype="multipart/form-data">
+                
+                <h3 class="form-section-title">👤 Datos del Capitán</h3>
+                
+                <div class="form-group">
+                    <label for="nombre-capitan">Nombre Completo del Capitán</label>
+                    <input type="text" id="nombre-capitan" name="nombre_capitan" placeholder="Nombre completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Ocupación en la Universidad</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="ocupacion" value="estudiante" required> Estudiante
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="ocupacion" value="egresado"> Egresado
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="ocupacion" value="administrativo"> Administrativo
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="correo">Correo Electrónico</label>
+                        <input type="email" id="correo" name="correo" placeholder="correo@ucaribe.edu.mx" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono de Contacto</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="9981234567" required>
+                    </div>
+                </div>
+
+                <h3 class="form-section-title team-title">🛡️ Datos del Equipo</h3>
+
+                <div class="form-group">
+                    <label for="disciplina">Torneo / Disciplina</label>
+                    <select id="disciplina" name="disciplina" required>
+                        <option value="" disabled selected>Selecciona deporte</option>
+                        <option value="futbol">Fútbol</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre-equipo">Nombre del Equipo</label>
+                        <input type="text" id="nombre-equipo" name="nombre_equipo" placeholder="Ej. Albañiles FC (no usar nombres altisonantes)" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="colores-equipo">Colores del Equipo</label>
+                        <input type="text" id="colores-equipo" name="colores_equipo" placeholder="Ej. Azul y Oro" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="escudo">Escudo del Equipo (en caso de tenerlo listo)</label>
+                    <input type="file" id="escudo" name="escudo" accept=".png, .jpg, .jpeg" class="file-input">
+                    <small class="form-help-text">Formatos permitidos: JPG o PNG con fondo transparente.</small>
+                </div>
+
+                <button type="submit" class="btn-submit-form">Enviar Solicitud de Registro</button>
+            </form>
+        </div>
+        
+        <div class="inscripcion-image-side">
+            <img src="imagenes_ucaribe/logos_ucaribe/ucaribe_personaje.png" alt="Ucaribe League Competición" class="side-photo">
+            <div class="image-overlay-text">
+                <h3>Ucaribe League 2026</h3>
+                <p>Pasión, disciplina y gloria universitaria en la cancha.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer-section">
+        <p>Derechos reservados © Caribe Sports by Universidad del Caribe</p>
+    </footer>
+
+    <script>
+        function startCountdown() {
+            // Formato estándar ISO (Año-Mes-Día) que VSC prefiere para evitar errores
+            const targetDate = new Date('2026-09-04T00:00:00').getTime();
+
+            const timerInterval = setInterval(function() {
+                const now = new Date().getTime();
+                const difference = targetDate - now;
+
+                // 1. Capturamos los elementos del HTML de forma segura
+                const daysEl = document.getElementById('days');
+                const hoursEl = document.getElementById('hours');
+                const minutesEl = document.getElementById('minutes');
+                const secondsEl = document.getElementById('seconds');
+                const timerContainer = document.querySelector('.countdown-timer');
+
+                // 2. Si el tiempo llega a cero, cambiamos el mensaje y detenemos el reloj
+                if (difference < 0) {
+                    clearInterval(timerInterval);
+                    if (timerContainer) {
+                        timerContainer.innerHTML = "<p class='closed-badge'>LAS INSCRIPCIONES HAN CERRADO</p>";
+                    }
+                    return; // Detiene la ejecución aquí para no seguir calculando números negativos
+                }
+
+                // 3. Cálculos matemáticos del tiempo restante
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                // 4. Inyectamos los números usando 'innerText' y validando que existan (esto quita el error de VSC)
+                // Usamos padStart(2, '0') para que siempre se vea '09' en lugar de solo '9' de forma más limpia
+                if (daysEl) daysEl.innerText = String(days).padStart(2, '0');
+                if (hoursEl) hoursEl.innerText = String(hours).padStart(2, '0');
+                if (minutesEl) minutesEl.innerText = String(minutes).padStart(2, '0');
+                if (secondsEl) secondsEl.innerText = String(seconds).padStart(2, '0');
+
+            }, 1000);
+        }
+        
+        // Iniciar la función cuando cargue la página
+        window.onload = startCountdown;
+    </script>
+</body>
+</html>

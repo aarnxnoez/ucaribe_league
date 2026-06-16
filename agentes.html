@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentes Libres - Ucaribe League</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_a.css"> 
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="imagenes_ucaribe/logos_ucaribe/logo_ucaribe.png" alt="Logo" class="logo-img">
+            UCARIBE<span>LEAGUE</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="torneos.html">Torneos</a>
+            <a href="inscripciones.html">Inscripción</a>
+            <a href="#" class="active">Agentes Libres</a>
+            <a href="https://wa.me/529982335568" target="_blank" class="phone-link">
+                +52 998 233 5568
+            </a>
+        </nav>
+    </header>
+
+    <main class="main-wrapper">
+        
+        <section class="form-section">
+            <div class="section-header">
+                <span class="badge">📣 BUSCA ESCUADRA</span>
+                <h1>Registro de <span>Agentes Libres</span></h1>
+                <p>¿No tienes equipo? Regístrate como agente libre para que los capitanes puedan ver tu perfil, tu posición en la cancha y contactarte directamente.</p>
+            </div>
+
+            <form class="agentes-form" action="#" method="POST" enctype="multipart/form-data">
+                
+                <h3 class="form-section-title">👤 Datos Personales</h3>
+                
+                <div class="form-group">
+                    <label for="nombre-completo">Nombre Completo</label>
+                    <input type="text" id="nombre-completo" name="nombre_completo" placeholder="Tu nombre y apellidos" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="correo">Correo Electrónico</label>
+                        <input type="email" id="correo" name="correo" placeholder="correo@ucaribe.edu.mx" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Número de Celular</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="9981234567" required>
+                    </div>
+                </div>
+
+                <h3 class="form-section-title spacing-top">🏀 Deporte y Posiciones</h3>
+
+                <div class="form-group">
+                    <label>Deporte de Interés (Puedes marcar ambos)</label>
+                    <div class="sport-checkbox-group">
+                        <label class="check-label">
+                            <input type="checkbox" name="deporte" value="futbol"> Fútbol
+                        </label>
+                        <label class="check-label">
+                            <input type="checkbox" name="deporte" value="basquet"> Básquetbol
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Posiciones en las que te desempeñas (Selección Múltiple)</label>
+                    <div class="positions-selector-box">
+                        
+                        <div class="position-group">
+                            <span class="group-title">⚽ Fútbol - Portería</span>
+                            <label class="position-item"><input type="checkbox" name="posiciones" value="Portero"> Portero</label>
+                        </div>
+
+                        <div class="position-group">
+                            <span class="group-title">⚽ Fútbol - Defensa</span>
+                            <label class="position-item"><input type="checkbox" name="posiciones" value="Defensa Central"> Central</label>
+                            <label class="position-item"><input type="checkbox" name="posiciones" value="Defensa Libero"> Libero</label>
+                            <label class="position-item"><input type="checkbox" name="posiciones" value="Defensa Lateral Derecho"> Lateral Derecho</label>
+                            <label class="position-item"><input type="checkbox" name="posiciones" value="Defensa Lateral Izquierdo"> Lateral Izquierdo</label>
+                            <label class="position-item"><input type="checkbox" name="posiciones" value="Carrilero Derecho"> Carrilero Derecho</label>
+                            <label class="position-item"><input type="checkbox" name="posiciones" value="Carrilero Izquierdo"> Carrilero Izquierdo</label>
+                        </div>
+
+                        <div class="position-group">
+                            <span class="group-title">⚽ Fútbol - Mediocampo</span>
+                            <label class="position-item"><input type="checkbox" name="posiciones" value="Mediocentro Defensivo"> Defensivo / Pivote</label>
+                            <label class="position-item"><input type="checkbox" name="posiciones" value="Mediocentro Organizador"> Organizador</label>
+                            <label class="position-item"><input type="checkbox" name="posiciones" value="Interior/Volante Derecho"> Interior / Volante Derecho</label>
+                            <label class="position-item"><input type="checkbox" name="posiciones" value="Interior/Volante Izquierdo"> Interior / Volante Izquierdo</label>
+                            <label class="position-item"><input type="checkbox" name="posiciones" value="Mediapunta"> Mediapunta</label>
+                        </div>
+
+                        <div class="position-group">
+                            <span class="group-title">⚽ Fútbol - Delantera</span>
+                            
+                            <label class="position-item"><input type="checkbox" name="posiciones" value="Extremo Derecho"> Extremo Derecho</label>
+                            <label class="position-item"><input type="checkbox" name="posiciones" value="Extremo Izquierdo"> Extremo Izquierdo</label>
+                            <label class="position-item"><input type="checkbox" name="posiciones" value="Delantero Centro"> Delantero Centro</label>
+                            <label class="position-item"><input type="checkbox" name="posiciones" value="Segundo Delantero"> Segundo Delantero</label>
+                        </div>
+
+                        <!-- <div class="position-group border-top-group">
+                            <span class="group-title">🏀 Básquetbol</span>
+                            <label class="position-item"><input type="checkbox" name="posiciones" value="Base"> Base</label>
+                            <label class="position-item"><input type="checkbox" name="posiciones" value="Escolta"> Escolta</label>
+                            <label class="position-item"><input type="checkbox" name="posiciones" value="Alero"> Alero</label>
+                            <label class="position-item"><input type="checkbox" name="posiciones" value="Ala-Pívot"> Ala-Pívot</label>
+                            <label class="position-item"><input type="checkbox" name="posiciones" value="Pívot"> Pívot</label>
+                        </div> -->
+
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fotografia">Fotografía de Rostro (Selfie)</label>
+                        <input type="file" id="fotografia" name="fotografia" accept=".png, .jpg, .jpeg" class="file-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="perfil-habil">Perfil Hábil (Opcional)</label>
+                        <select id="perfil-habil" name="perfil_habil">
+                            <option value="" disabled selected>Selecciona tu lado hábil</option>
+                            <option value="Diestro">Diestro / Derecho</option>
+                            <option value="Zurdo">Zurdo / Izquierdo</option>
+                            <option value="Ambidiestro">Ambidiestro</option>
+                        </select>
+                    </div>
+                </div>
+                <small class="form-help-text">Sube una selfie clara de frente para tu ficha de jugador. Formatos permitidos: JPG o PNG.</small>
+
+                <button type="submit" class="btn-submit-form">Registrarme como Agente Libre</button>
+            </section>
+        </form>
+
+        <section class="players-section">
+            <div class="players-main-header">
+                <h2>JUGADORES QUE BUSCAN EQUIPO</h2>
+                <p>Si alguno de los siguientes jugadores es de tu interés por favor contáctanos en caso de que llegues a inscribirlo a tu equipo.</p>
+                <div class="contact-info-block">
+                    <span>📞 WhatsApp: <a href="https://wa.me/529982335568" target="_blank" style="color: var(--brand-teal); text-decoration: none;"><strong>998 233 5568</strong></a></span>
+                    <span class="separator">|</span>
+                    <span>✉️ Correo Electrónico: <strong>210300545@ucaribe.edu.mx</strong></span>
+                </div>
+            </div>
+
+            <div class="players-grid">
+
+                <!-- <div class="player-card">
+                    <div class="card-left">
+                        <img src="imagenes_ucaribe/ejemplo_rostro2.jpg" alt="Foto Jugador" class="player-photo">
+                    </div>
+                    <div class="card-right">
+                        <div class="card-top-info">
+                            <span class="sport-tag tag-basquet">🏀 BÁSQUET</span>
+                            <span class="status-tag">DISPONIBLE</span>
+                        </div>
+                        <h4 class="player-name">Alejandro Gómez Ruiz</h4>
+                        <p class="player-meta"><strong>Posiciones:</strong> Base, Escolta</p>
+                        <p class="player-meta"><strong>Perfil:</strong> Diestro</p>
+                        <div class="phone-box">
+                            <span class="phone-label">Celular del Jugador:</span>
+                            <a href="tel:9981112233" class="player-phone-number">998 111 2233</a>
+                        </div>
+                    </div>
+                </div> -->
+                
+                <div class="player-card">
+                    <div class="card-left">
+                        <img src="imagenes_ucaribe/agentes_libres/jjct.png" alt="Foto Jugador" class="player-photo">
+                    </div>
+                    <div class="card-right">
+                        <div class="card-top-info">
+                            <span class="sport-tag tag-futbol">⚽ FÚTBOL</span>
+                            <span class="status-tag">DISPONIBLE</span>
+                        </div>
+                        <h4 class="player-name">Juan Jose Chim Torres</h4>
+                        <p class="player-meta"><strong>Posiciones:</strong> Medio derecho, extremo derecho</p>
+                        <p class="player-meta"><strong>Perfil:</strong> Desconocido</p>
+                        <div class="phone-box">
+                            <span class="phone-label">Celular del Jugador:</span>
+                            <a href="https://wa.me/529981448527" target="_blank" class="player-phone-number">+52 998 144 8527</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-card">
+                    <div class="card-left">
+                        <img src="imagenes_ucaribe/agentes_libres/cbc.png" alt="Foto Jugador" class="player-photo">
+                    </div>
+                    <div class="card-right">
+                        <div class="card-top-info">
+                            <span class="sport-tag tag-futbol">⚽ FÚTBOL</span>
+                            <span class="status-tag">DISPONIBLE</span>
+                        </div>
+                        <h4 class="player-name">Cristopher Barrancos Chan</h4>
+                        <p class="player-meta"><strong>Posiciones:</strong> Delantero Centro</p>
+                        <p class="player-meta"><strong>Perfil:</strong> Desconocido</p>
+                        <div class="phone-box">
+                            <span class="phone-label">Celular del Jugador:</span>
+                            <a href="https://wa.me/529984829036" target="_blank" class="player-phone-number">+52 998 482 9036</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-card">
+                    <div class="card-left">
+                        <img src="imagenes_ucaribe/agentes_libres/ci.png" alt="Foto Jugador" class="player-photo">
+                    </div>
+                    <div class="card-right">
+                        <div class="card-top-info">
+                            <span class="sport-tag tag-futbol">⚽ FÚTBOL</span>
+                            <span class="status-tag">DISPONIBLE</span>
+                        </div>
+                        <h4 class="player-name">Cesar Igno</h4>
+                        <p class="player-meta"><strong>Posiciones:</strong> Medio campo</p>
+                        <p class="player-meta"><strong>Perfil:</strong> Desconocido</p>
+                        <div class="phone-box">
+                            <span class="phone-label">Celular del Jugador:</span>
+                            <a href="https://wa.me/529985394242" target="_blank" class="player-phone-number">+52 998 539 4242</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-card">
+                    <div class="card-left">
+                        <img src="imagenes_ucaribe/agentes_libres/ht.png" alt="Foto Jugador" class="player-photo">
+                    </div>
+                    <div class="card-right">
+                        <div class="card-top-info">
+                            <span class="sport-tag tag-futbol">⚽ FÚTBOL</span>
+                            <span class="status-tag">DISPONIBLE</span>
+                        </div>
+                        <h4 class="player-name">Hector Tlilayatzi</h4>
+                        <p class="player-meta"><strong>Posiciones:</strong> Medio campo</p>
+                        <p class="player-meta"><strong>Perfil:</strong> Desconocido</p>
+                        <div class="phone-box">
+                            <span class="phone-label">Celular del Jugador:</span>
+                            <a href="https://wa.me/522481954713" target="_blank" class="player-phone-number">+52 248 195 4713</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-card">
+                    <div class="card-left">
+                        <img src="imagenes_ucaribe/agentes_libres/sl.png" alt="Foto Jugador" class="player-photo">
+                    </div>
+                    <div class="card-right">
+                        <div class="card-top-info">
+                            <span class="sport-tag tag-futbol">⚽ FÚTBOL</span>
+                            <span class="status-tag">DISPONIBLE</span>
+                        </div>
+                        <h4 class="player-name">Samuel Lang</h4>
+                        <p class="player-meta"><strong>Posiciones:</strong> Portero</p>
+                        <p class="player-meta"><strong>Perfil:</strong> Desconocido</p>
+                        <div class="phone-box">
+                            <span class="phone-label">Celular del Jugador:</span>
+                            <a href="https://wa.me/529984059306" target="_blank" class="player-phone-number">+52 998 405 9306</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-card">
+                    <div class="card-left">
+                        <img src="imagenes_ucaribe/agentes_libres/eo.png" alt="Foto Jugador" class="player-photo">
+                    </div>
+                    <div class="card-right">
+                        <div class="card-top-info">
+                            <span class="sport-tag tag-futbol">⚽ FÚTBOL</span>
+                            <span class="status-tag">DISPONIBLE</span>
+                        </div>
+                        <h4 class="player-name">Emiliano Ortega</h4>
+                        <p class="player-meta"><strong>Posiciones:</strong> Portero, contención, volante, delantero</p>
+                        <p class="player-meta"><strong>Perfil:</strong> Desconocido</p>
+                        <div class="phone-box">
+                            <span class="phone-label">Celular del Jugador:</span>
+                            <a href="https://wa.me/529981397008" target="_blank" class="player-phone-number">+52 998 139 7008</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer-section">
+        <p>Derechos reservados © Caribe Sports by Universidad del Caribe</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,367 @@
+/* RESET GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --base-bg: #0a0a0c;          /* Negro profundo absoluto (fiel a tu petición) */
+    --card-bg: #121216;          /* Gris oscuro/negro para contenedores y tarjetas */
+    --brand-teal: #4dae9a;       /* Tu color de resaltado exacto para textos y acentos */
+    --brand-teal-hover: #3d8f7e;  /* Variación más oscura para efectos hover */
+    --text-white: #ffffff;       /* Blanco puro para títulos principales */
+    --text-secondary: #94a3b8;   /* Gris suave limpio para párrafos descriptivos */
+}
+
+body {
+    background-color: var(--base-bg);
+    color: var(--text-white);
+    font-family: 'Inter', sans-serif; /* Unificamos a Inter para todo el texto base */
+    overflow-x: hidden;
+}
+
+/* --- 1. HEADER (LOGO IZQUIERDA Y MENÚ DER) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(10, 10, 12, 0.95);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(77, 174, 154, 0.15); /* Línea sutil con tu color de resaltado */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* <--- Espacio de separación entre la imagen y el texto */
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--brand-teal); /* Resaltado en tu color */
+}
+
+.logo-img {
+    height: 40px; /* <--- Ajusta este valor según los píxeles que mida tu logo */
+    width: auto;  /* <--- Esto evita que la imagen se deforme o se vea chata */
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--text-white);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500; /* <-- Deja este grosor fijo */
+    font-size: 1.1rem; 
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+/* Efecto interactivo inferior con tu color personalizado */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--brand-teal);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after, .nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--brand-teal);
+}
+
+.phone-link {
+    border: 1px solid var(--brand-teal);
+    color: var(--brand-teal) !important;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-left: 10px !important;
+}
+
+.phone-link:hover {
+    background-color: var(--brand-teal);
+    color: var(--base-bg) !important; /* Texto negro al pasar el cursor */
+}
+
+/* --- 2. HERO PRINCIPAL CENTRADO (BODY) --- */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px 40px 20px;
+    /* Resplandor radial sutil de fondo usando tu color #4dae9a */
+    background: radial-gradient(circle, rgba(77, 174, 154, 0.06) 0%, rgba(10, 10, 12, 0) 70%);
+}
+
+.hero-center-box {
+    max-width: 800px;
+    width: 100%;
+    animation: fadeInUp 1s ease-out;
+}
+
+.badge {
+    background-color: rgba(77, 174, 154, 0.1);
+    color: var(--brand-teal);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    margin-bottom: 25px;
+    border: 1px solid rgba(77, 174, 154, 0.2);
+}
+
+.hero-center-box h1 {
+    font-family: 'Outfit', sans-serif; /* <-- Cambia esta línea */
+    font-size: 5.8rem;                 /* <-- Ajusta a 5.8rem para que no rompa en pantallas medianas */
+    font-weight: 900;
+    line-height: 1.05;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.hero-center-box h1 span {
+    color: var(--brand-teal); /* Destaca "Caribe Sports" con tu color */
+}
+
+.hero-center-box p {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    background-color: var(--brand-teal);
+    color: var(--base-bg); /* Texto oscuro para contraste perfecto */
+    padding: 16px 40px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 25px rgba(77, 174, 154, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: var(--brand-teal-hover);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(77, 174, 154, 0.4);
+}
+
+/* --- 3. CUERPO DE TARJETAS DE TORNEOS --- */
+.body-section {
+    padding: 100px 6%;
+    background-color: #0d0d11; /* Fondo ligeramente contrastado pero muy oscuro */
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+}
+
+.title-underline {
+    width: 70px;
+    height: 4px;
+    background-color: var(--brand-teal);
+    margin: 12px auto 0 auto;
+    border-radius: 2px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.info-card {
+    background-color: var(--card-bg);
+    padding: 40px 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Contenedor de la foto de la tarjeta */
+.card-img-wrapper {
+    width: 120px;          /* <-- Tamaño controlado, ya no se verá gigante */
+    aspect-ratio: 1 / 1;   /* Mantiene el formato cuadrado perfecto */
+    border-radius: 16px;   /* Bordes suavizados modernos (puedes usar 50% si los quieres circulares) */
+    overflow: hidden;     
+    margin: 0 auto 25px auto; /* <-- Centra la imagen horizontalmente y le da espacio abajo */
+    border: 2px solid rgba(77, 174, 154, 0.3); /* Un borde sutil con tu color turquesa */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra elegante para que parezca flotar */
+}
+
+/* Propiedades de la imagen para que sea responsiva y no se deforme */
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.info-card h3 {
+    font-family: 'Outfit', sans-serif; /* <-- Cambia esta línea */
+    font-size: 2.2rem;                 /* <-- Sube a 2.2rem para resaltar el título del torneo */
+    margin-bottom: 15px;
+    color: var(--text-white);
+}
+
+.info-card p {
+    color: var(--text-secondary);
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+/* --- 4. FOOTER --- */
+.footer-section {
+    padding: 40px 6%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    background-color: var(--base-bg);
+}
+
+.footer-section p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* ANIMACIÓN DE ENTRADA */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 2%;
+    }
+    .hero-section {
+        padding-top: 160px;
+    }
+    .hero-center-box h1 {
+        font-size: 4rem;
+    }
+}
+
+/* --- DISEÑO ESPECÍFICO PARA TABLETS --- */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .navbar {
+        padding: 20px 4%; /* Reduce un poco los lados del menú */
+    }
+    
+    .nav-links a {
+        margin: 0 10px;    /* Junta un poco más los enlaces para que quepan bien */
+        font-size: 1rem;   /* Baja sutilmente el tamaño de la letra del menú */
+    }
+
+    .hero-center-box h1 {
+        font-size: 4.5rem; /* El título se adapta perfectamente sin verse gigante */
+    }
+
+    .hero-center-box p {
+        font-size: 1.15rem; /* El texto descriptivo se vuelve más compacto */
+        max-width: 600px;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr); /* Acomoda las tarjetas en 2 columnas perfectas */
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    .nav-links a {
+        margin: 0 6px;
+        font-size: 0.85rem;
+    }
+    .hero-center-box h1 {
+        font-size: 2.4rem; /* <-- Bajamos un poquito más para asegurar que quepa bien en pantallas chicas */
+    }
+    .hero-center-box p {
+        font-size: 1rem;   /* <-- Texto descriptivo más cómodo para lectura en móvil */
+    }
+    
+    /* --- AQUÍ EMPIEZAN LOS CAMBIOS CLAVE PARA CORREGIR EL TEXTO CORTADO Y LAS TARJETAS --- */
+    
+    .body-section {
+        padding: 40px 5%; /* <-- Esto le da un colchón de aire a los lados para que nada toque las esquinas del cel */
+    }
+
+    .section-title h2 {
+        font-size: 1.8rem; /* <-- Tamaño perfecto: ya NO se va a cortar el título de "NUESTROS TORNEOS" */
+        letter-spacing: 0px;
+        line-height: 1.2;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr; /* <-- Obliga a las tarjetas a ponerse una debajo de otra en fila limpia */
+        gap: 20px;                  /* <-- Separación ideal entre tarjeta y tarjeta */
+        width: 100%;
+    }
+
+    .info-card {
+        padding: 25px 20px; /* <-- Hace el espacio interior de la tarjeta más compacto para que el texto respire */
+    }
+
+    .info-card h3 {
+        font-size: 1.5rem;  /* <-- Ajusta los títulos "TORNEOS DE FÚTBOL" y "BASQUETBOL" para celular */
+    }
+}
