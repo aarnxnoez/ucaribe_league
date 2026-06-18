@@ -31,56 +31,90 @@ body {
 }
 
 /* ==========================================================================
-   2. NAVBAR
+   1. HEADER (LOGO IZQUIERDA Y MENÚ DER) - INTEGRAL DE TU BASE
    ========================================================================== */
-.navbar { 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 20px 5%; 
-    background-color: rgba(10, 10, 12, 0.95); 
-    backdrop-filter: blur(12px); 
-    position: fixed; 
-    width: 100%; 
-    top: 0; 
-    left: 0; 
-    z-index: 1000; 
-    border-bottom: 1px solid rgba(77, 174, 154, 0.15); 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(10, 10, 12, 0.95);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(77, 174, 154, 0.15);
 }
 
-.logo { 
-    display: flex; 
-    align-items: center; 
-    gap: 10px; 
-    font-family: 'Outfit', sans-serif; 
-    font-size: 2.6rem; 
-    font-weight: 900; 
-    letter-spacing: 1px; 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 900;
+    letter-spacing: 1px;
 }
 
-.logo span { color: var(--brand-teal); }
-.logo-img { height: 40px; width: auto; object-fit: contain; }
-
-.nav-links { display: flex; align-items: center; }
-.nav-links a { 
-    color: var(--text-white); text-decoration: none; margin: 0 15px; 
-    font-weight: 500; font-size: 1.1rem; position: relative; padding: 5px 0; 
-    transition: color 0.3s ease; 
+.logo span {
+    color: var(--brand-teal);
 }
 
-.nav-links a::after { 
-    content: ''; position: absolute; width: 0; height: 3px; bottom: 0; left: 0; 
-    background-color: var(--brand-teal); transition: width 0.3s ease; 
+.logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
 }
 
-.nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
-.nav-links a:hover, .nav-links a.active { color: var(--brand-teal); }
-
-.phone-link { 
-    border: 1px solid var(--brand-teal); color: var(--brand-teal) !important; 
-    padding: 8px 16px; border-radius: 4px; margin-left: 10px !important; 
+.nav-links {
+    display: flex;
+    align-items: center;
 }
-.phone-link:hover { background-color: var(--brand-teal); color: var(--base-bg) !important; }
+
+.nav-links a {
+    color: var(--text-white);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    font-size: 1.1rem; 
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--brand-teal);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after, .nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--brand-teal);
+}
+
+.phone-link {
+    border: 1px solid var(--brand-teal);
+    color: var(--brand-teal) !important;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-left: 10px !important;
+}
+
+.phone-link:hover {
+    background-color: var(--brand-teal);
+    color: var(--base-bg) !important;
+}
 
 /* ==========================================================================
    3. HERO DEL TORNEO Y ESCUDOS
@@ -361,6 +395,48 @@ body {
     font-size: 0.9rem;
 }
 
+/* --- ADAPTACIÓN MÁXIMA PARA CELULARES (CABECERA) --- */
+@media (max-width: 768px) {
+    /* 1. Logo arriba, pero conservando tu padding original de 20px */
+    .navbar {
+        flex-direction: column;
+        align-items: center; 
+        padding: 20px 5%; 
+        gap: 15px;
+    }
+
+    /* ¡ELIMINAMOS LA REDUCCIÓN DEL LOGO! 
+       Ahora heredará automáticamente los 2.6rem y 40px originales */
+
+    /* 2. Enlaces con tus medidas exactas del otro CSS */
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .nav-links a {
+        margin: 0 6px;
+        font-size: 0.85rem;
+    }
+
+    /* 3. Protección para los botones largos en su propia línea */
+    .phone-link, #nav-volver {
+        margin-left: 0 !important;
+        margin-top: 5px;
+        flex-basis: 100%; 
+        text-align: center;
+    }
+    
+    .phone-link {
+        flex-basis: auto;
+        display: block;
+        width: fit-content;
+        margin: 5px auto 0 auto !important;
+    }
+}
+
 @media (max-width: 1100px) {
     .players-grid-roster { grid-template-columns: repeat(2, 340px); }
     .players-grid-stats-goleo { grid-template-columns: repeat(4, 1fr); }
@@ -380,7 +456,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    .nav-links { flex-wrap: wrap; justify-content: center; gap: 8px; }
     .tab-navigation { flex-direction: column; }
     .tab-btn { width: 100%; text-align: center; }
     .players-grid-roster { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }

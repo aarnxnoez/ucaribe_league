@@ -446,7 +446,6 @@ body {
     .inscripcion-container {
         grid-template-columns: 1fr; /* Cambia a una sola columna */
     }
-    
     /* 1. CENTRADO PERFECTO EN TABLET */
     .inscripcion-content-side {
         text-align: center; /* Centra el título y subtítulo */
