@@ -1,0 +1,188 @@
+/* ==========================================================================
+   GLOBAL.CSS - REPOSITORIO DE ORO (BASE MAESTRA)
+   ========================================================================== */
+
+/* ==========================================================================
+   1. RESET GENERAL Y BASE
+   ========================================================================== */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    scroll-behavior: smooth; 
+}
+
+:root {
+    --base-bg: #0a0a0c;
+    --card-bg: #121216;
+    --brand-teal: #4dae9a;
+    --brand-teal-hover: #3d8f7e;
+    --text-white: #ffffff;
+    --text-secondary: #94a3b8;
+    --text-muted: #6b7280;
+    --border-light: rgba(255, 255, 255, 0.05);
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --transition-fast: all 0.3s ease;
+    --shadow-glow: 0 5px 15px rgba(77, 174, 154, 0.2);
+}
+
+body { 
+    background-color: var(--base-bg); 
+    color: var(--text-white); 
+    font-family: 'Inter', sans-serif; 
+    overflow-x: hidden; 
+}
+
+/* ==========================================================================
+   2. HEADER NORMAL (PC) - TUS MEDIDAS EXACTAS
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(10, 10, 12, 0.95);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(77, 174, 154, 0.15); /* Línea sutil con tu color de resaltado */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* <--- Espacio de separación entre la imagen y el texto */
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--brand-teal); /* Resaltado en tu color */
+}
+
+.logo-img {
+    height: 40px; /* <--- Ajusta este valor según los píxeles que mida tu logo */
+    width: auto;  /* <--- Esto evita que la imagen se deforme o se vea chata */
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap !important; /* <-- EL SECRETO: Prohíbe que salten de línea en PC */
+    gap: 5px;
+}
+
+/* Blindaje para que el botón volver se comporte perfectamente */
+#nav-volver {
+    flex-basis: auto !important; /* Evita que intente ocupar todo el ancho */
+    margin: 0 15px !important;
+    white-space: nowrap; /* Mantiene el texto en una sola línea */
+}
+
+.nav-links a {
+    color: var(--text-white);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500; /* <-- Deja este grosor fijo */
+    font-size: 1.1rem; 
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+/* Efecto interactivo inferior con tu color personalizado */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--brand-teal);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after, .nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--brand-teal);
+}
+
+.phone-link {
+    border: 1px solid var(--brand-teal);
+    color: var(--brand-teal) !important;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-left: 10px !important;
+}
+
+.phone-link:hover {
+    background-color: var(--brand-teal);
+    color: var(--base-bg) !important; /* Texto negro al pasar el cursor */
+}
+
+/* ==========================================================================
+   3. FOOTER COMPARTIDO (PC Y MÓVIL)
+   ========================================================================== */
+.footer-section {
+    padding: 40px 6%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    background-color: var(--base-bg);
+    margin-top: 8px;
+}
+
+.footer-section p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   4. ADAPTACIÓN MÁXIMA PARA CELULARES (CABECERA Y GLOBAL)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Logo arriba, conservando el padding original */
+    .navbar {
+        flex-direction: column;
+        align-items: center; 
+        padding: 20px 5%; 
+        gap: 15px;
+    }
+
+    /* Enlaces adaptables para celular */
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .nav-links a {
+        margin: 0 6px;
+        font-size: 0.85rem;
+    }
+
+    /* Protección para los botones largos en su propia línea */
+    .phone-link, #nav-volver {
+        margin-left: 0 !important;
+        margin-top: 5px;
+        flex-basis: 100%; 
+        text-align: center;
+    }
+    
+    .phone-link {
+        flex-basis: auto;
+        display: block;
+        width: fit-content;
+        margin: 5px auto 0 auto !important;
+    }
+}

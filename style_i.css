@@ -420,7 +420,7 @@ body {
 .image-overlay-text p {
     color: var(--brand-teal);
     font-size: 1.05rem;
-    font-weight: 500;
+    font-weight: 500;   
 }
 
 /* ==========================================================================
