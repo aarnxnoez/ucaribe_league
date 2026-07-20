@@ -1,110 +1,8 @@
-/* RESET GENERAL */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-:root {
-    --base-bg: #0a0a0c;          /* Negro profundo absoluto (fiel a tu petición) */
-    --card-bg: #121216;          /* Gris oscuro/negro para contenedores y tarjetas */
-    --brand-teal: #4dae9a;       /* Tu color de resaltado exacto para textos y acentos */
-    --brand-teal-hover: #3d8f7e;  /* Variación más oscura para efectos hover */
-    --text-white: #ffffff;       /* Blanco puro para títulos principales */
-    --text-secondary: #94a3b8;   /* Gris suave limpio para párrafos descriptivos */
-}
-
 body {
     background-color: var(--base-bg);
     color: var(--text-white);
     font-family: 'Inter', sans-serif; /* Unificamos a Inter para todo el texto base */
     overflow-x: hidden;
-}
-
-/* --- 1. HEADER (LOGO IZQUIERDA Y MENÚ DER) --- */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-    background-color: rgba(10, 10, 12, 0.95);
-    backdrop-filter: blur(12px);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(77, 174, 154, 0.15); /* Línea sutil con tu color de resaltado */
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* <--- Espacio de separación entre la imagen y el texto */
-    font-family: 'Outfit', sans-serif;
-    font-size: 2.6rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-}
-
-.logo span {
-    color: var(--brand-teal); /* Resaltado en tu color */
-}
-
-.logo-img {
-    height: 40px; /* <--- Ajusta este valor según los píxeles que mida tu logo */
-    width: auto;  /* <--- Esto evita que la imagen se deforme o se vea chata */
-    object-fit: contain;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-}
-
-.nav-links a {
-    color: var(--text-white);
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: 500; /* <-- Deja este grosor fijo */
-    font-size: 1.1rem; 
-    position: relative;
-    padding: 5px 0;
-    transition: color 0.3s ease;
-}
-
-/* Efecto interactivo inferior con tu color personalizado */
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 3px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--brand-teal);
-    transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after, .nav-links a.active::after {
-    width: 100%;
-}
-
-.nav-links a:hover, .nav-links a.active {
-    color: var(--brand-teal);
-}
-
-.phone-link {
-    border: 1px solid var(--brand-teal);
-    color: var(--brand-teal) !important;
-    padding: 8px 16px;
-    border-radius: 4px;
-    margin-left: 10px !important;
-}
-
-.phone-link:hover {
-    background-color: var(--brand-teal);
-    color: var(--base-bg) !important; /* Texto negro al pasar el cursor */
 }
 
 /* --- 2. HERO PRINCIPAL CENTRADO (BODY) --- */
@@ -220,7 +118,7 @@ body {
     background-color: var(--card-bg);
     padding: 40px 30px;
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.16);
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -256,19 +154,6 @@ body {
     line-height: 1.6;
 }
 
-/* --- 4. FOOTER --- */
-.footer-section {
-    padding: 40px 6%;
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.03);
-    background-color: var(--base-bg);
-}
-
-.footer-section p {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-}
-
 /* ANIMACIÓN DE ENTRADA */
 @keyframes fadeInUp {
     from {
@@ -281,47 +166,7 @@ body {
     }
 }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 1024px) {
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 2%;
-    }
-    .hero-section {
-        padding-top: 160px;
-    }
-    .hero-center-box h1 {
-        font-size: 4rem;
-    }
-}
-
-/* --- DISEÑO ESPECÍFICO PARA TABLETS --- */
-@media (max-width: 1024px) and (min-width: 769px) {
-    .navbar {
-        padding: 20px 4%; /* Reduce un poco los lados del menú */
-    }
-    
-    .nav-links a {
-        margin: 0 10px;    /* Junta un poco más los enlaces para que quepan bien */
-        font-size: 1rem;   /* Baja sutilmente el tamaño de la letra del menú */
-    }
-
-    .hero-center-box h1 {
-        font-size: 4.5rem; /* El título se adapta perfectamente sin verse gigante */
-    }
-
-    .hero-center-box p {
-        font-size: 1.15rem; /* El texto descriptivo se vuelve más compacto */
-        max-width: 600px;
-    }
-
-    .cards-grid {
-        grid-template-columns: repeat(2, 1fr); /* Acomoda las tarjetas en 2 columnas perfectas */
-        gap: 25px;
-    }
-}
-
+/* RESPONSIVE DESIGN — SOLO MÓVIL */
 @media (max-width: 768px) {
     .nav-links {
         flex-wrap: wrap;

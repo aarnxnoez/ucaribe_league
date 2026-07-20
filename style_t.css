@@ -1,116 +1,4 @@
 /* ==========================================================================
-   RESET GENERAL Y BASE (IDÉNTICO A TU BASE DE REFERENCIA)
-   ========================================================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-:root {
-    --base-bg: #0a0a0c;          /* Negro profundo absoluto */
-    --card-bg: #121216;          /* Gris oscuro/negro para contenedores y tarjetas */
-    --brand-teal: #4dae9a;       /* Tu color de resaltado exacto para textos y acentos */
-    --brand-teal-hover: #3d8f7e;  /* Variación más oscura para efectos hover */
-    --text-white: #ffffff;       /* Blanco puro para títulos principales */
-    --text-secondary: #94a3b8;   /* Gris suave limpio para párrafos descriptivos */
-}
-
-body {
-    background-color: var(--base-bg);
-    color: var(--text-white);
-    font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
-}
-
-/* ==========================================================================
-   1. HEADER (LOGO IZQUIERDA Y MENÚ DER) - INTEGRAL DE TU BASE
-   ========================================================================== */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-    background-color: rgba(10, 10, 12, 0.95);
-    backdrop-filter: blur(12px);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(77, 174, 154, 0.15);
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'Outfit', sans-serif;
-    font-size: 2.6rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-}
-
-.logo span {
-    color: var(--brand-teal);
-}
-
-.logo-img {
-    height: 40px;
-    width: auto;
-    object-fit: contain;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-}
-
-.nav-links a {
-    color: var(--text-white);
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: 500;
-    font-size: 1.1rem; 
-    position: relative;
-    padding: 5px 0;
-    transition: color 0.3s ease;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 3px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--brand-teal);
-    transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after, .nav-links a.active::after {
-    width: 100%;
-}
-
-.nav-links a:hover, .nav-links a.active {
-    color: var(--brand-teal);
-}
-
-.phone-link {
-    border: 1px solid var(--brand-teal);
-    color: var(--brand-teal) !important;
-    padding: 8px 16px;
-    border-radius: 4px;
-    margin-left: 10px !important;
-}
-
-.phone-link:hover {
-    background-color: var(--brand-teal);
-    color: var(--base-bg) !important;
-}
-
-/* ==========================================================================
    2. CONTENIDO PROPIO DEL BODY DE TORNEOS (ESTRUCTURADO MODULARMENTE)
    ========================================================================== */
 
@@ -164,7 +52,7 @@ body {
 .torneo-card {
     background-color: var(--card-bg);
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.16);
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -332,21 +220,6 @@ body {
     line-height: 1.6;
 }
 
-/* ==========================================================================
-   3. FOOTER - INTEGRAL DE TU BASE
-   ========================================================================== */
-.footer-section {
-    padding: 40px 6%;
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.03);
-    background-color: var(--base-bg);
-}
-
-.footer-section p {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-}
-
 /* ANIMACIÓN DE ENTRADA */
 @keyframes fadeInUp {
     from {
@@ -363,51 +236,7 @@ body {
    4. DESIGN RESPONSIVO - ADAPTACIÓN MATEMÁTICA COHERENTE
    ========================================================================== */
 
-@media (max-width: 1024px) {
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 2%;
-    }
-    .torneos-page-content {
-        padding-top: 160px;
-    }
-    .torneos-welcome h1 {
-        font-size: 4rem;
-    }
-}
-
-/* --- ADAPTACIÓN ESPECÍFICA PARA TABLETS --- */
-@media (max-width: 1024px) and (min-width: 769px) {
-    .navbar {
-        padding: 20px 4%;
-    }
-    
-    .nav-links a {
-        margin: 0 10px;
-        font-size: 1rem;
-    }
-
-    .torneos-welcome h1 {
-        font-size: 4.5rem;
-    }
-
-    .torneos-welcome p {
-        font-size: 1.15rem;
-        max-width: 600px;
-    }
-
-    .torneos-cards-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-    }
-    
-    .reglamento-title h2 {
-        font-size: 2.8rem;
-    }
-}
-
-/* --- ADAPTACIÓN MÁXIMA PARA CELULARES --- */
+/* RESPONSIVE DESIGN — SOLO MÓVIL */
 @media (max-width: 768px) {
     .nav-links {
         flex-wrap: wrap;
@@ -417,6 +246,9 @@ body {
     .nav-links a {
         margin: 0 6px;
         font-size: 0.85rem;
+    }
+    .torneos-page-content {
+        margin-top: 40px; /* Ajuste para header fijo en móvil */
     }
     .torneos-welcome h1 {
         font-size: 2.4rem;
@@ -435,18 +267,40 @@ body {
         line-height: 1.2;
     }
 
+    /* Contenedor principal en 1 columna */
     .torneos-cards-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 25px; /* Espaciado cómodo entre tarjetas verticales */
+        width: 100%;
+        padding: 0 15px; /* Evita que las tarjetas peguen en los bordes de la pantalla */
+        box-sizing: border-box;
+        margin-bottom: 50px; /* Margen inferior adaptado a móvil */
+    }
+
+    /* Evita que la tarjeta se haga gigante a lo ancho */
+    .torneo-card {
+        padding: 0; 
+        max-width: 340px; /* Ancho perfecto para celular: se ve estético y compacto */
+        margin: 0 auto;   /* Centra la tarjeta horizontalmente en la pantalla */
         width: 100%;
     }
 
-    .torneo-card {
-        padding: 0; /* Cambiado de '25px 20px' a '0' para que no rompa el diseño cuadrado superior */
+    /* Reduce el título para que encaje proporcionalmente */
+    .torneo-card h3 {
+        font-size: 1.4rem !important; /* Ajustado para el nuevo ancho de la tarjeta */
     }
 
-    .torneo-card h3 {
-        font-size: 1.5rem;
+    /* El texto del badge que querías más chico y con menos margen */
+    .live-badge {
+        font-size: 0.65rem !important;
+        margin: 0 auto 6px auto !important; /* Mantiene el centrado pero reduce el espacio de abajo */
+        padding: 3px 10px !important;       /* Ajusta un poco el grosor del badge */
+    }
+
+    /* Ajuste extra opcional para que los botones no se sientan tan toscos en móvil */
+    .btn-ver-torneo {
+        padding: 12px;
+        font-size: 0.85rem;
     }
     
     .reglamento-content-box {

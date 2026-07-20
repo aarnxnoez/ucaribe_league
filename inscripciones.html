@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style_i.css">
     <link rel="stylesheet" href="global.css">
 </head>
-<body>
+<body class="page-enter">
 
     <header class="navbar">
         <div class="logo">
@@ -67,32 +67,32 @@
                 <h3 class="form-section-title">👤 Datos del Capitán</h3>
                 
                 <div class="form-group">
-                    <label for="nombre-capitan">Nombre Completo del Capitán</label>
+                    <label for="nombre-capitan">Nombre Completo del Capitán *</label>
                     <input type="text" id="nombre-capitan" name="nombre_capitan" placeholder="Nombre completo" required>
                 </div>
 
                 <div class="form-group">
-                    <label>Ocupación en la Universidad</label>
+                    <label>Ocupación en la Universidad *</label>
                     <div class="radio-group">
                         <label class="radio-label">
                             <input type="radio" name="ocupacion" value="estudiante" required> Estudiante
                         </label>
                         <label class="radio-label">
-                            <input type="radio" name="ocupacion" value="egresado"> Egresado
+                            <input type="radio" name="ocupacion" value="egresado" required> Egresado
                         </label>
                         <label class="radio-label">
-                            <input type="radio" name="ocupacion" value="administrativo"> Administrativo
+                            <input type="radio" name="ocupacion" value="administrativo" required> Administrativo
                         </label>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="correo">Correo Electrónico</label>
+                        <label for="correo">Correo Electrónico *</label>
                         <input type="email" id="correo" name="email" placeholder="correo@ucaribe.edu.mx" required>
                     </div>
                     <div class="form-group">
-                        <label for="telefono">Teléfono de Contacto</label>
+                        <label for="telefono">Teléfono de Contacto *</label>
                         <input type="tel" id="telefono" name="telefono" placeholder="9981234567" required>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
                 <h3 class="form-section-title team-title">🛡️ Datos del Equipo</h3>
 
                 <div class="form-group">
-                    <label for="disciplina">Torneo / Disciplina</label>
+                    <label for="disciplina">Torneo / Disciplina *</label>
                     <select id="disciplina" name="disciplina" required>
                         <option value="" disabled selected>Selecciona deporte</option>
                         <option value="futbol">Fútbol</option>
@@ -109,12 +109,12 @@
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="nombre-equipo">Nombre del Equipo</label>
+                        <label for="nombre-equipo">Nombre del Equipo *</label>
                         <input type="text" id="nombre-equipo" name="nombre_equipo" placeholder="Ej. Albañiles FC (no usar nombres altisonantes)" required>
                     </div>
                     <div class="form-group">
                         <label for="colores-equipo">Colores del Equipo</label>
-                        <input type="text" id="colores-equipo" name="colores_equipo" placeholder="Ej. Azul y Oro" required>
+                        <input type="text" id="colores-equipo" name="colores_equipo" placeholder="Ej. Azul y Oro">
                     </div>
                 </div>
 
@@ -143,49 +143,6 @@
         <p>Derechos reservados © Caribe Sports by Universidad del Caribe</p>
     </footer>
 
-    <script>
-        function startCountdown() {
-            // Formato estándar ISO (Año-Mes-Día) que VSC prefiere para evitar errores
-            const targetDate = new Date('2026-09-04T00:00:00').getTime();
-
-            const timerInterval = setInterval(function() {
-                const now = new Date().getTime();
-                const difference = targetDate - now;
-
-                // 1. Capturamos los elementos del HTML de forma segura
-                const daysEl = document.getElementById('days');
-                const hoursEl = document.getElementById('hours');
-                const minutesEl = document.getElementById('minutes');
-                const secondsEl = document.getElementById('seconds');
-                const timerContainer = document.querySelector('.countdown-timer');
-
-                // 2. Si el tiempo llega a cero, cambiamos el mensaje y detenemos el reloj
-                if (difference < 0) {
-                    clearInterval(timerInterval);
-                    if (timerContainer) {
-                        timerContainer.innerHTML = "<p class='closed-badge'>LAS INSCRIPCIONES HAN CERRADO</p>";
-                    }
-                    return; // Detiene la ejecución aquí para no seguir calculando números negativos
-                }
-
-                // 3. Cálculos matemáticos del tiempo restante
-                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-                // 4. Inyectamos los números usando 'innerText' y validando que existan (esto quita el error de VSC)
-                // Usamos padStart(2, '0') para que siempre se vea '09' en lugar de solo '9' de forma más limpia
-                if (daysEl) daysEl.innerText = String(days).padStart(2, '0');
-                if (hoursEl) hoursEl.innerText = String(hours).padStart(2, '0');
-                if (minutesEl) minutesEl.innerText = String(minutes).padStart(2, '0');
-                if (secondsEl) secondsEl.innerText = String(seconds).padStart(2, '0');
-
-            }, 1000);
-        }
-        
-        // Iniciar la función cuando cargue la página
-        window.onload = startCountdown;
-    </script>
+        <script src="inscripciones.js"></script>
 </body>
 </html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torneo - Ucaribe League</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../imagenes_ucaribe/logos_ucaribe/logo_ucaribe.png">
+    <link rel="stylesheet" href="style_tc2026.css">
+    <link rel="stylesheet" href="../global.css">
+</head>
+<body class="page-enter">
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="../imagenes_ucaribe/logos_ucaribe/logo_ucaribe.png" alt="Logo" class="logo-img">
+            UCARIBE<span>LEAGUE</span>
+        </div>
+        <nav class="nav-links">
+            <a href="../index.html">Inicio</a>
+            <a href="../torneos.html" onclick="volverTorneo()" id="nav-torneos" class="active">Torneos</a>
+            <a href="../inscripciones.html" id="nav-inscripcion">Inscripción</a>
+            <a href="../agentes.html" id="nav-agentes">Agentes Libres</a>
+            <a href="#" onclick="volverTorneo()" id="nav-volver" style="display: none; color: var(--brand-teal);">← Volver al Torneo</a>
+            <a href="https://wa.me/529982335568" target="_blank" class="phone-link">
+                +52 998 233 5568
+            </a>
+        </nav>
+    </header>
+
+    <div id="vista-principal-torneo">
+        
+        <section class="torneo-hero">
+            <div class="banner-campeon hidden">
+                🏆 ¡ESTELARES CAMPEÓN DEL TORNEO! 🏆
+            </div>
+            
+            <h1 class="torneo-titulo">Torneo <span>Clausura 2026</span></h1>
+
+                <div class="hero-media-grid">
+                    <div class="media-box-left">
+                    <iframe 
+                        width="100%" 
+                        height="100%" 
+                        src="https://www.youtube.com/embed/38wVpUpeRsM?si=ImQ8hSF8oNTb_Bgq" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                
+                <div class="media-box-right">
+                    <h3 class="escudos-title">Equipos Participantes</h3>
+                    <div class="escudos-grid">
+                        <div class="escudo-item clickable-team" onclick="mostrarEquipo('estelares')">
+                            <div class="escudo-img-box"><img src="../imagenes_ucaribe/logos_equipos/estelares.png" alt="Estelares" class="team-logo-img"></div>
+                            <span class="escudo-name">Estelares FC</span>
+                        </div>
+                        <div class="escudo-item clickable-team" onclick="mostrarEquipo('capuchas')">
+                            <div class="escudo-img-box"><img src="../imagenes_ucaribe/logos_equipos/capuchas_1.png" alt="Capuchas" class="team-logo-img"></div>
+                            <span class="escudo-name">Capuchas FC</span>
+                        </div>
+                        <div class="escudo-item clickable-team" onclick="mostrarEquipo('temozon')">
+                            <div class="escudo-img-box"><img src="../imagenes_ucaribe/logos_equipos/temozon_1.png" alt="Atlético Temozón" class="team-logo-img"></div>
+                            <span class="escudo-name">Atlético Temozón</span>
+                        </div>
+                        <div class="escudo-item clickable-team" onclick="mostrarEquipo('inges')">
+                            <div class="escudo-img-box"><img src="../imagenes_ucaribe/logos_equipos/inges.png" alt="Inges FC" class="team-logo-img"></div>
+                            <span class="escudo-name">Inges FC</span>
+                        </div>
+                        <div class="escudo-item clickable-team" onclick="mostrarEquipo('corinthians')">
+                            <div class="escudo-img-box"><img src="../imagenes_ucaribe/logos_equipos/corinthians.png" alt="Corinthians FC" class="team-logo-img"></div>
+                            <span class="escudo-name">Corinthians FC</span>
+                        </div>
+                        <div class="escudo-item clickable-team" onclick="mostrarEquipo('turismologos')">
+                            <div class="escudo-img-box"><img src="../imagenes_ucaribe/logos_equipos/turismologos.png" alt="Turismólogos FC" class="team-logo-img"></div>
+                            <span class="escudo-name">Turismólogos FC</span>
+                        </div>
+                        <div class="escudo-item clickable-team" onclick="mostrarEquipo('dragones')">
+                            <div class="escudo-img-box"><img src="../imagenes_ucaribe/logos_equipos/dragones_1.png" alt="Dragones FC" class="team-logo-img"></div>
+                            <span class="escudo-name">Dragones FC</span>
+                        </div>
+                        <div class="escudo-item clickable-team" onclick="mostrarEquipo('crystal')">
+                            <div class="escudo-img-box"><img src="../imagenes_ucaribe/logos_equipos/crystal.png" alt="FC Crystal" class="team-logo-img"></div>
+                            <span class="escudo-name">FC Crystal</span>
+                        </div>
+                        <div class="escudo-item clickable-team" onclick="mostrarEquipo('sat')">
+                            <div class="escudo-img-box"><img src="../imagenes_ucaribe/logos_equipos/sat.png" alt="SAT Football Club" class="team-logo-img"></div>
+                            <span class="escudo-name">SAT Football Club</span>
+                        </div>
+                        <div class="escudo-item clickable-team" onclick="mostrarEquipo('caguama')">
+                            <div class="escudo-img-box"><img src="../imagenes_ucaribe/logos_equipos/caguama.png" alt="Real Caguama" class="team-logo-img"></div>
+                            <span class="escudo-name">Real Caguama</span>
+                        </div>
+                        <div class="escudo-item clickable-team" onclick="mostrarEquipo('fosiles')">
+                            <div class="escudo-img-box"><img src="../imagenes_ucaribe/logos_equipos/fosiles.png" alt="Fósiles FC" class="team-logo-img"></div>
+                            <span class="escudo-name">Fósiles FC</span>
+                        </div>
+                        <div class="escudo-item clickable-team" onclick="mostrarEquipo('galacticos')">
+                            <div class="escudo-img-box"><img src="../imagenes_ucaribe/logos_equipos/galacticos_1.png" alt="Galácticos" class="team-logo-img"></div>
+                            <span class="escudo-name">Galácticos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <main class="torneo-content-wrapper">
+            
+            <nav class="tab-navigation">
+                <button class="tab-btn active" onclick="openTab(event, 'tab-clasificaciones')">Clasificaciones</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab-partidos')">Partidos</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab-eliminatorias')">Eliminatorias</button>
+            </nav>
+
+            <section id="tab-clasificaciones" class="tab-content active-content">
+                <div class="table-wrapper">
+                    <div class="table-header-flex">
+                        <h2 class="table-section-title">🏆 Tabla General</h2>
+                        <span class="table-info-badge">Fase de Liga</span>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="torneo-table">
+                            <thead>
+                                <tr>
+                                    <th>POS</th>
+                                    <th class="text-left">EQUIPO</th>
+                                    <th>PJ</th>
+                                    <th>G</th>
+                                    <th>E</th>
+                                    <th>P</th>
+                                    <th>GF</th>
+                                    <th>GC</th>
+                                    <th>DIF</th>
+                                    <th>PTS</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-general-body"></tbody>
+                        </table>
+                    </div>
+                    <div class="table-legend">
+                        <span class="legend-item"><span class="color-box zona-verde"></span> Clasifica a Liguilla</span>
+                    </div>
+                </div>
+
+                <div class="stats-nav-buttons">
+                    <button class="tab-btn" onclick="cambiarVistaEspecial('goleo')">Ver Goleo</button>
+                    <button class="tab-btn" onclick="cambiarVistaEspecial('porteros')">Ver Porteros</button>
+                </div>
+            </section>
+
+            <section id="tab-partidos" class="tab-content">
+                <div class="tab-header-flex">
+                    <h2 class="tab-title">📅 Calendario y Resultados</h2>
+                </div>
+                <div id="calendario-container"></div>
+            </section>
+
+            <section id="tab-eliminatorias" class="tab-content">
+                <h2 class="tab-title">🏆 Fase Final (Liguilla)</h2>
+                <div class="bracket-container ucl-bracket-container" id="eliminatorias-container"></div>
+            </section>
+        </main>
+    </div>
+    
+
+    <div id="vista-equipo" style="display: none;">
+        <main class="team-profile-container">
+            <section class="team-header">
+                <img id="logo-equipo-dinamico" src="" alt="escudo_equipo" class="team-hero-logo-img">
+                <h1 id="titulo-equipo-dinamico"></h1>
+                <p class="team-sub">Liga Clausura 2026</p>
+            </section>
+
+            <section class="roster-section">
+                <h2 class="section-title">Plantilla de Jugadores</h2>
+                <div id="contenedor-plantilla-dinamica" class="players-grid-roster"></div>
+            </section>
+
+            <section class="team-history">
+                <h2 class="section-title">Historial de Partidos</h2>
+                <div class="table-wrapper">
+                    <div class="table-responsive">
+                        <table class="torneo-table">
+                            <thead>
+                                <tr>
+                                    <th>Jornada</th>
+                                    <th>Fecha</th>
+                                    <th>Local</th>
+                                    <th>Marcador</th>
+                                    <th>Visitante</th>
+                                    <th>Resultado</th>
+                                </tr>
+                            </thead>
+                            <tbody id="contenedor-historial-dinamico"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <section id="vista-goleo" class="stats-view" style="display:none; margin-top: 140px; max-width: 1300px; margin-left: auto; margin-right: auto; padding: 0 5%; margin-bottom: 60px;">
+        <h2 class="section-title">⚽ Tabla de Goleo</h2>
+        <div id="contenedor-goleo"></div>
+    </section>
+
+    <section id="vista-porteros" class="stats-view" style="display:none; margin-top: 140px; max-width: 1300px; margin-left: auto; margin-right: auto; padding: 0 5%; margin-bottom: 60px;">
+        <h2 class="section-title">🧤 Registro de Porteros</h2>
+        <p class="stats-legend">La efectividad del portero se calcula según los goles que recibe por partido, comparándolo con el portero más goleado del torneo. Entre menos goles reciba, mayor será su porcentaje de efectividad. Entre más partidos juegue, mayor será su probabilidad de ganar el guante de oro.</p>
+        <div id="contenedor-porteros"></div>
+    </section>
+
+    <footer class="footer-section">
+        <p>Derechos reservados © Caribe Sports by Universidad del Caribe</p>
+    </footer>
+
+    <div id="modal-partido" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal" onclick="cerrarModal()">&times;</span>
+            <h3 id="modal-titulo" style="color: var(--brand-teal); margin-bottom: 15px;"></h3>
+            <div id="modal-cuerpo"></div>
+        </div>
+    </div>
+    
+    <script src="torneo_clausura2026.js"></script>
+</body>
+</html>

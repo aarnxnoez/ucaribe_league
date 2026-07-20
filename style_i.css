@@ -1,116 +1,4 @@
 /* ==========================================================================
-   RESET GENERAL Y BASE (IDÉNTICO A TU BASE DE REFERENCIA DE ORO)
-   ========================================================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-:root {
-    --base-bg: #0a0a0c;          /* Negro profundo absoluto */
-    --card-bg: #121216;          /* Gris oscuro/negro para contenedores y tarjetas */
-    --brand-teal: #4dae9a;       /* Tu color de resaltado exacto para textos y acentos */
-    --brand-teal-hover: #3d8f7e;  /* Variación más oscura para efectos hover */
-    --text-white: #ffffff;       /* Blanco puro para títulos principales */
-    --text-secondary: #94a3b8;   /* Gris suave limpio para párrafos descriptivos */
-}
-
-body {
-    background-color: var(--base-bg);
-    color: var(--text-white);
-    font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
-}
-
-/* ==========================================================================
-   1. HEADER NAVBAR (MEDIDAS ORIGINALES RESPETADAS AL 100%)
-   ========================================================================== */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-    background-color: rgba(10, 10, 12, 0.95);
-    backdrop-filter: blur(12px);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(77, 174, 154, 0.15);
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'Outfit', sans-serif;
-    font-size: 2.6rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-}
-
-.logo span {
-    color: var(--brand-teal);
-}
-
-.logo-img {
-    height: 40px;
-    width: auto;
-    object-fit: contain;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-}
-
-.nav-links a {
-    color: var(--text-white);
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: 500;
-    font-size: 1.1rem; 
-    position: relative;
-    padding: 5px 0;
-    transition: color 0.3s ease;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 3px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--brand-teal);
-    transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after, .nav-links a.active::after {
-    width: 100%;
-}
-
-.nav-links a:hover, .nav-links a.active {
-    color: var(--brand-teal);
-}
-
-.phone-link {
-    border: 1px solid var(--brand-teal);
-    color: var(--brand-teal) !important;
-    padding: 8px 16px;
-    border-radius: 4px;
-    margin-left: 10px !important;
-}
-
-.phone-link:hover {
-    background-color: var(--brand-teal);
-    color: var(--base-bg) !important;
-}
-
-/* ==========================================================================
    2. DISTRIBUCIÓN DEL CUERPO (DOS COLUMNAS: FORMULARIO + FOTO DERECHA)
    ========================================================================== */
 .inscripcion-container {
@@ -424,92 +312,33 @@ body {
 }
 
 /* ==========================================================================
-   3. FOOTER
-   ========================================================================== */
-.footer-section {
-    padding: 40px 6%;
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.03);
-    background-color: var(--base-bg);
-}
-
-.footer-section p {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-}
-
-/* ==========================================================================
-   4. RESPONSIVIDAD INTEGRAL Y AJUSTES DE COLAPSO (CORREGIDO)
+   3. RESPONSIVIDAD INTEGRAL Y AJUSTES DE COLAPSO (CORREGIDO)
    ========================================================================== */
 
-@media (max-width: 1100px) {
-    .inscripcion-container {
-        grid-template-columns: 1fr; /* Cambia a una sola columna */
-    }
-    /* 1. CENTRADO PERFECTO EN TABLET */
-    .inscripcion-content-side {
-        text-align: center; /* Centra el título y subtítulo */
-    }
-    .inscripcion-header p {
-        margin: 0 auto; /* Centra el párrafo */
-    }
-    .inscripcion-form {
-        width: 100%;
-        max-width: 600px;
-        margin: 0 auto; /* Centra el bloque del formulario */
-        text-align: left; /* Mantiene los inputs alineados a la izquierda */
-    }
-
-    /* 2. IMAGEN A LA PAR DEL FORMULARIO Y COMPLETA */
-    .inscripcion-image-side {
-        width: 100%;
-        max-width: 600px; /* Obliga a la imagen a ser exactamente del mismo ancho que el formulario */
-        margin: 40px auto 0 auto; /* Centra el bloque de la imagen */
-        height: 500px; /* Fija una altura estéticamente agradable */
-        background-color: rgba(10, 10, 12, 0.4); /* Fondo sutil si la imagen es transparente */
-        border: 1px solid rgba(77, 174, 154, 0.15); /* Marco ligero para combinar */
-    }
-    
-    .side-photo {
-        object-fit: contain; /* Muestra al personaje entero de pies a cabeza sin recortar */
-        object-position: center top; /* Lo pega hacia arriba para que el texto de abajo no lo tape */
-        padding-bottom: 0; 
-    }
-
-    .inscripcion-header h1 {
-        font-size: 3.5rem;
-    }
-}
-
-@media (max-width: 1024px) {
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 2%;
-    }
-    .countdown-container {
-        margin-top: 180px; 
-    }
-    .inscripcion-container {
-        padding-top: 40px; 
-    }
-}
-
+/* RESPONSIVE DESIGN — SOLO MÓVIL */
 @media (max-width: 768px) {
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-    }
-    .nav-links a {
-        margin: 0 6px;
-        font-size: 0.85rem;
+    .inscripcion-container {
+        grid-template-columns: 1fr;
+        padding-top: 40px;
     }
     .inscripcion-content-side {
-        padding: 40px 0; /* Remueve el padding lateral excesivo en móviles */
+        text-align: center;
+        padding: 0;
     }
     .inscripcion-header h1 {
         font-size: 2.4rem;
+    }
+    .inscripcion-header p {
+        margin: 0 auto;
+    }
+    .inscripcion-form {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: left;
+    }
+    .countdown-container {
+        margin-top: 190px;
     }
     .countdown-timer {
         gap: 10px;
@@ -522,12 +351,18 @@ body {
         font-size: 1.8rem;
     }
     .form-row {
-        grid-template-columns: 1fr; /* Apila en móvil */
+        grid-template-columns: 1fr;
         gap: 20px;
     }
-    
-    /* ALTURA PROPORCIONAL PARA CELULARES */
     .inscripcion-image-side {
-        height: 400px; /* Ligeramente más bajo para que no ocupe todo el alto del móvil */
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        background-color: rgba(10, 10, 12, 0.4);
+        border: 1px solid rgba(77, 174, 154, 0.15);
+    }
+    .side-photo {
+        object-fit: contain;
+        object-position: center top;
     }
 }

@@ -12,6 +12,12 @@
     scroll-behavior: smooth; 
 }
 
+html, body {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+}
+
 :root {
     --base-bg: #0a0a0c;
     --card-bg: #121216;
@@ -32,6 +38,25 @@ body {
     color: var(--text-white); 
     font-family: 'Inter', sans-serif; 
     overflow-x: hidden; 
+    overflow-y: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes pageFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body.page-enter {
+    animation: pageFadeInUp 0.75s ease-out both;
 }
 
 /* ==========================================================================
@@ -129,27 +154,56 @@ body {
     background-color: var(--brand-teal);
     color: var(--base-bg) !important; /* Texto negro al pasar el cursor */
 }
+/* ========
+ESTILOS VARIOS
+===== */
+
+.escudo-item { display: flex; flex-direction: column; align-items: center; gap: 5px; }
+.escudo-name { font-size: 0.7rem; color: var(--text-secondary); text-align: center; font-weight: 600; }
 
 /* ==========================================================================
    3. FOOTER COMPARTIDO (PC Y MÓVIL)
    ========================================================================== */
 .footer-section {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
     padding: 40px 6%;
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.03);
     background-color: var(--base-bg);
-    margin-top: 8px;
+    margin: 40px 0 0 0;
+    margin-top: auto;
+    clear: both;
+    box-sizing: border-box;
+    position: relative;
+    left: 0;
+    right: 0;
 }
 
 .footer-section p {
     color: var(--text-secondary);
     font-size: 0.9rem;
+    margin: 0;
 }
 
 /* ==========================================================================
    4. ADAPTACIÓN MÁXIMA PARA CELULARES (CABECERA Y GLOBAL)
    ========================================================================== */
 @media (max-width: 768px) {
+    html, body {
+        height: auto;
+        min-height: 100%;
+        overflow-y: auto;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        position: static;
+    }
+
     /* Logo arriba, conservando el padding original */
     .navbar {
         flex-direction: column;
@@ -184,5 +238,45 @@ body {
         display: block;
         width: fit-content;
         margin: 5px auto 0 auto !important;
+    }
+
+    .footer-section {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative !important;
+        z-index: 5;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        padding: 44px 18px !important;
+        box-sizing: border-box !important;
+        border-top: 1px solid rgba(148, 163, 184, 0.16);
+    }
+
+    .footer-section p {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        line-height: 1.5;
+    }
+
+    /* Mobile-only fixes: remove unnecessary bottom blocks and backgrounds above footer */
+    .torneo-content-wrapper {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        background: transparent !important;
+    }
+
+    .table-wrapper {
+        margin-bottom: 12px !important;
+        background: transparent !important;
+    }
+
+    /* Ensure no unexpected full-width colored bars appear near the page bottom */
+    .stats-view, .modal-overlay, .placeholder-bottom-block, .content-wrapper, .page-section {
+        background: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
     }
 }
