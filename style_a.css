@@ -1,19 +1,15 @@
-/* ==========================================================================
-   2. CONTENEDOR MAESTRO (MÁRGENES DE CONTROL DE PANTALLA)
-   ========================================================================== */
+
 .main-wrapper {
     max-width: 1200px;
-    margin: 140px auto 60px auto; /* Compensa la altura fija del menú superior */
+    margin: 140px auto 60px auto;
     padding: 0 4%;
 }
 
-/* ==========================================================================
-   3. SECCIÓN DEL FORMULARIO PREMIUM
-   ========================================================================== */
+
 .form-section {
     width: 100%;
-    max-width: 750px; /* Un poco más espacioso debido al selector de posiciones */
-    margin: 0 auto 80px auto; /* Centrado absoluto */
+    max-width: 750px;
+    margin: 0 auto 80px auto;
 }
 
 .section-header {
@@ -53,7 +49,7 @@
     line-height: 1.6;
 }
 
-/* LOGICA DE CAMPOS */
+
 .agentes-form {
     display: flex;
     flex-direction: column;
@@ -113,7 +109,7 @@
     margin-top: 20px;
 }
 
-/* CHECKBOXES DE DEPORTE */
+
 .sport-checkbox-group {
     display: flex;
     gap: 30px;
@@ -136,20 +132,20 @@
     cursor: pointer;
 }
 
-/* SELECTOR MULTIPLE DE POSICIONES INTERACTIVO */
+
 .positions-selector-box {
     background-color: var(--card-bg);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 6px;
     padding: 15px;
     max-height: 280px;
-    overflow-y: auto; /* Hace que tenga scroll vertical si se desborda */
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 14px;
 }
 
-/* Estilo para la barra de scroll del selector */
+
 .positions-selector-box::-webkit-scrollbar {
     width: 6px;
 }
@@ -202,7 +198,7 @@
     padding-top: 12px;
 }
 
-/* BOTÓN DE SUBIR ARCHIVOS */
+
 .file-input {
     background-color: rgba(255, 255, 255, 0.01) !important;
     padding: 10px !important;
@@ -229,7 +225,7 @@
     margin-top: -6px;
 }
 
-/* BOTÓN REGISTRO */
+
 .btn-submit-form {
     background-color: var(--brand-teal);
     color: var(--base-bg);
@@ -251,9 +247,7 @@
     transform: translateY(-2px);
 }
 
-/* ==========================================================================
-   4. SECCIÓN GRID DE TARJETAS DE JUGADORES (2 COLUMNAS)
-   ========================================================================== */
+
 .players-section {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     padding-top: 60px;
@@ -303,14 +297,14 @@
     color: rgba(255, 255, 255, 0.1);
 }
 
-/* ESTRUCTURA DEL GRID */
+
 .players-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Exactamente 2 columnas */
+    grid-template-columns: 1fr 1fr;
     gap: 25px;
 }
 
-/* DISEÑO DE LA TARJETA (FOTO IZQUIERDA, DATOS DERECHA) */
+
 .player-card {
     background-color: var(--card-bg);
     border: 1px solid rgba(255, 255, 255, 0.16);
@@ -323,9 +317,9 @@
     height: 100%;
 }
 
-/* Lado izquierdo de la tarjeta: Foto Cuadrada */
+
 .card-left {
-    width: 160px; /* Ancho fijo para garantizar consistencia */
+    width: 160px;
     min-width: 160px;
     aspect-ratio: 1 / 1;
     flex-shrink: 0;
@@ -341,7 +335,7 @@
     border-bottom-left-radius: 14px;
 }
 
-/* Lado derecho de la tarjeta: Información */
+
 .card-right {
     padding: 20px;
     display: flex;
@@ -424,14 +418,12 @@
     color: #fff;
 }
 
-/* ==========================================================================
-   5. RESPONSIVIDAD INTEGRAL (COLAPSOS Y ADAPTACIÓN MOVIL)
-   ========================================================================== */
 
-/* RESPONSIVE DESIGN — SOLO MÓVIL */
+
+
 @media (max-width: 768px) {
     .main-wrapper {
-        margin-top: 190px;
+        margin-top: 12em !important;
     }
     .section-header h1 {
         font-size: 2.6rem;

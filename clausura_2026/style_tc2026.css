@@ -1,6 +1,4 @@
-/* ==========================================================================
-   3. HERO DEL TORNEO Y ESCUDOS
-   ========================================================================== */
+
 .torneo-hero { max-width: 1300px; margin: 120px auto 40px auto; padding: 0 5%; text-align: center; }
 
 .banner-campeon { 
@@ -9,7 +7,6 @@
     border-radius: 8px; font-family: 'Outfit', sans-serif; font-weight: 900; 
     font-size: 1.2rem; margin-bottom: 20px; letter-spacing: 2px; 
 }
-.banner-campeon.hidden { display: none; }
 
 .torneo-titulo { font-family: 'Outfit', sans-serif; font-size: 3.5rem; font-weight: 900; text-transform: uppercase; margin-bottom: 30px; }
 .torneo-titulo span { color: var(--brand-teal); }
@@ -21,7 +18,7 @@
 .escudos-title { font-size: 1.1rem; color: var(--brand-teal); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
 .escudos-grid { display: grid; grid-template-columns: repeat(4, minmax(70px, 1fr)); gap: 15px; justify-items: center; }
 
-/* CONFIGURACIÓN MÁSTER DE ESCUDOS */
+
 .team-logo-img {
     width: 40px;
     height: 40px;
@@ -56,9 +53,7 @@
     object-fit: contain;
 }
 
-/* ==========================================================================
-   4. SISTEMA DE PESTAÑAS (TABS)
-   ========================================================================== */
+
 .torneo-content-wrapper { max-width: 1300px; margin: 0 auto 60px auto; padding: 0 5%; }
 .tab-navigation { display: flex; justify-content: center; gap: 10px; background-color: var(--card-bg); padding: 10px; border-radius: 8px; border: 1px solid rgba(77, 174, 154, 0.15); margin-bottom: 40px; flex-wrap: wrap; }
 .tab-btn { background: transparent; border: none; color: var(--text-secondary); padding: 12px 24px; font-size: 1rem; font-weight: 600; font-family: 'Inter', sans-serif; border-radius: 6px; cursor: pointer; transition: all 0.3s ease; }
@@ -70,9 +65,7 @@
 
 .tab-title { font-family: 'Outfit', sans-serif; font-size: 2rem; color: var(--text-white); margin-bottom: 20px; border-bottom: 2px solid rgba(77, 174, 154, 0.2); padding-bottom: 10px; }
 
-/* ==========================================================================
-   5. TABLAS DE CLASIFICACIÓN
-   ========================================================================== */
+
 .table-wrapper { background-color: var(--card-bg); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 25px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); }
 .table-header-flex { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px; }
 .table-section-title { font-family: 'Outfit', sans-serif; font-size: 1.6rem; color: var(--text-white); margin-bottom: 0; }
@@ -87,11 +80,9 @@
 .torneo-table td { padding: 15px 10px; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.03); font-size: 0.95rem; color: var(--text-white); transition: background-color 0.2s ease; }
 .torneo-table tbody tr:hover td { background-color: rgba(255, 255, 255, 0.03); }
 
-/* ==========================================================================
-   ESTILOS EXCLUSIVOS PARA EL HISTORIAL (NO AFECTAN A LA TABLA GENERAL)
-   ========================================================================== */
 
-/* Esto solo cambiará a diseño vertical en la tabla que esté dentro de .team-history */
+
+
 .team-history .torneo-table td.team-cell {
     display: flex;
     flex-direction: column;
@@ -100,21 +91,21 @@
     padding: 8px;
     gap: 4px; 
     min-width: 120px;
-    color: var(--text-secondary); /* El nombre del equipo rival se vuelve gris */
+    color: var(--text-secondary);
 }
 
-/* El texto del equipo dentro del historial */
+
 .team-history .team-cell span {
     font-size: 0.85rem;
 }
 
-/* El equipo dueño del historial (strong) se mantiene blanco */
+
 .team-history .team-cell strong {
     color: var(--secondary);
     font-weight: 700;
 }
 
-/* El tamaño del marcador aumentado solo para el historial */
+
 .team-history .torneo-table td.pts-cell {
     font-size: 1.4rem; 
     font-weight: 800;
@@ -134,9 +125,7 @@
 .color-box { width: 12px; height: 12px; border-radius: 2px; }
 .zona-verde { background-color: var(--brand-teal); }
 
-/* ==========================================================================
-   6. PARTIDOS Y JORNADAS
-   ========================================================================== */
+
 .tab-header-flex { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; border-bottom: 2px solid rgba(77, 174, 154, 0.2); padding-bottom: 10px; }
 .tab-header-flex .tab-title { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 
@@ -182,7 +171,7 @@
 .text-right { text-align: right; }
 .text-left { text-align: left; }
 
-/* El contenedor padre DEBE ser flex para que el alto en porcentaje funcione en los hijos */
+
 .match-events {
     display: flex;
 }
@@ -190,26 +179,24 @@
 .event-divider { 
     width: 1px; 
     background-color: rgba(255, 255, 255, 0.1); 
-    height: auto; /* Cambiar a auto para que responda al contenedor */
-    align-self: stretch; /* Fuerza a la línea a estirarse de arriba a abajo */ 
+    height: auto;
+    align-self: stretch; 
 }
 
 .pending-notice { text-align: center; width: 100%; color: var(--text-secondary); font-size: 0.95rem; font-style: italic; }
 
-/* ==========================================================================
-   7. BRACKET DE ELIMINATORIAS (Líneas Inteligentes)
-   ========================================================================== */
+
 .ucl-bracket-container { 
     display: flex; 
     padding: 40px 20px 80px 20px; 
     overflow-x: auto; 
     overflow-y: visible !important; 
-    justify-content: center; /* ESTO ES LO QUE LO CENTRA */
+    justify-content: center;
     background-color: var(--card-bg); 
     border-radius: 12px; 
     border: 1px solid rgba(77, 174, 154, 0.15);
-    margin: 0 auto; /* Centra el bloque en el layout */
-    max-width: 1000px; /* Opcional: limita el ancho para que no se estire demasiado */
+    margin: 0 auto;
+    max-width: 1000px;
 }
 .ucl-bracket-container .round-column { min-width: 250px; margin-right: 50px; display: flex; flex-direction: column; overflow: visible !important; }
 .ucl-round-final { margin-right: 0 !important; }
@@ -241,42 +228,40 @@
 .bronze-match { border-left-color: #cd7f32; background: linear-gradient(135deg, rgba(205, 127, 50, 0.08), var(--base-bg)); }
 .bronze-match .match-label { color: #f0c27b; }
 
-/* DIBUJO DE LÍNEAS MÁGICAS - CORRECCIÓN MILIMÉTRICA DE INTERSECCIONES */
 
-/* Línea 1: Recortamos el ancho horizontal para que la cruz izquierda muera justo en el borde de la tarjeta */
+
+
 .ucl-round-semis .ucl-match-card::before, .ucl-round-final .ucl-match-card.champion-match::before { content: ""; position: absolute; width: 16px; height: 2px; left: -18px; top: calc(50% - 1px); background-color: var(--brand-teal); z-index: -1; }
 
-/* Línea 2: Recortamos la colita horizontal del 3er lugar */
+
 .ucl-round-final .ucl-match-card.bronze-match::before { content: ""; position: absolute; width: 16px; height: 2px; left: -18px; top: calc(50% - 1px); background-color: #cd7f32; z-index: -1; }
 
-/* Línea 3: Cuartos de final (Se mantiene intacto) */
+
 .ucl-round-cuartos .ucl-match-card:nth-child(odd)::after { content: ""; position: absolute; width: 22px; height: calc(100% + 20px); right: -18px; top: calc(50% - 1px); border-top: 2px solid var(--brand-teal); border-right: 2px solid var(--brand-teal); border-radius: 0 6px 0 0; box-sizing: border-box; z-index: -1; }
 
-/* Línea 4: ¡CRÍTICO! Reducimos el agregado de 104px a 94px para recortar esos píxeles de exceso que perforan la línea naranja inferior */
+
 .ucl-round-semis .ucl-match-card:nth-child(odd)::after { content: ""; position: absolute; width: 25px; height: calc(100% + 113px); right: -25px; top: calc(50% - 1px); border-top: 2px solid var(--brand-teal); border-right: 2px solid var(--brand-teal); border-radius: 0 6px 0 0; box-sizing: border-box; z-index: -1; }
 
-/* Línea 5: Líneas rectas horizontales (Se mantiene intacto) */
+
 .ucl-round-cuartos .ucl-match-card:nth-child(even)::after, .ucl-round-semis .ucl-match-card:nth-child(even)::after { content: ""; position: absolute; width: 25px; height: 2px; right: -18px; top: calc(50% - 1px); background-color: var(--brand-teal); z-index: -1; }
 
-/* Línea 6: ¡CRÍTICO! Quitamos 'top: 100%' que la hacía flotar y usamos 'top: calc(100% - 2px)' para que se pegue al fondo de la Final. Ajustamos el alto a 26px para que muera justo al tocar la tarjeta del 3er lugar sin encimarse en las letras */
+
 .ucl-round-final .ucl-match-card.champion-match::after { content: ""; position: absolute; width: 2px; height: 42px; left: calc(50% - 1px); top: calc(100% - 2px); background: linear-gradient(180deg, #ffd700, #cd7f32); z-index: -1; }
 
-/* Línea 7: Desactivación (Se mantiene intacto) */
+
 .ucl-round-final .ucl-match-card.bronze-match::after { display: none; }
 
 
-/* ==========================================================================
-   MODAL DE DETALLES - SOLUCIÓN DE SCROLL DINÁMICO
-   ========================================================================== */
+
 .modal-overlay { 
     display: none; 
-    position: absolute !important; /* Cambiado a absolute para respetar el top del JS */
+    position: absolute !important;
     top: 0; 
     left: 0; 
     width: 100% !important; 
-    height: 100vh !important;      /* Cubre exactamente la ventana del navegador */
+    height: 100vh !important;     
     background: rgba(0, 0, 0, 0.9); 
-    z-index: 999999 !important;    /* Capa máxima por encima de las llaves del bracket */
+    z-index: 999999 !important;   
     justify-content: center; 
     align-items: center; 
     backdrop-filter: blur(5px);
@@ -287,9 +272,9 @@
     padding: 25px; 
     border-radius: 16px; 
     width: 90%; 
-    max-width: 440px;              /* Un poco más ancho para las dos columnas de goles */
-    max-height: 85vh;              /* Evita que se salga en celulares */
-    overflow-y: auto;              /* Scroll interno por si hay muchos goles o tarjetas */
+    max-width: 440px;             
+    max-height: 85vh;             
+    overflow-y: auto;             
     border: 1px solid var(--brand-teal); 
     position: relative; 
     box-shadow: var(--shadow-glow);
@@ -309,15 +294,13 @@
     transform: scale(1.15);
 }
 
-/* Animación de entrada para que no aparezca de golpe */
+
 @keyframes modalPopUp {
     from { transform: scale(0.95); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
 }
 
-/* ==========================================================================
-   8. ESTILOS DE LA VISTA DEL EQUIPO (SPA)
-   ========================================================================== */
+
 .team-profile-container { max-width: 1200px; margin: 140px auto 60px auto; padding: 0 5%; }
 .team-header { text-align: center; margin-bottom: 50px; animation: fadeIn 0.4s ease; }
 .team-header h1 { font-family: 'Outfit', sans-serif; font-size: 3.5rem; color: var(--text-white); text-transform: uppercase; line-height: 1.1; }
@@ -326,7 +309,7 @@
 .section-title { font-family: 'Outfit', sans-serif; font-size: 2rem; color: var(--text-white); border-bottom: 2px solid rgba(77, 174, 154, 0.2); padding-bottom: 10px; margin-bottom: 30px; text-align: center; }
 .team-history { margin-top: 60px; }
 
-/* Tarjetas de Jugadores */
+
 .players-grid-roster { display: grid; grid-template-columns: repeat(4, 340px); justify-content: center; gap: 25px; animation: fadeIn 0.6s ease; }
 .player-card-pro { background-color: var(--card-bg); border: 1px solid rgba(77, 174, 154, 0.15); border-radius: 12px; display: flex; align-items: center; overflow: hidden; transition: transform 0.3s ease, border-color 0.3s ease; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
 .player-img-left { width: 140px; height: 140px; flex-shrink: 0; background-color: rgba(0, 0, 0, 0.3); }
@@ -341,9 +324,7 @@
 .res-empate { background-color: #f59e0b; } 
 .res-derrota { background-color: #ef4444; color: #fff; } 
 
-/* ==========================================================================
-   9. VISTAS DE ESTADÍSTICAS (GOLEO Y PORTEROS)
-   ========================================================================== */
+
 .stats-view { padding: 20px 0; animation: fadeIn 0.4s ease forwards; }
 .stats-legend { text-align: center; color: var(--text-secondary); font-size: 0.9rem; max-width: 800px; margin: 0 auto 30px auto; line-height: 1.5; }
 
@@ -352,14 +333,14 @@
 
 .players-grid-stats-goleo { 
     display: grid; 
-    grid-template-columns: repeat(5, 1fr); /* Fuerza 5 columnas exactas */
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px; 
     margin-top: 20px; 
 }
 
 .players-grid-stats-porteros { 
     display: grid; 
-    grid-template-columns: repeat(4, 1fr); /* Fuerza 4 columnas exactas */
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px; 
     margin-top: 20px; 
 }
@@ -373,10 +354,10 @@
 .stats-info-centered p { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px; }
 .badge-stats { display: inline-block; background: rgba(77, 174, 154, 0.15); color: var(--brand-teal); padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; }
 
-/* RESPONSIVE DESIGN — SOLO MÓVIL */
+
 @media (max-width: 768px) {
 
-    /* --- NAVBAR --- */
+   
     .navbar {
         flex-direction: column;
         align-items: center;
@@ -393,7 +374,7 @@
         margin: 0 6px;
         font-size: 0.85rem;
     }
-    /* El botón de volver se queda inline con los demás links */
+   
     #nav-volver {
         flex-basis: auto !important;
         margin-top: 0 !important;
@@ -405,7 +386,7 @@
         margin: 5px auto 0 auto !important;
     }
 
-    /* --- HERO DEL TORNEO --- */
+   
     .torneo-hero {
         margin-top: 170px;
     }
@@ -426,7 +407,7 @@
         grid-template-columns: repeat(3, minmax(70px, 1fr)) !important;
     }
 
-    /* --- TABS --- */
+   
     .tab-navigation {
         flex-direction: column;
     }
@@ -443,18 +424,16 @@
         padding: 20px 10px !important;  
     }
 
-    /* ==========================================================================
-    ESTILOS EXCLUSIVOS PARA TU @MEDIA MÓVIL
-    ========================================================================== */
+   
 
-    /* 1. Ajustamos el contenedor del partido para que no se apriete */
+   
     .match-teams {
         gap: 10px !important;
         justify-content: space-between !important;
         width: 100% !important;
     }
 
-    /* 2. Forzamos la alineación vertical (Escudo arriba, Nombre abajo) SOLO en tarjetas de partidos */
+   
     .match-teams .team-info {
         display: flex !important;
         flex-direction: column !important; 
@@ -465,7 +444,7 @@
         gap: 8px !important;               
     }
 
-    /* Local en celular: Flujo natural hacia abajo (Escudo arriba, Nombre abajo) */
+   
     .match-teams .home-team {
         display: flex !important;
         flex-direction: column !important; 
@@ -475,39 +454,39 @@
         gap: 8px !important;
     }
 
-    /* Visitante en celular: Invierte el HTML para que el escudo suba a la parte superior */
+   
     .match-teams .away-team {
         display: flex !important;
-        flex-direction: column-reverse !important; /* Fuerza al escudo a quedar arriba */
+        flex-direction: column-reverse !important;
         align-items: center !important;
         justify-content: center !important;
         width: 32% !important;
         gap: 8px !important;
     }
 
-    /* 4. Reducimos el tamaño de la tipografía para que no se rompa en dos renglones */
+   
     .team-name {
-        font-size: 0.85rem !important;     /* Tamaño ideal para pantallas de celular */
+        font-size: 0.85rem !important;    
         font-weight: 600 !important;
-        white-space: normal !important;    /* Permite quiebre limpio si el nombre es largo */
+        white-space: normal !important;   
         word-break: break-word !important; 
         color: var(--text-white) !important;
     }
 
-    /* 5. Aseguramos el tamaño de los escudos SOLO en las tarjetas de partidos */
+   
     .match-teams .team-logo-img {
-        width: 40px !important;            /* 👈 Ahora solo afecta a la jornada */
+        width: 40px !important;           
         height: 40px !important;
         object-fit: contain !important;    
     }
 
-    /* 6. Compactamos ligeramente la caja del marcador central */
+   
     .match-score-box {
         min-width: 75px !important;
         padding: 6px 10px !important;
     }
 
-    /* --- BRACKET: scrollable horizontal, nunca se corta --- */
+   
     .ucl-bracket-container {
         justify-content: flex-start;
         -webkit-overflow-scrolling: touch;
@@ -535,7 +514,7 @@
         right: -15px;
     }
 
-    /* --- VISTA EQUIPO: plantilla en 2 columnas verticales --- */
+   
     .team-profile-container {
         margin-top: 170px;
     }
@@ -554,7 +533,7 @@
         aspect-ratio: 1 / 1;
     }
 
-    /* --- GOLEO Y PORTEROS: líder grande arriba, 2 columnas abajo --- */
+   
     .players-grid-stats-goleo,
     .players-grid-stats-porteros {
         grid-template-columns: repeat(2, 1fr);

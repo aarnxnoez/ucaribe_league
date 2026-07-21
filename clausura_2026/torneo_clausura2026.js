@@ -31,11 +31,11 @@ function mostrarEquipo(idEquipo) {
 
     window.scrollTo(0, 0);
 
-    // BASE DE DATOS MAPEADA POR UN "ID" INDEPENDIENTE
+    
     const baseDatosEquipos = {
         'estelares': {
-            nombreReal: 'Estelares FC', // Nombre estético e independiente para el título
-            logo: 'estelares.png',       // Archivo físico de la imagen
+            nombreReal: 'Estelares FC', 
+            logo: 'estelares.png',       
             plantilla: [
                 { nombre: 'Tomas Estrada', rol: 'CAPITÁN', foto: 'te.png' },
                 { nombre: 'Adrián Paxtián', rol: 'PORTERO', foto: 'ap.png' },
@@ -98,8 +98,8 @@ function mostrarEquipo(idEquipo) {
             ]
         },
         'temozon': {
-            nombreReal: 'Atlético Temozón', // Nombre real que saldrá en la pantalla
-            logo: 'temozon_1.png',           // Tu foto física que se llama diferente
+            nombreReal: 'Atlético Temozón', 
+            logo: 'temozon_1.png',           
             plantilla: [
                 { nombre: 'Javier Hernández', rol: 'CAPITÁN', foto: 'ju.png' },
                 { nombre: 'Luis Guzmán', rol: 'PORTERO', foto: 'lg.png' },
@@ -131,8 +131,8 @@ function mostrarEquipo(idEquipo) {
             ]
         },
         'inges': {
-            nombreReal: 'Inges FC', // Nombre estético e independiente para el título
-            logo: 'inges.png',       // Archivo físico de la imagen
+            nombreReal: 'Inges FC', 
+            logo: 'inges.png',       
             plantilla: [
                 { nombre: 'Alexander Flores', rol: 'CAPITÁN', foto: 'af.png' },
                 { nombre: 'Raymundo Lara', rol: 'PORTERO', foto: 'jugador.png' },
@@ -162,8 +162,8 @@ function mostrarEquipo(idEquipo) {
             ]
         },
         'corinthians': {
-            nombreReal: 'Corinthians FC', // Nombre estético e independiente para el título
-            logo: 'corinthians.png',       // Archivo físico de la imagen
+            nombreReal: 'Corinthians FC', 
+            logo: 'corinthians.png',       
             plantilla: [
                 { nombre: 'Gabriel Rivadeneira', rol: 'CAPITÁN', foto: 'gr.png' },
                 { nombre: 'Oswald Grajales', rol: 'PORTERO', foto: 'og.png' },
@@ -194,8 +194,8 @@ function mostrarEquipo(idEquipo) {
             ]
         },
         'turismologos': {
-            nombreReal: 'Turismólogos FC', // Nombre estético e independiente para el título
-            logo: 'turismologos.png',       // Archivo físico de la imagen
+            nombreReal: 'Turismólogos FC', 
+            logo: 'turismologos.png',       
             plantilla: [
                 { nombre: 'Vicente Ramón', rol: 'CAPITÁN', foto: 'vr.png' },
                 { nombre: 'Dr. Oswaldo Gallegos', rol: 'PORTERO', foto: 'og.png' },
@@ -225,8 +225,8 @@ function mostrarEquipo(idEquipo) {
             ]
         },
         'dragones': {
-            nombreReal: 'Dragones FC', // Nombre estético e independiente para el título
-            logo: 'dragones_1.png',       // Archivo físico de la imagen
+            nombreReal: 'Dragones FC', 
+            logo: 'dragones_1.png',       
             plantilla: [
                 { nombre: 'Aarón Martínez', rol: 'CAPITÁN', foto: 'am.png' },
                 { nombre: 'Ian Cisneros', rol: 'PORTERO', foto: 'ic.png' },
@@ -257,8 +257,8 @@ function mostrarEquipo(idEquipo) {
             ]
         },
         'crystal': {
-            nombreReal: 'FC Crystal', // Nombre estético e independiente para el título
-            logo: 'crystal.png',       // Archivo físico de la imagen
+            nombreReal: 'FC Crystal', 
+            logo: 'crystal.png',       
             plantilla: [
                 { nombre: 'Rodrigo Almeyda', rol: 'CAPITÁN', foto: 'ra.png' },
                 { nombre: 'Alan Soto', rol: 'PORTERO', foto: 'as.png' },
@@ -292,8 +292,8 @@ function mostrarEquipo(idEquipo) {
             ]
         },
         'sat': {
-            nombreReal: 'SAT Football Club', // Nombre estético e independiente para el título
-            logo: 'sat.png',       // Archivo físico de la imagen
+            nombreReal: 'SAT Football Club', 
+            logo: 'sat.png',       
             plantilla: [
                 { nombre: 'Angel Ordoñez', rol: 'CAPITÁN', foto: 'ao.png' },
                 { nombre: 'Jorge Soberanes', rol: 'PORTERO', foto: 'js.png' },
@@ -323,8 +323,8 @@ function mostrarEquipo(idEquipo) {
             ]
         },
         'caguama': {
-            nombreReal: 'Real Caguama', // Nombre estético e independiente para el título
-            logo: 'caguama.png',       // Archivo físico de la imagen
+            nombreReal: 'Real Caguama', 
+            logo: 'caguama.png',       
             plantilla: [
                 { nombre: 'Cristian Valdés', rol: 'CAPITÁN', foto: 'cv.png' },
                 { nombre: 'Emmanuel Murillo', rol: 'PORTERO', foto: 'em.png' },
@@ -357,8 +357,8 @@ function mostrarEquipo(idEquipo) {
             ]
         },
         'fosiles': {
-            nombreReal: 'Fósiles FC', // Nombre estético e independiente para el título
-            logo: 'fosiles.png',       // Archivo físico de la imagen
+            nombreReal: 'Fósiles FC', 
+            logo: 'fosiles.png',       
             plantilla: [
                 { nombre: 'Emmanuel García', rol: 'CAPITÁN', foto: 'eg.png' },
                 { nombre: 'Manuel Álvarez', rol: 'PORTERO', foto: 'portero.png' },
@@ -388,8 +388,8 @@ function mostrarEquipo(idEquipo) {
             ]
         },
         'galacticos': {
-            nombreReal: 'Galacticos', // Nombre estético e independiente para el título
-            logo: 'galacticos_1.png',       // Archivo físico de la imagen
+            nombreReal: 'Galacticos', 
+            logo: 'galacticos_1.png',       
             plantilla: [
                 { nombre: 'José Lujan',  rol: 'CAPITÁN', foto: 'jl.png' },
                 { nombre: 'Marco Hoil', rol: 'PORTERO', foto: 'portero.png' },
@@ -422,10 +422,10 @@ function mostrarEquipo(idEquipo) {
         }
     };
 
-    // Buscamos los datos usando el ID del onclick (ej: 'temozon')
+    
     let equipo = baseDatosEquipos[idEquipo];
 
-    // Fallback por si el ID no existe en la base de datos
+    
     if (!equipo) {
         equipo = { 
             nombreReal: idEquipo, 
@@ -435,22 +435,22 @@ function mostrarEquipo(idEquipo) {
         };
     }
 
-    // 1. Ahora el título toma el 'nombreReal' guardado, NO el ID del onclick
+    
     document.getElementById('titulo-equipo-dinamico').innerText = equipo.nombreReal;
     
-    // 2. La imagen toma el archivo exacto de la propiedad logo
+    
     document.getElementById('logo-equipo-dinamico').src = '../imagenes_ucaribe/logos_equipos/' + equipo.logo;
 
-    // --- Renderizado de Plantilla ---
+    
     let htmlPlantilla = '';
     if (equipo.plantilla.length === 0) {
         htmlPlantilla = '<p style="color:var(--text-secondary); grid-column: 1/-1; text-align:center;">No hay jugadores registrados aún.</p>';
     } 
     else {
         equipo.plantilla.forEach(jugador => {
-            // CONSTRUCCIÓN DINÁMICA DE LA RUTA:
-            // Si estás parado en la carpeta 'js' o similar, usamos '../' para ir al root, 
-            // luego entramos a clausura2026/plantillas/, usamos el idEquipo (ej: 'galacticos') y la foto del jugador.
+            
+            
+            
             const rutaFotoReal = `../imagenes_ucaribe/plantillas/${idEquipo}/${jugador.foto}`;
 
             htmlPlantilla += `
@@ -467,14 +467,14 @@ function mostrarEquipo(idEquipo) {
     }
     document.getElementById('contenedor-plantilla-dinamica').innerHTML = htmlPlantilla;
 
-    // --- Renderizado de Historial ---
+    
     let htmlHistorial = '';
     if (equipo.historial.length === 0) {
         htmlHistorial = '<tr><td colspan="6" style="color:var(--text-secondary); text-align:center; padding: 20px;">No hay partidos registrados en el historial.</td></tr>';
     } 
     else {
         equipo.historial.forEach(partido => {
-            // Evaluamos contra equipo.nombreReal para que resalte correctamente las negritas
+            
             const htmlLocal = partido.local === equipo.nombreReal ? `<strong>${partido.local}</strong>` : partido.local;
             const htmlVisitante = partido.visitante === equipo.nombreReal ? `<strong>${partido.visitante}</strong>` : partido.visitante;
             const colorRojo = partido.claseRes === 'res-derrota' ? "style='color: #ef4444;'" : '';
@@ -688,7 +688,7 @@ function renderGoleo() {
 
     const lider = goleadores[0];
     
-    // Si no hay foto, usamos 'jugador.png' dentro de la carpeta de su propio equipo
+    
     const archivoFotoLider = !lider.foto || lider.foto.trim() === "" ? "jugador.png" : lider.foto;
     const rutaLider = `../imagenes_ucaribe/plantillas/${lider.carpetaEquipo}/${archivoFotoLider}`;
 
@@ -714,7 +714,7 @@ function renderGoleo() {
         if (index === 0) { colorMedalla = 'color: #c0c0c0; border-color: #c0c0c0;'; }
         else if (index === 1) { colorMedalla = 'color: #cd7f32; border-color: #cd7f32;'; }
 
-        // Si no hay foto, usamos 'jugador.png' dentro de la carpeta de su propio equipo
+        
         const archivoFotoJugador = !jugador.foto || jugador.foto.trim() === "" ? "jugador.png" : jugador.foto;
         const rutaJugador = `../imagenes_ucaribe/plantillas/${jugador.carpetaEquipo}/${archivoFotoJugador}`;
         const golesTexto = !jugador.goles || jugador.goles.trim() === "" ? 'SIN GOLES' : `${jugador.goles} GOLES`;
@@ -742,7 +742,7 @@ function renderPorteros() {
     const container = document.getElementById('contenedor-porteros');
     if (!container) return;
 
-    // Aquí va tu lista de porteros con el nuevo formato estructurado
+    
     const porteros = [
         { nombre: 'Oswald Grajales', equipo: 'Corinthians FC', golesRecibidos: 22, partidos: 10, efectividad: '85.3%', carpetaEquipo: 'corinthians', foto: 'og.png' },
         { nombre: 'Emiliano Ortega', equipo: 'Capuchas FC', golesRecibidos: 27, partidos: 10, efectividad: '82%', carpetaEquipo: 'capuchas', foto: 'eo.png' },
@@ -773,7 +773,7 @@ function renderPorteros() {
 
     const liderPortero = porteros[0];
     
-    // Si no hay foto, usamos 'portero.png' dentro de la carpeta de su propio equipo
+    
     const archivoFotoLider = !liderPortero.foto || liderPortero.foto.trim() === "" ? "portero.png" : liderPortero.foto;
     const rutaLider = `../imagenes_ucaribe/plantillas/${liderPortero.carpetaEquipo}/${archivoFotoLider}`;
 
@@ -800,7 +800,7 @@ function renderPorteros() {
         if (index === 0) { colorMedalla = 'color: #c0c0c0; border-color: #c0c0c0;'; }
         else if (index === 1) { colorMedalla = 'color: #cd7f32; border-color: #cd7f32;'; }
 
-        // Si no hay foto, usamos 'portero.png' dentro de la carpeta de su propio equipo
+        
         const archivoFotoPortero = !portero.foto || portero.foto.trim() === "" ? "portero.png" : portero.foto;
         const rutaPortero = `../imagenes_ucaribe/plantillas/${portero.carpetaEquipo}/${archivoFotoPortero}`;
 
@@ -1298,10 +1298,10 @@ function renderEliminatorias() {
                     equipo2: 'FC Crystal',
                     marcador: '<small class="marcadores">Ida: Sin Información | Vuelta: Sin Información</small><br><strong>Global: 19-1</strong>',
                     
-                    // 📅 Cronograma Partido de Ida
+                    
                     fechaIda: 'Sin Información', horaIda: 'Sin Información',
                     
-                    // 📅 Cronograma Partido de Vuelta
+                    
                     fechaVuelta: 'Viernes 7 de Noviembre, 2025', horaVuelta: '18:00 hrs',
                     
                     golesIda: ["Carlos Mendoza (15') ⚽"], golesVuelta: [],
@@ -1312,10 +1312,10 @@ function renderEliminatorias() {
                     equipo1: 'Capuchas FC', equipo2: 'Dragones FC',
                     marcador: '<small class="marcadores">Ida: Sin Información | Vuelta: Sin Información</small><br><strong>Global: 9-5</strong>',
                     
-                    // 📅 Cronograma Partido de Ida
+                    
                     fechaIda: 'Sin Información', horaIda: 'Sin Información',
                     
-                    // 📅 Cronograma Partido de Vuelta
+                    
                     fechaVuelta: 'Viernes 7 de Noviembre, 2025', horaVuelta: '16:00 hrs',
                     
                     golesIda: [], golesVuelta: [],
@@ -1326,10 +1326,10 @@ function renderEliminatorias() {
                     equipo1: 'Atlético Temozón', equipo2: 'Turismólogos FC',
                     marcador: '<small class="marcadores">Ida: 1-3 | Vuelta: 8-2</small><br><strong>Global: 11-3</strong>',
                     
-                    // 📅 Cronograma Partido de Ida
+                    
                     fechaIda: 'Miércoles 5 de Noviembre, 2025', horaIda: '14:00 hrs',
                     
-                    // 📅 Cronograma Partido de Vuelta
+                    
                     fechaVuelta: 'Viernes 7 de Noviembre, 2025', horaVuelta: '17:00 hrs',
                     
                     golesIda: [], golesVuelta: [],
@@ -1341,11 +1341,11 @@ function renderEliminatorias() {
                     equipo2: 'Corinthians FC',
                     marcador: '<small class="marcadores">Ida: 1-2 gana Inges FC | Vuelta: 1-2 gana Corinthians FC</small><br><strong>Global: 3-3 (Pasa Inges FC por penales)</strong>',
                     
-                    // 📅 Cronograma de ambos partidos
-                    fechaIda: 'Sin Información', horaIda: 'Sin Información',
-                    fechaVuelta: 'Sin Información', horaVuelta: '19:00 hrs', // Al tener texto, se activa el modo Ida y Vuelta
                     
-                    // ⚽ Goles y tarjetas de la IDA
+                    fechaIda: 'Sin Información', horaIda: 'Sin Información',
+                    fechaVuelta: 'Sin Información', horaVuelta: '19:00 hrs', 
+                    
+                    
                     golesIda: [
                         { jugador: '⚽ Jorge Delgadillo', equipo: 'equipo2' },
                         { jugador: 'Israel Corona ⚽⚽', equipo: 'equipo1' }
@@ -1354,7 +1354,7 @@ function renderEliminatorias() {
                         { jugador: '', equipo: '' }
                     ],
                     
-                    // ⚽ Goles y tarjetas de la VUELTA
+                    
                     golesVuelta: [
                         { jugador: '⚽ José Colorado', equipo: 'equipo2' },
                         { jugador: 'Jorge Delgadillo ⚽⚽', equipo: 'equipo1' }
@@ -1374,10 +1374,10 @@ function renderEliminatorias() {
                     equipo1: 'Estelares FC', equipo2: 'Capuchas FC',
                     marcador: '<small class="marcadores">Ida: 2-3 | Vuelta: 2-7</small><br><strong>Global: 9-5</strong>',
                     
-                    // 📅 Cronograma Partido de Ida
+                    
                     fechaIda: 'Sin Información', horaIda: 'Sin Información',
                     
-                    // 📅 Cronograma Partido de Vuelta
+                    
                     fechaVuelta: 'Viernes 7 de Noviembre, 2025', horaVuelta: '18:00 hrs',
                     
                     golesIda: [], golesVuelta: [],
@@ -1388,10 +1388,10 @@ function renderEliminatorias() {
                     equipo1: 'Dragones FC', equipo2: 'Milan',
                     marcador: '<small class="marcadores">Ida: 3-4 | Vuelta: 7-2</small><br><strong>Global: 5-11</strong>',
                     
-                    // 📅 Cronograma Partido de Ida
+                    
                     fechaIda: 'Sin Información', horaIda: 'Sin Información',
                     
-                    // 📅 Cronograma Partido de Vuelta
+                    
                     fechaVuelta: 'Viernes 7 de Noviembre, 2025', horaVuelta: '18:00 hrs',
                     
                     golesIda: [], golesVuelta: ["Héctor Moreno (5') ⚽"],
@@ -1408,13 +1408,13 @@ function renderEliminatorias() {
                     equipo1: 'Estelares FC', equipo2: 'Milan',
                     marcador: '<strong>Resultado: Sin Información</strong><br><strong>🏆 ¡CAMPEÓN ESTELARES! </strong>',
                     
-                    // 📅 Cronograma del Partido Único (Se usa el bloque de Ida por arquitectura)
+                    
                     fechaIda: 'Viernes 21 de noviembre, 2025', horaIda: '16:00 hrs',
                     
-                    // ❌ Campos de Vuelta en null para que el script apague el segundo bloque
+                    
                     fechaVuelta: null, horaVuelta: null,
                     
-                    golesIda: [], golesVuelta: null, // null para que crearLista no pinte cajas vacías en el limbo
+                    golesIda: [], golesVuelta: null, 
                     tarjetasIda: [], tarjetasVuelta: null,
                     claseExtra: 'champion-match'
                 },
@@ -1422,13 +1422,13 @@ function renderEliminatorias() {
                     equipo1: 'Capuchas FC', equipo2: 'Dragones FC',
                     marcador: '<strong>Resultado: Sin Información</strong><br><strong>🥉 ¡3ER LUGAR CAPUCHAS! </strong>',
                     
-                    // 📅 Cronograma del Partido Único (Se usa el bloque de Ida por arquitectura)
+                    
                     fechaIda: 'Viernes 21 de noviembre, 2025', horaIda: '15:00 hrs',
                     
-                    // ❌ Campos de Vuelta en null para que el script apague el segundo bloque
+                    
                     fechaVuelta: null, horaVuelta: null,
                     
-                    golesIda: [], golesVuelta: null, // null para que crearLista no pinte cajas vacías en el limbo
+                    golesIda: [], golesVuelta: null, 
                     tarjetasIda: [], tarjetasVuelta: null,
                     claseExtra: 'bronze-match',
                     etiqueta: '3er Lugar'
@@ -1469,7 +1469,7 @@ function abrirModalDetalle(encodedData) {
 
     document.getElementById('modal-titulo').innerText = `${p.equipo1} vs ${p.equipo2}`;
 
-    // 📋 Nueva función que filtra los eventos por equipo y los convierte en elementos de lista de forma limpia
+    
     const agruparEventosPorEquipo = (arregloEventos, identificadorEquipo) => {
         if (!arregloEventos || arregloEventos.length === 0) {
             return '<li style="color: #555; font-style: italic; list-style: none;">-</li>';
@@ -1480,11 +1480,11 @@ function abrirModalDetalle(encodedData) {
             : '<li style="color: #555; font-style: italic; list-style: none;">-</li>';
     };
 
-    // 🧠 CONDICIONALES DE CONTROL PARA PARTIDO ÚNICO
+    
     const esPartidoUnico = !p.fechaVuelta || p.fechaVuelta.trim() === "";
     const textoTituloIda = esPartidoUnico ? '▶ Partido Único' : '▶ Partido de Ida';
 
-    // Si es partido único, este bloque se queda totalmente vacío
+    
     const htmlSeccionVuelta = esPartidoUnico ? '' : `
         <div style="margin-bottom: 12px; border-bottom: 1px solid #444; padding-bottom: 6px; margin-top: 25px;">
             <h4 style="color: var(--brand-teal); margin: 0 0 5px 0; font-size: 1rem; display: block;">▶ Partido de Vuelta</h4>
@@ -1538,7 +1538,7 @@ function abrirModalDetalle(encodedData) {
         </div>
     `;
 
-    // Código de control de scroll inalterado
+    
     const modal = document.getElementById('modal-partido');
     const scrollActual = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
     modal.style.position = 'absolute';

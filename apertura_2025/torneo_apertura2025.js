@@ -310,10 +310,10 @@ function renderEliminatorias() {
                     equipo2: 'Sementeros FC',
                     marcador: '<small class="marcadores">Ida: Sin Información | Vuelta: Sin Información</small><br><strong>Global: 19-1</strong>',
                     
-                    // 📅 Cronograma Partido de Ida
+                    
                     fechaIda: 'Sin Información', horaIda: 'Sin Información',
                     
-                    // 📅 Cronograma Partido de Vuelta
+                    
                     fechaVuelta: 'Viernes 7 de Noviembre, 2025', horaVuelta: '18:00 hrs',
                     
                     golesIda: [], golesVuelta: [],
@@ -324,10 +324,10 @@ function renderEliminatorias() {
                     equipo1: 'Capuchas FC', equipo2: 'Palmeras CF',
                     marcador: '<small class="marcadores">Ida: Sin Información | Vuelta: Sin Información</small><br><strong>Global: 9-5</strong>',
                     
-                    // 📅 Cronograma Partido de Ida
+                    
                     fechaIda: 'Sin Información', horaIda: 'Sin Información',
                     
-                    // 📅 Cronograma Partido de Vuelta
+                    
                     fechaVuelta: 'Viernes 7 de Noviembre, 2025', horaVuelta: '16:00 hrs',
                     
                     golesIda: [], golesVuelta: [],
@@ -338,10 +338,10 @@ function renderEliminatorias() {
                     equipo1: 'Dragones FC', equipo2: 'Real Caribe FC',
                     marcador: '<small class="marcadores">Ida: 1-3 | Vuelta: 8-2</small><br><strong>Global: 11-3</strong>',
                     
-                    // 📅 Cronograma Partido de Ida
+                    
                     fechaIda: 'Miércoles 5 de Noviembre, 2025', horaIda: '14:00 hrs',
                     
-                    // 📅 Cronograma Partido de Vuelta
+                    
                     fechaVuelta: 'Viernes 7 de Noviembre, 2025', horaVuelta: '17:00 hrs',
                     
                     golesIda: [], golesVuelta: [],
@@ -352,10 +352,10 @@ function renderEliminatorias() {
                     equipo1: 'Milan', equipo2: 'Galácticos',
                     marcador: '<small class="marcadores">Partido Único: 7-0</small><br><strong>Global: 7-0</strong>',
                     
-                    // 📅 Cronograma Partido de Ida
+                    
                     fechaIda: 'Sin Información', horaIda: 'Sin Información',
                     
-                    // 📅 Cronograma Partido de Vuelta
+                    
                     fechaVuelta: 'Sin Información', horaVuelta: 'Sin Información',
                     
                     golesIda: [], golesVuelta: [],
@@ -372,10 +372,10 @@ function renderEliminatorias() {
                     equipo1: 'Estelares FC', equipo2: 'Capuchas FC',
                     marcador: '<small class="marcadores">Ida: 2-3 | Vuelta: 2-7</small><br><strong>Global: 9-5</strong>',
                     
-                    // 📅 Cronograma Partido de Ida
+                    
                     fechaIda: 'Sin Información', horaIda: 'Sin Información',
                     
-                    // 📅 Cronograma Partido de Vuelta
+                    
                     fechaVuelta: 'Viernes 7 de Noviembre, 2025', horaVuelta: '18:00 hrs',
                     
                     golesIda: [], golesVuelta: [],
@@ -386,10 +386,10 @@ function renderEliminatorias() {
                     equipo1: 'Dragones FC', equipo2: 'Milan',
                     marcador: '<small class="marcadores">Ida: 3-4 | Vuelta: 7-2</small><br><strong>Global: 5-11</strong>',
                     
-                    // 📅 Cronograma Partido de Ida
+                    
                     fechaIda: 'Sin Información', horaIda: 'Sin Información',
                     
-                    // 📅 Cronograma Partido de Vuelta
+                    
                     fechaVuelta: 'Viernes 7 de Noviembre, 2025', horaVuelta: '18:00 hrs',
                     
                     golesIda: [], golesVuelta: ["Héctor Moreno (5') ⚽"],
@@ -406,13 +406,13 @@ function renderEliminatorias() {
                     equipo1: 'Estelares FC', equipo2: 'Milan',
                     marcador: '<strong>Resultado: Sin Información</strong><br><strong>🏆 ¡CAMPEÓN ESTELARES! </strong>',
                     
-                    // 📅 Cronograma del Partido Único (Se usa el bloque de Ida por arquitectura)
+                    
                     fechaIda: 'Viernes 21 de noviembre, 2025', horaIda: '16:00 hrs',
                     
-                    // ❌ Campos de Vuelta en null para que el script apague el segundo bloque
+                    
                     fechaVuelta: null, horaVuelta: null,
                     
-                    golesIda: [], golesVuelta: null, // null para que crearLista no pinte cajas vacías en el limbo
+                    golesIda: [], golesVuelta: null, 
                     tarjetasIda: [], tarjetasVuelta: null,
                     claseExtra: 'champion-match'
                 },
@@ -420,13 +420,13 @@ function renderEliminatorias() {
                     equipo1: 'Capuchas FC', equipo2: 'Dragones FC',
                     marcador: '<strong>Resultado: Sin Información</strong><br><strong>🥉 ¡3ER LUGAR CAPUCHAS! </strong>',
                     
-                    // 📅 Cronograma del Partido Único (Se usa el bloque de Ida por arquitectura)
+                    
                     fechaIda: 'Viernes 21 de noviembre, 2025', horaIda: '15:00 hrs',
                     
-                    // ❌ Campos de Vuelta en null para que el script apague el segundo bloque
+                    
                     fechaVuelta: null, horaVuelta: null,
                     
-                    golesIda: [], golesVuelta: null, // null para que crearLista no pinte cajas vacías en el limbo
+                    golesIda: [], golesVuelta: null, 
                     tarjetasIda: [], tarjetasVuelta: null,
                     claseExtra: 'bronze-match',
                     etiqueta: '3er Lugar'
@@ -471,11 +471,11 @@ function abrirModalDetalle(encodedData) {
         ? arr.map(item => `<li style="margin-bottom: 4px;">${item}</li>`).join('')
         : '<li style="color: #666; font-style: italic;">Ninguno</li>';
 
-    // 🧠 CONDICIONALES DE CONTROL PARA PARTIDO ÚNICO
+    
     const esPartidoUnico = !p.fechaVuelta;
     const textoTituloIda = esPartidoUnico ? '▶ Partido Único' : '▶ Partido de Ida';
 
-    // Si es partido único, este bloque se queda totalmente vacío
+    
     const htmlSeccionVuelta = esPartidoUnico ? '' : `
         <div style="margin-bottom: 12px; border-bottom: 1px solid #444; padding-bottom: 6px;">
             <h4 style="color: var(--brand-teal); margin: 0 0 5px 0; font-size: 1rem; display: block;">▶ Partido de Vuelta</h4>
@@ -521,7 +521,7 @@ function abrirModalDetalle(encodedData) {
         </div>
     `;
 
-    // Código de control de scroll inalterado
+    
     const modal = document.getElementById('modal-partido');
     const scrollActual = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
     modal.style.position = 'absolute';

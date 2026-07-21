@@ -1,11 +1,11 @@
 body {
     background-color: var(--base-bg);
     color: var(--text-white);
-    font-family: 'Inter', sans-serif; /* Unificamos a Inter para todo el texto base */
+    font-family: 'Inter', sans-serif;
     overflow-x: hidden;
 }
 
-/* --- 2. HERO PRINCIPAL CENTRADO (BODY) --- */
+
 .hero-section {
     min-height: 100vh;
     display: flex;
@@ -13,7 +13,7 @@ body {
     align-items: center;
     text-align: center;
     padding: 100px 20px 40px 20px;
-    /* Resplandor radial sutil de fondo usando tu color #4dae9a */
+   
     background: radial-gradient(circle, rgba(77, 174, 154, 0.06) 0%, rgba(10, 10, 12, 0) 70%);
 }
 
@@ -37,8 +37,8 @@ body {
 }
 
 .hero-center-box h1 {
-    font-family: 'Outfit', sans-serif; /* <-- Cambia esta línea */
-    font-size: 5.8rem;                 /* <-- Ajusta a 5.8rem para que no rompa en pantallas medianas */
+    font-family: 'Outfit', sans-serif;
+    font-size: 5.8rem;                
     font-weight: 900;
     line-height: 1.05;
     text-transform: uppercase;
@@ -47,7 +47,7 @@ body {
 }
 
 .hero-center-box h1 span {
-    color: var(--brand-teal); /* Destaca "Caribe Sports" con tu color */
+    color: var(--brand-teal);
 }
 
 .hero-center-box p {
@@ -62,7 +62,7 @@ body {
 
 .btn-primary {
     background-color: var(--brand-teal);
-    color: var(--base-bg); /* Texto oscuro para contraste perfecto */
+    color: var(--base-bg);
     padding: 16px 40px;
     border-radius: 4px;
     text-decoration: none;
@@ -81,10 +81,10 @@ body {
     box-shadow: 0 8px 30px rgba(77, 174, 154, 0.4);
 }
 
-/* --- 3. CUERPO DE TARJETAS DE TORNEOS --- */
+
 .body-section {
     padding: 100px 6%;
-    background-color: #0d0d11; /* Fondo ligeramente contrastado pero muy oscuro */
+    background-color: #0d0d11;
 }
 
 .section-title {
@@ -122,18 +122,18 @@ body {
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Contenedor de la foto de la tarjeta */
+
 .card-img-wrapper {
-    width: 120px;          /* <-- Tamaño controlado, ya no se verá gigante */
-    aspect-ratio: 1 / 1;   /* Mantiene el formato cuadrado perfecto */
-    border-radius: 16px;   /* Bordes suavizados modernos (puedes usar 50% si los quieres circulares) */
+    width: 120px;         
+    aspect-ratio: 1 / 1;  
+    border-radius: 16px;  
     overflow: hidden;     
-    margin: 0 auto 25px auto; /* <-- Centra la imagen horizontalmente y le da espacio abajo */
-    border: 2px solid rgba(77, 174, 154, 0.3); /* Un borde sutil con tu color turquesa */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra elegante para que parezca flotar */
+    margin: 0 auto 25px auto;
+    border: 2px solid rgba(77, 174, 154, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Propiedades de la imagen para que sea responsiva y no se deforme */
+
 .card-img {
     width: 100%;
     height: 100%;
@@ -142,8 +142,8 @@ body {
 }
 
 .info-card h3 {
-    font-family: 'Outfit', sans-serif; /* <-- Cambia esta línea */
-    font-size: 2.2rem;                 /* <-- Sube a 2.2rem para resaltar el título del torneo */
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.2rem;                
     margin-bottom: 15px;
     color: var(--text-white);
 }
@@ -154,7 +154,7 @@ body {
     line-height: 1.6;
 }
 
-/* ANIMACIÓN DE ENTRADA */
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -166,7 +166,7 @@ body {
     }
 }
 
-/* RESPONSIVE DESIGN — SOLO MÓVIL */
+
 @media (max-width: 768px) {
     .nav-links {
         flex-wrap: wrap;
@@ -178,35 +178,35 @@ body {
         font-size: 0.85rem;
     }
     .hero-center-box h1 {
-        font-size: 2.4rem; /* <-- Bajamos un poquito más para asegurar que quepa bien en pantallas chicas */
+        font-size: 2.4rem;
     }
     .hero-center-box p {
-        font-size: 1rem;   /* <-- Texto descriptivo más cómodo para lectura en móvil */
+        font-size: 1rem;  
     }
     
-    /* --- AQUÍ EMPIEZAN LOS CAMBIOS CLAVE PARA CORREGIR EL TEXTO CORTADO Y LAS TARJETAS --- */
+   
     
     .body-section {
-        padding: 40px 5%; /* <-- Esto le da un colchón de aire a los lados para que nada toque las esquinas del cel */
+        padding: 40px 5%;
     }
 
     .section-title h2 {
-        font-size: 1.8rem; /* <-- Tamaño perfecto: ya NO se va a cortar el título de "NUESTROS TORNEOS" */
+        font-size: 1.8rem;
         letter-spacing: 0px;
         line-height: 1.2;
     }
 
     .cards-grid {
-        grid-template-columns: 1fr; /* <-- Obliga a las tarjetas a ponerse una debajo de otra en fila limpia */
-        gap: 20px;                  /* <-- Separación ideal entre tarjeta y tarjeta */
+        grid-template-columns: 1fr;
+        gap: 20px;                 
         width: 100%;
     }
 
     .info-card {
-        padding: 25px 20px; /* <-- Hace el espacio interior de la tarjeta más compacto para que el texto respire */
+        padding: 25px 20px;
     }
 
     .info-card h3 {
-        font-size: 1.5rem;  /* <-- Ajusta los títulos "TORNEOS DE FÚTBOL" y "BASQUETBOL" para celular */
+        font-size: 1.5rem; 
     }
 }

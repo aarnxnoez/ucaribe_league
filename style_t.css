@@ -1,14 +1,12 @@
-/* ==========================================================================
-   2. CONTENIDO PROPIO DEL BODY DE TORNEOS (ESTRUCTURADO MODULARMENTE)
-   ========================================================================== */
 
-/* Contenedor envolvente de la página completa */
+
+
 .torneos-page-content {
-    padding-top: 140px; /* Margen superior exacto para no solapar el header */
+    padding-top: 140px;
     width: 100%;
 }
 
-/* Sección de Bienvenida */
+
 .torneos-welcome {
     text-align: center;
     max-width: 800px;
@@ -19,7 +17,7 @@
 
 .torneos-welcome h1 {
     font-family: 'Outfit', sans-serif;
-    font-size: 5.8rem; /* Consistencia milimétrica con tus títulos */
+    font-size: 5.8rem;
     font-weight: 900;
     line-height: 1.05;
     text-transform: uppercase;
@@ -39,10 +37,10 @@
     margin: 0 auto;
 }
 
-/* GRID DE LAS 3 TARJETAS */
+
 .torneos-cards-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 Columnas balanceadas en PC */
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     max-width: 1100px;
     margin: 0 auto 100px auto;
@@ -56,15 +54,15 @@
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    padding: 0;            /* Mantenlo en 0 para que la imagen se pegue al borde */
-    overflow: hidden;      /* Respeta el redondeado de las esquinas de la tarjeta */
+    padding: 0;           
+    overflow: hidden;     
 }
 
-/* Caja contenedora para las imágenes cuadradas premium */
+
 .torneo-card-img-wrapper {
-    width: 100%;           /* Abárcalo de esquina a esquina */
-    height: auto;          /* <--- AÑADE ESTA LÍNEA: Obliga a calcular el alto dinámicamente */
-    aspect-ratio: 1 / 1;   /* Proporción cuadrada de oro */
+    width: 100%;          
+    height: auto;         
+    aspect-ratio: 1 / 1;  
     overflow: hidden;     
     margin: 0;             
     border-bottom: 2px solid rgba(77, 174, 154, 0.3); 
@@ -72,20 +70,20 @@
 
 .torneo-card-img {
     width: 100%;
-    height: 100%;          /* <--- CAMBIA O AGREGA ESTA LÍNEA: Rellena el alto completo del cuadrado */
-    object-fit: cover;     /* <--- REVISA QUE ESTÉ ESTA LÍNEA: Evita que la foto se aplaste o se estire feo */
-    display: block;        /* Elimina espacios fantasmas inferiores en HTML */
+    height: 100%;         
+    object-fit: cover;    
+    display: block;       
 }
 
 .torneo-card-info {
-    padding: 20px 22px;   /* <-- Reducido para recortar la altura de la tarjeta */
+    padding: 20px 22px;  
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    gap: 12px;            /* <-- Espaciado más compacto entre títulos y cajas */
+    gap: 12px;           
 }
 
-/* Textos informativos de las tarjetas */
+
 .torneo-card h3 {
     font-family: 'Outfit', sans-serif;
     font-size: 2.2rem;
@@ -97,13 +95,13 @@
 .podium-box {
     background-color: rgba(255, 255, 255, 0.01);
     border: 1px solid rgba(255, 255, 255, 0.03);
-    padding: 12px 14px;   /* <-- Relleno más compacto */
+    padding: 12px 14px;  
     border-radius: 6px;
     margin-bottom: 0;
 }
 
 .podium-box p {
-    font-size: 0.9rem;    /* <-- Letra ligeramente más pequeña para ahorrar altura */
+    font-size: 0.9rem;   
     color: var(--text-white);
     line-height: 1.5;
     margin-bottom: 2px;
@@ -116,25 +114,25 @@
 .date-box {
     border-left: 3px solid var(--brand-teal);
     padding-left: 10px;
-    margin-bottom: 5px;   /* <-- Reducido de 25px a solo 5px */
+    margin-bottom: 5px;  
     text-align: left;
 }
 
 .date-box p {
-    font-size: 0.88rem;   /* <-- Proporción ideal y estilizada */
+    font-size: 0.88rem;  
     color: var(--text-secondary);
     line-height: 1.4;
 }
 
 .upcoming-text {
     color: var(--text-secondary);
-    font-size: 0.9rem;    /* <-- Más compacto */
+    font-size: 0.9rem;   
     line-height: 1.5;
-    margin-bottom: 5px;   /* <-- Reducido para acortar la tarjeta */
+    margin-bottom: 5px;  
     text-align: center;
 }
 
-/* Botones dentro de las tarjetas */
+
 .btn-ver-torneo {
     width: 100%;
     padding: 14px;
@@ -147,7 +145,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     text-align: center;
-    margin-top: auto; /* Empuja el botón al fondo si las tarjetas difieren en texto */
+    margin-top: auto;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -169,10 +167,10 @@
     border: 1px solid rgba(77, 174, 154, 0.2);
 }
 
-/* SECCIÓN DEL REGLAMENTO OFICIAL */
+
 .reglamento-section {
     padding: 100px 6%;
-    background-color: #0d0d11; /* Contraste sutil idéntico a tu base */
+    background-color: #0d0d11;
 }
 
 .reglamento-title {
@@ -220,7 +218,7 @@
     line-height: 1.6;
 }
 
-/* ANIMACIÓN DE ENTRADA */
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -232,11 +230,9 @@
     }
 }
 
-/* ==========================================================================
-   4. DESIGN RESPONSIVO - ADAPTACIÓN MATEMÁTICA COHERENTE
-   ========================================================================== */
 
-/* RESPONSIVE DESIGN — SOLO MÓVIL */
+
+
 @media (max-width: 768px) {
     .nav-links {
         flex-wrap: wrap;
@@ -248,7 +244,7 @@
         font-size: 0.85rem;
     }
     .torneos-page-content {
-        margin-top: 40px; /* Ajuste para header fijo en móvil */
+        margin-top: 0 !important;
     }
     .torneos-welcome h1 {
         font-size: 2.4rem;
@@ -267,37 +263,37 @@
         line-height: 1.2;
     }
 
-    /* Contenedor principal en 1 columna */
+   
     .torneos-cards-grid {
         grid-template-columns: 1fr;
-        gap: 25px; /* Espaciado cómodo entre tarjetas verticales */
+        gap: 25px;
         width: 100%;
-        padding: 0 15px; /* Evita que las tarjetas peguen en los bordes de la pantalla */
+        padding: 0 15px;
         box-sizing: border-box;
-        margin-bottom: 50px; /* Margen inferior adaptado a móvil */
+        margin-bottom: 50px;
     }
 
-    /* Evita que la tarjeta se haga gigante a lo ancho */
+   
     .torneo-card {
         padding: 0; 
-        max-width: 340px; /* Ancho perfecto para celular: se ve estético y compacto */
-        margin: 0 auto;   /* Centra la tarjeta horizontalmente en la pantalla */
+        max-width: 340px;
+        margin: 0 auto;  
         width: 100%;
     }
 
-    /* Reduce el título para que encaje proporcionalmente */
+   
     .torneo-card h3 {
-        font-size: 1.4rem !important; /* Ajustado para el nuevo ancho de la tarjeta */
+        font-size: 1.4rem !important;
     }
 
-    /* El texto del badge que querías más chico y con menos margen */
+   
     .live-badge {
         font-size: 0.65rem !important;
-        margin: 0 auto 6px auto !important; /* Mantiene el centrado pero reduce el espacio de abajo */
-        padding: 3px 10px !important;       /* Ajusta un poco el grosor del badge */
+        margin: 0 auto 6px auto !important;
+        padding: 3px 10px !important;      
     }
 
-    /* Ajuste extra opcional para que los botones no se sientan tan toscos en móvil */
+   
     .btn-ver-torneo {
         padding: 12px;
         font-size: 0.85rem;

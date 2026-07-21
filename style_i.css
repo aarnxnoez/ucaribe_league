@@ -1,17 +1,15 @@
-/* ==========================================================================
-   2. DISTRIBUCIÓN DEL CUERPO (DOS COLUMNAS: FORMULARIO + FOTO DERECHA)
-   ========================================================================== */
+
 .inscripcion-container {
     display: grid;
-    grid-template-columns: 1.2fr 1fr; /* 2 celdas: Formulario un poco más ancho que la foto */
-    gap: 40px;                 /* Espacio limpio entre el formulario y la foto */
-    max-width: 1300px;         /* Limita el ancho total para que no se estire al infinito */
-    margin: 0 auto;            /* Centra perfectamente el div padre en la pantalla */
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;                
+    max-width: 1300px;        
+    margin: 0 auto;           
     padding: 40px 5% 60px 5%; 
-    align-items: stretch;      /* Ambas celdas tendrán exactamente la misma altura */
+    align-items: stretch;     
 }
 
-/* COLUMNA IZQUIERDA: CONTENIDO */
+
 .inscripcion-content-side {
     width: 100%;
     display: flex;
@@ -57,7 +55,7 @@
     max-width: 600px;
 }
 
-/* DISEÑO PREMIUM DEL RELOJ REGRESIVO */
+
 .countdown-container {
     background-color: var(--card-bg);
     border: 1px solid rgba(77, 174, 154, 0.15);
@@ -117,7 +115,7 @@
     letter-spacing: 1px;
 }
 
-/* CAMPOS DEL FORMULARIO */
+
 .inscripcion-form {
     max-width: 600px;
     display: flex;
@@ -160,7 +158,7 @@
     box-shadow: 0 0 10px rgba(77, 174, 154, 0.15);
 }
 
-/* NUEVOS ELEMENTOS (TÍTULOS, RADIOS Y ARCHIVO) */
+
 .form-section-title {
     color: var(--brand-teal);
     font-family: 'Outfit', sans-serif;
@@ -206,7 +204,7 @@
     background-color: var(--card-bg);
 }
 
-/* Botón de subir archivo (Escudo) */
+
 .file-input {
     background-color: rgba(255, 255, 255, 0.01) !important;
     padding: 8px !important;
@@ -245,7 +243,7 @@
     margin-top: 2px;
 }
 
-/* BOTÓN DE ENVIAR */
+
 .btn-submit-form {
     background-color: var(--brand-teal);
     color: var(--base-bg);
@@ -267,7 +265,7 @@
     transform: translateY(-2px);
 }
 
-/* COLUMNA DERECHA: IMAGEN (ESCRITORIO) */
+
 .inscripcion-image-side {
     width: 100%;
     background-color: transparent;
@@ -311,11 +309,9 @@
     font-weight: 500;   
 }
 
-/* ==========================================================================
-   3. RESPONSIVIDAD INTEGRAL Y AJUSTES DE COLAPSO (CORREGIDO)
-   ========================================================================== */
 
-/* RESPONSIVE DESIGN — SOLO MÓVIL */
+
+
 @media (max-width: 768px) {
     .inscripcion-container {
         grid-template-columns: 1fr;
@@ -338,7 +334,7 @@
         text-align: left;
     }
     .countdown-container {
-        margin-top: 190px;
+        margin-top: 12em !important;
     }
     .countdown-timer {
         gap: 10px;

@@ -1,10 +1,4 @@
-/* ==========================================================================
-   GLOBAL.CSS - REPOSITORIO DE ORO (BASE MAESTRA)
-   ========================================================================== */
 
-/* ==========================================================================
-   1. RESET GENERAL Y BASE
-   ========================================================================== */
 * { 
     margin: 0; 
     padding: 0; 
@@ -59,9 +53,7 @@ body.page-enter {
     animation: pageFadeInUp 0.75s ease-out both;
 }
 
-/* ==========================================================================
-   2. HEADER NORMAL (PC) - TUS MEDIDAS EXACTAS
-   ========================================================================== */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -74,13 +66,13 @@ body.page-enter {
     top: 0;
     left: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(77, 174, 154, 0.15); /* Línea sutil con tu color de resaltado */
+    border-bottom: 1px solid rgba(77, 174, 154, 0.15);
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px; /* <--- Espacio de separación entre la imagen y el texto */
+    gap: 10px; 
     font-family: 'Outfit', sans-serif;
     font-size: 2.6rem;
     font-weight: 900;
@@ -88,41 +80,41 @@ body.page-enter {
 }
 
 .logo span {
-    color: var(--brand-teal); /* Resaltado en tu color */
+    color: var(--brand-teal);
 }
 
 .logo-img {
-    height: 40px; /* <--- Ajusta este valor según los píxeles que mida tu logo */
-    width: auto;  /* <--- Esto evita que la imagen se deforme o se vea chata */
+    height: 40px;
+    width: auto; 
     object-fit: contain;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    flex-wrap: nowrap !important; /* <-- EL SECRETO: Prohíbe que salten de línea en PC */
+    flex-wrap: nowrap !important;
     gap: 5px;
 }
 
-/* Blindaje para que el botón volver se comporte perfectamente */
+
 #nav-volver {
-    flex-basis: auto !important; /* Evita que intente ocupar todo el ancho */
+    flex-basis: auto !important;
     margin: 0 15px !important;
-    white-space: nowrap; /* Mantiene el texto en una sola línea */
+    white-space: nowrap;
 }
 
 .nav-links a {
     color: var(--text-white);
     text-decoration: none;
     margin: 0 15px;
-    font-weight: 500; /* <-- Deja este grosor fijo */
+    font-weight: 500;
     font-size: 1.1rem; 
     position: relative;
     padding: 5px 0;
     transition: color 0.3s ease;
 }
 
-/* Efecto interactivo inferior con tu color personalizado */
+
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -152,18 +144,14 @@ body.page-enter {
 
 .phone-link:hover {
     background-color: var(--brand-teal);
-    color: var(--base-bg) !important; /* Texto negro al pasar el cursor */
+    color: var(--base-bg) !important;
 }
-/* ========
-ESTILOS VARIOS
-===== */
+
 
 .escudo-item { display: flex; flex-direction: column; align-items: center; gap: 5px; }
 .escudo-name { font-size: 0.7rem; color: var(--text-secondary); text-align: center; font-weight: 600; }
 
-/* ==========================================================================
-   3. FOOTER COMPARTIDO (PC Y MÓVIL)
-   ========================================================================== */
+
 .footer-section {
     display: block;
     width: 100%;
@@ -188,56 +176,60 @@ ESTILOS VARIOS
     margin: 0;
 }
 
-/* ==========================================================================
-   4. ADAPTACIÓN MÁXIMA PARA CELULARES (CABECERA Y GLOBAL)
-   ========================================================================== */
+
 @media (max-width: 768px) {
+   
     html, body {
-        height: auto;
-        min-height: 100%;
-        overflow-y: auto;
+        padding-top: 0.1px !important; 
     }
 
+    /* 2. Tu configuración limpia para liberar el Flexbox de PC */
     body {
-        display: flex;
-        flex-direction: column;
-        position: static;
+        display: block !important;      
+        position: relative !important;
+        margin: 0 !important; /* Limpieza extra para asegurar el pegado al techo */
+        width: 100% !important;
+        overflow-x: hidden !important;  
     }
 
-    /* Logo arriba, conservando el padding original */
+    /* 3. Tu descuento global del 20% para encoger las letras de todas las páginas */
+    html {
+        font-size: 80% !important;
+    }
+   
     .navbar {
         flex-direction: column;
-        align-items: center; 
-        padding: 20px 5%; 
+        align-items: center;
+        padding: 20px 5%;
         gap: 15px;
+        height: auto !important;
     }
 
-    /* Enlaces adaptables para celular */
+    .navbar .logo {
+        font-size: 2.4rem !important;
+    }
+
     .nav-links {
-        flex-wrap: wrap;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
         justify-content: center;
-        gap: 8px;
+        gap: 6px;
         width: 100%;
     }
 
     .nav-links a {
-        margin: 0 6px;
-        font-size: 0.85rem;
+        margin: 0 4px;
+        font-size: 0.75rem;
+        white-space: nowrap !important;
     }
 
-    /* Protección para los botones largos en su propia línea */
     .phone-link, #nav-volver {
         margin-left: 0 !important;
-        margin-top: 5px;
-        flex-basis: 100%; 
-        text-align: center;
-    }
-    
-    .phone-link {
+        margin-top: 0;
         flex-basis: auto;
-        display: block;
-        width: fit-content;
-        margin: 5px auto 0 auto !important;
+        font-size: 0.75rem;
+        white-space: nowrap !important;
     }
 
     .footer-section {
@@ -259,9 +251,10 @@ ESTILOS VARIOS
         visibility: visible !important;
         opacity: 1 !important;
         line-height: 1.5;
+        font-size: 0.75rem !important;
     }
 
-    /* Mobile-only fixes: remove unnecessary bottom blocks and backgrounds above footer */
+   
     .torneo-content-wrapper {
         margin-bottom: 0 !important;
         padding-bottom: 0 !important;
@@ -273,7 +266,7 @@ ESTILOS VARIOS
         background: transparent !important;
     }
 
-    /* Ensure no unexpected full-width colored bars appear near the page bottom */
+   
     .stats-view, .modal-overlay, .placeholder-bottom-block, .content-wrapper, .page-section {
         background: transparent !important;
         box-shadow: none !important;
