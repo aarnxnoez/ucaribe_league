@@ -232,6 +232,19 @@ body.page-enter {
         white-space: nowrap !important;
     }
 
+    /* 1. Mantiene el tamaño de los nombres de los equipos y el botón expandir */
+    .match-card .team-name,
+    .match-card .click-to-expand {
+        font-size: 0.65rem !important; 
+    }
+
+    /* 2. NUEVO: Hace la sección de detalles (fecha, hora, goles y tarjetas) un poco más grande */
+    .match-card .match-meta,
+    .match-card .match-events,
+    .match-card .match-events p {
+        font-size: 0.75rem !important; /* ◄ Sube este valor (ej: 0.95rem o 1rem) hasta que quede al tamaño que buscas */
+    }
+
     .footer-section {
         display: block !important;
         visibility: visible !important;

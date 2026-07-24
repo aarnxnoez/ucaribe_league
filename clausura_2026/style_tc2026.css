@@ -356,7 +356,6 @@
 
 
 @media (max-width: 768px) {
-
    
     .navbar {
         flex-direction: column;
@@ -385,7 +384,6 @@
         width: fit-content;
         margin: 5px auto 0 auto !important;
     }
-
    
     .torneo-hero {
         margin-top: 170px;
@@ -423,9 +421,6 @@
     .match-details { 
         padding: 20px 10px !important;  
     }
-
-   
-
    
     .match-teams {
         gap: 10px !important;
