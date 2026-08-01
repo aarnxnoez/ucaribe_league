@@ -1296,72 +1296,115 @@ function renderEliminatorias() {
                 {
                     equipo1: 'Estelares FC', 
                     equipo2: 'FC Crystal',
-                    marcador: '<small class="marcadores">Ida: Sin Información | Vuelta: Sin Información</small><br><strong>Global: 19-1</strong>',
                     
-                    
-                    fechaIda: 'Sin Información', horaIda: 'Sin Información',
-                    
-                    
-                    fechaVuelta: 'Viernes 7 de Noviembre, 2025', horaVuelta: '18:00 hrs',
-                    
-                    golesIda: ["Carlos Mendoza (15') ⚽"], golesVuelta: [],
-                    tarjetasIda: ["Mateo Silva (30') 🟨"], tarjetasVuelta: [],
-                    claseExtra: 'quarter-match'
-                },
-                {
-                    equipo1: 'Capuchas FC', equipo2: 'Dragones FC',
-                    marcador: '<small class="marcadores">Ida: Sin Información | Vuelta: Sin Información</small><br><strong>Global: 9-5</strong>',
-                    
+                    localIda: 'equipo2',
+                    localVuelta: 'equipo1',
+
+                    marcador: '<small class="marcadores">Ida: 0-2 gana Estelares FC | Vuelta: 4-2 gana Estelares FC</small><br><strong>Global: 6-2 Favor Estelares FC</strong>',
                     
                     fechaIda: 'Sin Información', horaIda: 'Sin Información',
-                    
-                    
-                    fechaVuelta: 'Viernes 7 de Noviembre, 2025', horaVuelta: '16:00 hrs',
-                    
-                    golesIda: [], golesVuelta: [],
-                    tarjetasIda: [], tarjetasVuelta: [],
-                    claseExtra: 'quarter-match'
-                },
-                {
-                    equipo1: 'Atlético Temozón', equipo2: 'Turismólogos FC',
-                    marcador: '<small class="marcadores">Ida: 1-3 | Vuelta: 8-2</small><br><strong>Global: 11-3</strong>',
-                    
-                    
-                    fechaIda: 'Miércoles 5 de Noviembre, 2025', horaIda: '14:00 hrs',
-                    
-                    
-                    fechaVuelta: 'Viernes 7 de Noviembre, 2025', horaVuelta: '17:00 hrs',
-                    
-                    golesIda: [], golesVuelta: [],
-                    tarjetasIda: [], tarjetasVuelta: [],
+                    fechaVuelta: 'Sin Información', horaVuelta: 'Sin Información', 
+
+                    golesIda: [
+                        { jugador: 'Victoria por default para Estelares FC', equipo: 'equipo1' } 
+                    ],
+                    tarjetasIda: [],
+
+                    golesVuelta: [
+                        { jugador: '⚽⚽ Karl Suárez', equipo: 'equipo1' },
+                        { jugador: '⚽⚽ Rafael Huchin', equipo: 'equipo1' },
+                        { jugador: 'Isaac Dominguez ⚽', equipo: 'equipo2' },
+                        { jugador: 'Rodrigo Almeyda ⚽', equipo: 'equipo2' }
+                    ],
+                    tarjetasVuelta: [],
+
                     claseExtra: 'quarter-match'
                 },
                 {
                     equipo1: 'Inges FC', 
                     equipo2: 'Corinthians FC',
-                    marcador: '<small class="marcadores">Ida: 1-2 gana Inges FC | Vuelta: 1-2 gana Corinthians FC</small><br><strong>Global: 3-3 (Pasa Inges FC por penales)</strong>',
                     
+                    localIda: 'equipo2',
+                    localVuelta: 'equipo1',
+
+                    marcador: '<small class="marcadores">Ida: 1-2 gana Inges FC | Vuelta: 1-2 gana Corinthians FC</small><br><strong>Global: 3-3 (Pasa Inges FC por penales)</strong>',
                     
                     fechaIda: 'Sin Información', horaIda: 'Sin Información',
                     fechaVuelta: 'Sin Información', horaVuelta: '19:00 hrs', 
-                    
-                    
+
                     golesIda: [
                         { jugador: '⚽ Jorge Delgadillo', equipo: 'equipo2' },
                         { jugador: 'Israel Corona ⚽⚽', equipo: 'equipo1' }
+                        
                     ],
                     tarjetasIda: [
                         { jugador: '', equipo: '' }
                     ],
-                    
-                    
+
                     golesVuelta: [
                         { jugador: '⚽ José Colorado', equipo: 'equipo2' },
                         { jugador: 'Jorge Delgadillo ⚽⚽', equipo: 'equipo1' }
                     ],
                     tarjetasVuelta: [
-                        { jugador: 'Moisés Vieyra 🟥', equipo: 'equipo2' }
+                        { jugador: '', equipo: '' }
                     ],
+
+                    claseExtra: 'quarter-match'
+                },
+                {
+                    equipo1: 'Capuchas FC', 
+                    equipo2: 'Dragones FC',
+                    
+                    localIda: 'equipo2',
+                    localVuelta: 'equipo1',
+
+                    marcador: '<small class="marcadores">Ida: 1-3 gana Capuchas FC | Vuelta: 5-2 gana Capuchas FC</small><br><strong>Global: 8-3 Favor Capuchas FC</strong>',
+                    
+                    fechaIda: 'Sin Información', horaIda: 'Sin Información',
+                    fechaVuelta: 'Sin Información', horaVuelta: 'Sin Información', 
+
+                    golesIda: [
+                        { jugador: '⚽ Arturo Can', equipo: 'equipo2' },
+                        { jugador: 'Angel Salvatierra ⚽', equipo: 'equipo1' },
+                        { jugador: 'Diego Trejo ⚽', equipo: 'equipo1' },
+                        { jugador: 'Emilio Rodríguez ⚽', equipo: 'equipo1' }
+                    ],
+                    tarjetasIda: [],
+
+                    golesVuelta: [
+                        { jugador: '4 ⚽ Angel Salvatierra', equipo: 'equipo1' },
+                        { jugador: 'Victor Itzá ⚽⚽', equipo: 'equipo2' }
+                    ],
+                    tarjetasVuelta: [],
+
+                    claseExtra: 'quarter-match'
+                },
+                {
+                    equipo1: 'Atlético Temozón', 
+                    equipo2: 'Turismólogos FC',
+                    
+                    localIda: 'equipo2',
+                    localVuelta: 'equipo1',
+
+                    marcador: '<small class="marcadores">Ida: 3-4 gana Atlético Temozón | Vuelta: 8-1 gana Atlético Temozón</small><br><strong>Global: 11-5 Favor Atlético Temozón</strong>',
+                    
+                    fechaIda: 'Sin Información', horaIda: 'Sin Información',
+                    fechaVuelta: 'Sin Información', horaVuelta: 'Sin Información', 
+
+                    golesIda: [
+                        { jugador: '⚽ Jonathan Bacab', equipo: 'equipo2' },
+                        { jugador: '⚽ Álvaro Madrazo', equipo: 'equipo2' },
+                        { jugador: '⚽ Carlos Yam', equipo: 'equipo2' },
+                        { jugador: 'Rodrigo ⚽⚽', equipo: 'equipo1' },
+                        { jugador: 'Luis Balam ⚽', equipo: 'equipo1' },
+                        { jugador: 'Kevin Hernández ⚽', equipo: 'equipo1' }
+                        
+                    ],
+                    tarjetasIda: [],
+
+                    golesVuelta: [],
+                    tarjetasVuelta: [],
+
                     claseExtra: 'quarter-match'
                 }
             ]
@@ -1371,31 +1414,43 @@ function renderEliminatorias() {
             claseRonda: 'ucl-round-semis',
             partidos: [
                 {
-                    equipo1: 'Estelares FC', equipo2: 'Capuchas FC',
-                    marcador: '<small class="marcadores">Ida: 2-3 | Vuelta: 2-7</small><br><strong>Global: 9-5</strong>',
+                    equipo1: 'Estelares FC', 
+                    equipo2: 'Inges FC',
                     
+                    localIda: 'equipo1',
+                    localVuelta: 'equipo2',
+
+                    marcador: '<small class="marcadores">Ida: Sin Información | Vuelta: Sin Información</small><br><strong>Global: 6-5 Favor Estelares FC</strong>',
                     
                     fechaIda: 'Sin Información', horaIda: 'Sin Información',
-                    
-                    
-                    fechaVuelta: 'Viernes 7 de Noviembre, 2025', horaVuelta: '18:00 hrs',
-                    
-                    golesIda: [], golesVuelta: [],
-                    tarjetasIda: [], tarjetasVuelta: [],
+                    fechaVuelta: 'Sin Información', horaVuelta: 'Sin Información', 
+
+                    golesIda: [],
+                    tarjetasIda: [],
+
+                    golesVuelta: [],
+                    tarjetasVuelta: [],
+
                     claseExtra: 'final-four'
                 },
                 {
-                    equipo1: 'Dragones FC', equipo2: 'Milan',
-                    marcador: '<small class="marcadores">Ida: 3-4 | Vuelta: 7-2</small><br><strong>Global: 5-11</strong>',
+                    equipo1: 'Atlético Temozón', 
+                    equipo2: 'Turismólogos FC',
                     
+                    localIda: 'equipo2',
+                    localVuelta: 'equipo1',
+
+                    marcador: '<small class="marcadores">Ida: Sin Información | Vuelta: Sin Información</small><br><strong>Global: 4-3 Favor Atlético Temozón</strong>',
                     
                     fechaIda: 'Sin Información', horaIda: 'Sin Información',
-                    
-                    
-                    fechaVuelta: 'Viernes 7 de Noviembre, 2025', horaVuelta: '18:00 hrs',
-                    
-                    golesIda: [], golesVuelta: ["Héctor Moreno (5') ⚽"],
-                    tarjetasIda: ["César Huerta (70') 🟨"], tarjetasVuelta: [],
+                    fechaVuelta: 'Sin Información', horaVuelta: 'Sin Información', 
+
+                    golesIda: [],
+                    tarjetasIda: [],
+
+                    golesVuelta: [],
+                    tarjetasVuelta: [],
+
                     claseExtra: 'final-four'
                 }
             ]
@@ -1405,31 +1460,31 @@ function renderEliminatorias() {
             claseRonda: 'ucl-round-final',
             partidos: [
                 {
-                    equipo1: 'Estelares FC', equipo2: 'Milan',
-                    marcador: '<strong>Resultado: Sin Información</strong><br><strong>🏆 ¡CAMPEÓN ESTELARES! </strong>',
-                    
-                    
-                    fechaIda: 'Viernes 21 de noviembre, 2025', horaIda: '16:00 hrs',
-                    
-                    
+                    equipo1: 'Estelares FC', 
+                    equipo2: 'Atlético Temozón',
+
+                    marcador: '<strong>Resultado: Sin Información</strong><br><strong>🏆 ¡BICAMPEÓN ESTELARES! </strong>',
+
+                    fechaIda: 'Jueves 14 de Mayo, 2026', horaIda: '18:00 hrs',
                     fechaVuelta: null, horaVuelta: null,
-                    
-                    golesIda: [], golesVuelta: null, 
-                    tarjetasIda: [], tarjetasVuelta: null,
+
+                    golesIda: [], tarjetasIda: [],
+                    golesVuelta: null, tarjetasVuelta: null,
+
                     claseExtra: 'champion-match'
                 },
                 {
-                    equipo1: 'Capuchas FC', equipo2: 'Dragones FC',
+                    equipo1: 'Capuchas FC', 
+                    equipo2: 'Inges FC',
+
                     marcador: '<strong>Resultado: Sin Información</strong><br><strong>🥉 ¡3ER LUGAR CAPUCHAS! </strong>',
-                    
-                    
-                    fechaIda: 'Viernes 21 de noviembre, 2025', horaIda: '15:00 hrs',
-                    
-                    
+
+                    fechaIda: 'Sin Información', horaIda: 'Sin Información',
                     fechaVuelta: null, horaVuelta: null,
-                    
-                    golesIda: [], golesVuelta: null, 
-                    tarjetasIda: [], tarjetasVuelta: null,
+
+                    golesIda: [], tarjetasIda: [], 
+                    golesVuelta: null, tarjetasVuelta: null,
+
                     claseExtra: 'bronze-match',
                     etiqueta: '3er Lugar'
                 }
@@ -1469,82 +1524,78 @@ function abrirModalDetalle(encodedData) {
 
     document.getElementById('modal-titulo').innerText = `${p.equipo1} vs ${p.equipo2}`;
 
-    
     const agruparEventosPorEquipo = (arregloEventos, identificadorEquipo) => {
         if (!arregloEventos || arregloEventos.length === 0) {
             return '<li style="color: #555; font-style: italic; list-style: none;">-</li>';
         }
-        const filtrados = arregloEventos.filter(item => item.equipo === identificadorEquipo);
+        const filtrados = arregloEventos.filter(item => item.equipo === identificadorEquipo && item.jugador.trim() !== '');
         return filtrados.length > 0
             ? filtrados.map(item => `<li style="margin-bottom: 4px;">${item.jugador}</li>`).join('')
             : '<li style="color: #555; font-style: italic; list-style: none;">-</li>';
     };
 
-    
     const esPartidoUnico = !p.fechaVuelta || p.fechaVuelta.trim() === "";
     const textoTituloIda = esPartidoUnico ? '▶ Partido Único' : '▶ Partido de Ida';
 
-    
+    const eqIzquierdaIda = p.localIda === 'equipo1' ? 'equipo1' : 'equipo2';
+    const eqDerechaIda = p.localIda === 'equipo1' ? 'equipo2' : 'equipo1';
+
+    const eqIzquierdaVuelta = p.localVuelta === 'equipo1' ? 'equipo1' : 'equipo2';
+    const eqDerechaVuelta = p.localVuelta === 'equipo1' ? 'equipo2' : 'equipo1';
+
     const htmlSeccionVuelta = esPartidoUnico ? '' : `
         <div style="margin-bottom: 12px; border-bottom: 1px solid #444; padding-bottom: 6px; margin-top: 25px;">
             <h4 style="color: var(--brand-teal); margin: 0 0 5px 0; font-size: 1rem; display: block;">▶ Partido de Vuelta</h4>
             <span style="font-size: 0.78rem; color: var(--text-secondary); display: block;">📅 ${p.fechaVuelta} | 🕒 ${p.horaVuelta}</span>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-            <!-- Columna Izquierda: Equipo 1 (Vuelta) -->
             <div style="background: rgba(0,0,0,0.2); padding: 12px; border-radius: 8px; text-align: right;">
-                <strong style="display: block; margin-bottom: 8px; font-size: 0.9rem; color: var(--brand-teal);">${p.equipo1}</strong>
-                <ul style="list-style: none; padding: 0; margin: 0 0 8px 0; font-size: 0.85rem; color: #ddd;">${agruparEventosPorEquipo(p.golesVuelta, 'equipo1')}</ul>
-                <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: #ddd;">${agruparEventosPorEquipo(p.tarjetasVuelta, 'equipo1')}</ul>
+                <strong style="display: block; margin-bottom: 8px; font-size: 0.9rem; color: var(--brand-teal);">${p[eqIzquierdaVuelta]}</strong>
+                <ul style="list-style: none; padding: 0; margin: 0 0 8px 0; font-size: 0.85rem; color: #ddd;">${agruparEventosPorEquipo(p.golesVuelta, eqIzquierdaVuelta)}</ul>
+                <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: #ddd;">${agruparEventosPorEquipo(p.tarjetasVuelta, eqIzquierdaVuelta)}</ul>
             </div>
-            <!-- Columna Derecha: Equipo 2 (Vuelta) -->
             <div style="background: rgba(0,0,0,0.2); padding: 12px; border-radius: 8px; text-align: left;">
-                <strong style="display: block; margin-bottom: 8px; font-size: 0.9rem; color: var(--brand-teal);">${p.equipo2}</strong>
-                <ul style="list-style: none; padding: 0; margin: 0 0 8px 0; font-size: 0.85rem; color: #ddd;">${agruparEventosPorEquipo(p.golesVuelta, 'equipo2')}</ul>
-                <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: #ddd;">${agruparEventosPorEquipo(p.tarjetasVuelta, 'equipo2')}</ul>
+                <strong style="display: block; margin-bottom: 8px; font-size: 0.9rem; color: var(--brand-teal);">${p[eqDerechaVuelta]}</strong>
+                <ul style="list-style: none; padding: 0; margin: 0 0 8px 0; font-size: 0.85rem; color: #ddd;">${agruparEventosPorEquipo(p.golesVuelta, eqDerechaVuelta)}</ul>
+                <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: #ddd;">${agruparEventosPorEquipo(p.tarjetasVuelta, eqDerechaVuelta)}</ul>
             </div>
         </div>
     `;
 
     document.getElementById('modal-cuerpo').innerHTML = `
         <div style="font-family: 'Inter', sans-serif; color: var(--text-white);">
-            <!-- Resultado Principal -->
             <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: center;">
                 <div style="font-size: 1.2rem; color: var(--brand-teal); line-height: 1.4;">${p.marcador}</div>
             </div>
 
-            <!-- 🗓️ PRIMER PARTIDO (Ida o Único) -->
             <div style="margin-bottom: 12px; border-bottom: 1px solid #444; padding-bottom: 6px;">
                 <h4 style="color: var(--brand-teal); margin: 0 0 5px 0; font-size: 1rem; display: block;">${textoTituloIda}</h4>
                 <span style="font-size: 0.78rem; color: var(--text-secondary); display: block;">📅 ${p.fechaIda} | 🕒 ${p.horaIda}</span>
             </div>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: ${esPartidoUnico ? '0' : '25px'};">
-                <!-- Columna Izquierda: Equipo 1 (Ida/Único) -->
                 <div style="background: rgba(0,0,0,0.2); padding: 12px; border-radius: 8px; text-align: right;">
-                    <strong style="display: block; margin-bottom: 8px; font-size: 0.9rem; color: var(--brand-teal);">${p.equipo1}</strong>
-                    <ul style="list-style: none; padding: 0; margin: 0 0 8px 0; font-size: 0.85rem; color: #ddd;">${agruparEventosPorEquipo(p.golesIda, 'equipo1')}</ul>
-                    <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: #ddd;">${agruparEventosPorEquipo(p.tarjetasIda, 'equipo1')}</ul>
+                    <strong style="display: block; margin-bottom: 8px; font-size: 0.9rem; color: var(--brand-teal);">${p[eqIzquierdaIda]}</strong>
+                    <ul style="list-style: none; padding: 0; margin: 0 0 8px 0; font-size: 0.85rem; color: #ddd;">${agruparEventosPorEquipo(p.golesIda, eqIzquierdaIda)}</ul>
+                    <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: #ddd;">${agruparEventosPorEquipo(p.tarjetasIda, eqIzquierdaIda)}</ul>
                 </div>
-                <!-- Columna Derecha: Equipo 2 (Ida/Único) -->
                 <div style="background: rgba(0,0,0,0.2); padding: 12px; border-radius: 8px; text-align: left;">
-                    <strong style="display: block; margin-bottom: 8px; font-size: 0.9rem; color: var(--brand-teal);">${p.equipo2}</strong>
-                    <ul style="list-style: none; padding: 0; margin: 0 0 8px 0; font-size: 0.85rem; color: #ddd;">${agruparEventosPorEquipo(p.golesIda, 'equipo2')}</ul>
-                    <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: #ddd;">${agruparEventosPorEquipo(p.tarjetasIda, 'equipo2')}</ul>
+                    <strong style="display: block; margin-bottom: 8px; font-size: 0.9rem; color: var(--brand-teal);">${p[eqDerechaIda]}</strong>
+                    <ul style="list-style: none; padding: 0; margin: 0 0 8px 0; font-size: 0.85rem; color: #ddd;">${agruparEventosPorEquipo(p.golesIda, eqDerechaIda)}</ul>
+                    <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: #ddd;">${agruparEventosPorEquipo(p.tarjetasIda, eqDerechaIda)}</ul>
                 </div>
             </div>
 
-            <!-- 🗓️ SECCIÓN DINÁMICA DE VUELTA (Se dibuja o se destruye sola) -->
             ${htmlSeccionVuelta}
         </div>
     `;
 
-    
     const modal = document.getElementById('modal-partido');
     const scrollActual = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
     modal.style.position = 'absolute';
     modal.style.top = `${scrollActual}px`;
     modal.style.display = 'flex';
 }
+
 
 function cerrarModal() {
     document.getElementById('modal-partido').style.display = 'none';

@@ -183,16 +183,16 @@ body.page-enter {
         padding-top: 0.1px !important; 
     }
 
-    /* 2. Tu configuración limpia para liberar el Flexbox de PC */
+   
     body {
         display: block !important;      
         position: relative !important;
-        margin: 0 !important; /* Limpieza extra para asegurar el pegado al techo */
+        margin: 0 !important;
         width: 100% !important;
         overflow-x: hidden !important;  
     }
 
-    /* 3. Tu descuento global del 20% para encoger las letras de todas las páginas */
+   
     html {
         font-size: 80% !important;
     }
@@ -232,17 +232,17 @@ body.page-enter {
         white-space: nowrap !important;
     }
 
-    /* 1. Mantiene el tamaño de los nombres de los equipos y el botón expandir */
+    
+
     .match-card .team-name,
     .match-card .click-to-expand {
         font-size: 0.65rem !important; 
     }
 
-    /* 2. NUEVO: Hace la sección de detalles (fecha, hora, goles y tarjetas) un poco más grande */
     .match-card .match-meta,
     .match-card .match-events,
     .match-card .match-events p {
-        font-size: 0.75rem !important; /* ◄ Sube este valor (ej: 0.95rem o 1rem) hasta que quede al tamaño que buscas */
+        font-size: 0.75rem !important;
     }
 
     .footer-section {
