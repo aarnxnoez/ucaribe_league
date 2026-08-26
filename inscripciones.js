@@ -4,7 +4,7 @@
    ========================================================================== */
 
 function startCountdown() {
-    const targetDate = new Date('2026-09-04T00:00:00').getTime();
+    const targetDate = new Date('2026-08-28T18:00:00').getTime();
 
     const timerInterval = setInterval(function () {
         const now = new Date().getTime();
