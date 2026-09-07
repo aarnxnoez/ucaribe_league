@@ -15,7 +15,7 @@ function renderTablaGeneral() {
         {
             pos: 1,
             equipo: 'Estelares FC',
-            logo: 'Estelares.png',
+            logo: 'estelares.png',
             pj: 1,
             g: 1,
             e: 0,
@@ -29,7 +29,7 @@ function renderTablaGeneral() {
         {
             pos: 2,
             equipo: 'Capuchas FC',
-            logo: 'Capuchas_1.png',
+            logo: 'capuchas_1.png',
             pj: 1,
             g: 0,
             e: 0,
@@ -43,7 +43,7 @@ function renderTablaGeneral() {
         {
             pos: 3,
             equipo: 'Dragones FC',
-            logo: 'Dragones_1.png',
+            logo: 'dragones_1.png',
             pj: 1,
             g: 1,
             e: 0,
@@ -57,7 +57,7 @@ function renderTablaGeneral() {
         {
             pos: 4,
             equipo: 'Universo 7',
-            logo: 'Universo7.png',
+            logo: 'universo7.png',
             pj: 1,
             g: 1,
             e: 0,
@@ -71,7 +71,7 @@ function renderTablaGeneral() {
         {
             pos: 5,
             equipo: 'Sportmatozoides FC',
-            logo: 'Sportmatozoides.png',
+            logo: 'sportmatozoides.png',
             pj: 1,
             g: 0,
             e: 0,
@@ -85,7 +85,7 @@ function renderTablaGeneral() {
         {
             pos: 6,
             equipo: 'Talacheros FC',
-            logo: 'Talacheros.png',
+            logo: 'talacheros.png',
             pj: 0,
             g: 0,
             e: 0,
@@ -99,7 +99,7 @@ function renderTablaGeneral() {
         {
             pos: 7,
             equipo: 'Kantulikin FC',
-            logo: 'Kantulikin.png',
+            logo: 'kantulikin.png',
             pj: 1,
             g: 0,
             e: 0,
@@ -113,7 +113,7 @@ function renderTablaGeneral() {
         {
             pos: 8,
             equipo: 'Sementeros FC',
-            logo: 'Sementeros_1.png',
+            logo: 'sementeros_1.png',
             pj: 1,
             g: 1,
             e: 0,
@@ -127,7 +127,7 @@ function renderTablaGeneral() {
         {
             pos: 9,
             equipo: 'Corinthians FC',
-            logo: 'Corinthians.png',
+            logo: 'corinthians.png',
             pj: 1,
             g: 0,
             e: 0,
@@ -141,7 +141,7 @@ function renderTablaGeneral() {
         {
             pos: 10,
             equipo: 'Atlético Temozón',
-            logo: 'Temozon_1.png',
+            logo: 'temozon_1.png',
             pj: 1,
             g: 1,
             e: 0,
@@ -155,7 +155,7 @@ function renderTablaGeneral() {
         {
             pos: 11,
             equipo: 'FC Crystal',
-            logo: 'Crystal.png',
+            logo: 'crystal.png',
             pj: 1,
             g: 0,
             e: 0,
