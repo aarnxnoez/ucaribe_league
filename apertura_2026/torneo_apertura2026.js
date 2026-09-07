@@ -212,27 +212,27 @@ function renderCalendario() {
             partidos: [
                 {
                     local: 'Capuchas FC', logoLocal: 'capuchas_1.png', golesLocal: '4', eventosLocal: "<p>3 ⚽ Diegro Trejo</p><p>⚽ Samuel de la Rosa</p>",
-                    visitante: 'Estelares FC', logoVisitante: 'Estelares.png', golesVisitante: '6', eventosVisitante: "<p>Tomás Estrada ⚽ 4</p><p>Joseph Sánchez ⚽⚽</p>",
+                    visitante: 'Estelares FC', logoVisitante: 'estelares.png', golesVisitante: '6', eventosVisitante: "<p>Tomás Estrada ⚽ 4</p><p>Joseph Sánchez ⚽⚽</p>",
                     fecha: 'Jueves 3 de Octubre, 2026', hora: '16:00 PM', esPendiente: false, mensajePendiente: ''
                 },
                 {
-                    local: 'Dragones FC', logoLocal: 'Dragones_1.png', golesLocal: '3', eventosLocal: "<p>⚽⚽ Edgar Osalde</p><p>⚽ Arturo Can</p>",
+                    local: 'Dragones FC', logoLocal: 'dragones_1.png', golesLocal: '3', eventosLocal: "<p>⚽⚽ Edgar Osalde</p><p>⚽ Arturo Can</p>",
                     visitante: 'Corinthians FC', logoVisitante: 'corinthians.png', golesVisitante: '2', eventosVisitante: "<p>Jorge Delgadillo ⚽⚽</p>",
                     fecha: 'Viernes 4 de Octubre, 2026', hora: '15:00 PM', esPendiente: false, mensajePendiente: ''
                 },
                 {
-                    local: 'Universo 7', logoLocal: 'Universo7.png', golesLocal: '11', eventosLocal: "<p>7 ⚽ Alejandro Estrella</p><p>⚽⚽ José Corona</p><p>⚽ Victor Itzá</p><p>⚽ Brian Madrigal</p>",
-                    visitante: 'Sportmatozoides FC', logoVisitante: 'Sportmatozoides.png', golesVisitante: '0', eventosVisitante: "",
+                    local: 'Universo 7', logoLocal: 'universo7.png', golesLocal: '11', eventosLocal: "<p>7 ⚽ Alejandro Estrella</p><p>⚽⚽ José Corona</p><p>⚽ Victor Itzá</p><p>⚽ Brian Madrigal</p>",
+                    visitante: 'Sportmatozoides FC', logoVisitante: 'sportmatozoides.png', golesVisitante: '0', eventosVisitante: "",
                     fecha: 'Viernes 4 de Octubre, 2026', hora: '16:00 PM', esPendiente: false, mensajePendiente: ''
                 },
                 {
-                    local: 'Sementeros FC', logoLocal: 'Sementeros.png', golesLocal: '4', eventosLocal: "<p>⚽Iván Yah</p><p>⚽ Victor Gutierrez</p><p>⚽ Axel Trejo</p><p>⚽ Giovanni Hernández</p>",
+                    local: 'Sementeros FC', logoLocal: 'sementeros.png', golesLocal: '4', eventosLocal: "<p>⚽Iván Yah</p><p>⚽ Victor Gutierrez</p><p>⚽ Axel Trejo</p><p>⚽ Giovanni Hernández</p>",
                     visitante: 'Kantulikin FC', logoVisitante: 'kantulikin.png', golesVisitante: '3', eventosVisitante: "<p>José Meneses ⚽</p><p>Isai López ⚽</p><p>Miguel de la Cruz ⚽</p>",
                     fecha: 'Viernes 4 de Octubre, 2026', hora: '18:00 PM', esPendiente: false, mensajePendiente: ''
                 },
                 {
-                    local: 'Atlético Temozón', logoLocal: 'Temozon_1.png', golesLocal: '9', eventosLocal: "<p>⚽⚽ Antonio Prado</p><p>4 ⚽ Tomas Soberanis</p><p>⚽ Mauricio Montero</p><p>⚽ Rafael Huchin</p>",
-                    visitante: 'FC Crystal', logoVisitante: 'Crystal.png', golesVisitante: '4', eventosVisitante: "<p>Rodrigo Almeyda ⚽</p><p>Isaac Dominguez⚽</p><p>Brian Pech ⚽</p><p>Luis Uuh Pérez⚽</p>",
+                    local: 'Atlético Temozón', logoLocal: 'temozon_1.png', golesLocal: '9', eventosLocal: "<p>⚽⚽ Antonio Prado</p><p>4 ⚽ Tomas Soberanis</p><p>⚽ Mauricio Montero</p><p>⚽ Rafael Huchin</p>",
+                    visitante: 'FC Crystal', logoVisitante: 'crystal.png', golesVisitante: '4', eventosVisitante: "<p>Rodrigo Almeyda ⚽</p><p>Isaac Dominguez⚽</p><p>Brian Pech ⚽</p><p>Luis Uuh Pérez⚽</p>",
                     fecha: 'Viernes 4 de Octubre, 2026', hora: '19:00 PM', esPendiente: false, mensajePendiente: ''
                 }
             ]
@@ -256,28 +256,28 @@ function renderCalendario() {
             titulo: 'Jornada 2', estado: 'Próximamente', claseEstado: 'proximamente',
             partidos: [
                 {
-                    local: 'Corinthians FC', logoLocal: 'Corinthians.png', golesLocal: '', eventosLocal: '',
-                    visitante: 'Atlético Temozón', logoVisitante: 'Temozon_1.png', golesVisitante: '', eventosVisitante: '',
+                    local: 'Corinthians FC', logoLocal: 'corinthians.png', golesLocal: '', eventosLocal: '',
+                    visitante: 'Atlético Temozón', logoVisitante: 'temozon_1.png', golesVisitante: '', eventosVisitante: '',
                     fecha: 'Viernes 11 de Septiembre, 2026', hora: '18:00 PM', esPendiente: true, mensajePendiente: 'Horario definitivo sujeto a confirmación oficial.'
                 },
                 {
-                    local: 'Estelares FC', logoLocal: 'Estelares.png', golesLocal: '', eventosLocal: '',
-                    visitante: 'Universo 7', logoVisitante: 'Universo7.png', golesVisitante: '', eventosVisitante: '',
+                    local: 'Estelares FC', logoLocal: 'estelares.png', golesLocal: '', eventosLocal: '',
+                    visitante: 'Universo 7', logoVisitante: 'universo7.png', golesVisitante: '', eventosVisitante: '',
                     fecha: 'Viernes 11 de Septiembre, 2026', hora: '18:00 PM', esPendiente: true, mensajePendiente: 'Horario definitivo sujeto a confirmación oficial.'
                 },
                 {
-                    local: 'FC Crystal', logoLocal: 'Crystal.png', golesLocal: '', eventosLocal: '',
-                    visitante: 'Sementeros FC', logoVisitante: 'Sementeros.png', golesVisitante: '', eventosVisitante: '',
+                    local: 'FC Crystal', logoLocal: 'crystal.png', golesLocal: '', eventosLocal: '',
+                    visitante: 'Sementeros FC', logoVisitante: 'sementeros.png', golesVisitante: '', eventosVisitante: '',
                     fecha: 'Viernes 11 de Septiembre, 2026', hora: '18:00 PM', esPendiente: true, mensajePendiente: 'Horario definitivo sujeto a confirmación oficial.'
                 },
                 {
-                    local: 'Kantulikin FC', logoLocal: 'Kantulikin.png', golesLocal: '', eventosLocal: '',
-                    visitante: 'Capuchas FC', logoVisitante: 'Capuchas_1.png', golesVisitante: '', eventosVisitante: '',
+                    local: 'Kantulikin FC', logoLocal: 'kantulikin.png', golesLocal: '', eventosLocal: '',
+                    visitante: 'Capuchas FC', logoVisitante: 'capuchas_1.png', golesVisitante: '', eventosVisitante: '',
                     fecha: 'Viernes 11 de Septiembre, 2026', hora: '18:00 PM', esPendiente: true, mensajePendiente: 'Horario definitivo sujeto a confirmación oficial.'
                 },
                 {
-                    local: 'Sportmatozoides FC', logoLocal: 'Sportmatozoides.png', golesLocal: '', eventosLocal: '',
-                    visitante: 'Talacheros FC', logoVisitante: 'Talacheros.png', golesVisitante: '', eventosVisitante: '',
+                    local: 'Sportmatozoides FC', logoLocal: 'sportmatozoides.png', golesLocal: '', eventosLocal: '',
+                    visitante: 'Talacheros FC', logoVisitante: 'talacheros.png', golesVisitante: '', eventosVisitante: '',
                     fecha: 'Viernes 11 de Septiembre, 2026', hora: '18:00 PM', esPendiente: true, mensajePendiente: 'Horario definitivo sujeto a confirmación oficial.'
                 }
             ]
