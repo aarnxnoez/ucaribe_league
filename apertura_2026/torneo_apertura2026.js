@@ -703,7 +703,7 @@ function mostrarEquipo(idEquipo) {
 
     const baseDatosEquipos = {
         estelares: {
-            nombreReal: 'Estelares FC', carpetaEquipo: 'estelares', logo: 'Estelares.png',
+            nombreReal: 'Estelares FC', carpetaEquipo: 'estelares', logo: 'estelares.png',
             plantilla: [
                 { nombre: 'Tomás Estrada', rol: 'CAPITÁN', foto: 'te_1.png' },
                 { nombre: 'Adrián Paxtian', rol: 'PORTERO', foto: 'ap_1.png' },
@@ -721,7 +721,7 @@ function mostrarEquipo(idEquipo) {
             historial: [{ jornada: 'Jornada 1', fecha: 'Jueves 3 de Octubre, 2026', local: 'Capuchas FC', logoLocal: 'Capuchas_1.png', marcador: '4 - 6', visitante: 'Estelares FC', logoVisitante: 'Estelares.png', resultado: 'VICTORIA', claseRes: 'res-victoria' }]
         },
         capuchas: {
-            nombreReal: 'Capuchas FC', carpetaEquipo: 'capuchas', logo: 'Capuchas_1.png',
+            nombreReal: 'Capuchas FC', carpetaEquipo: 'capuchas', logo: 'capuchas_1.png',
             plantilla: [
                 { nombre: 'Eugenio Palomares', rol: 'CAPITÁN', foto: 'ep_1.png' },
                 { nombre: 'Moisés Vieyra', rol: 'PORTERO', foto: 'mv_1.png' },
@@ -740,7 +740,7 @@ function mostrarEquipo(idEquipo) {
             historial: [{ jornada: 'Jornada 1', fecha: 'Jueves 3 de Octubre, 2026', local: 'Capuchas FC', logoLocal: 'Capuchas_1.png', marcador: '4 - 6', visitante: 'Estelares FC', logoVisitante: 'Estelares.png', resultado: 'DERROTA', claseRes: 'res-derrota' }]
         },
         dragones: {
-            nombreReal: 'Dragones FC', carpetaEquipo: 'dragones', logo: 'Dragones_1.png',
+            nombreReal: 'Dragones FC', carpetaEquipo: 'dragones', logo: 'dragones_1.png',
             plantilla: [
                 { nombre: 'Aarón Martínez', rol: 'CAPITÁN', foto: 'am_1.png' },
                 { nombre: 'Jaziel Nava', rol: 'PORTERO', foto: 'portero.png' },
@@ -760,7 +760,7 @@ function mostrarEquipo(idEquipo) {
             historial: [{ jornada: 'Jornada 1', fecha: 'Viernes 4 de Octubre, 2026', local: 'Dragones FC', logoLocal: 'Dragones_1.png', marcador: '3 - 2', visitante: 'Corinthians FC', logoVisitante: 'Corinthians.png', resultado: 'VICTORIA', claseRes: 'res-victoria' }]
         },
         universo7: {
-            nombreReal: 'Universo 7', carpetaEquipo: 'universo7', logo: 'Universo7.png',
+            nombreReal: 'Universo 7', carpetaEquipo: 'universo7', logo: 'universo7.png',
             plantilla: [
                 { nombre: 'Ian Cisneros', rol: 'CAPITÁN', foto: 'ic.png' },
                 { nombre: 'Francisco Arellano', rol: 'JUGADOR', foto: 'fa.png' },
@@ -779,14 +779,14 @@ function mostrarEquipo(idEquipo) {
             historial: [{ jornada: 'Jornada 1', fecha: 'Viernes 4 de Octubre, 2026', local: 'Universo 7', logoLocal: 'Universo7.png', marcador: '11 - 0', visitante: 'Sportmatozoides FC', logoVisitante: 'Sportmatozoides.png', resultado: 'VICTORIA', claseRes: 'res-victoria' }]
         },
         kantulikin: {
-            nombreReal: 'Kantulikin FC', carpetaEquipo: 'kantulikin', logo: 'Kantulikin.png',
+            nombreReal: 'Kantulikin FC', carpetaEquipo: 'kantulikin', logo: 'kantulikin.png',
             plantilla: [
                 { nombre: 'Braiam Hernández', rol: 'CAPITÁN', foto: 'jugador.png' }
             ],
             historial: [{ jornada: 'Jornada 1', fecha: 'Viernes 4 de Octubre, 2026', local: 'Sementeros FC', logoLocal: 'Sementeros_1.png', marcador: '4 - 3', visitante: 'Kantulikin FC', logoVisitante: 'Kantulikin.png', resultado: 'DERROTA', claseRes: 'res-derrota' }]
         },
         temozon: {
-            nombreReal: 'Atlético Temozón', carpetaEquipo: 'temozon', logo: 'Temozon_1.png',
+            nombreReal: 'Atlético Temozón', carpetaEquipo: 'temozon', logo: 'temozon_1.png',
             plantilla: [
                 { nombre: 'Uriel Hernández', rol: 'CAPITÁN', foto: 'uh.png' },
                 { nombre: 'Luis Guzman', rol: 'PORTERO', foto: 'lg_1.png' },
@@ -806,7 +806,7 @@ function mostrarEquipo(idEquipo) {
             historial: [{ jornada: 'Jornada 1', fecha: 'Viernes 4 de Octubre, 2026', local: 'Atlético Temozón', logoLocal: 'Temozon_1.png', marcador: '9 - 4', visitante: 'FC Crystal', logoVisitante: 'Crystal.png', resultado: 'VICTORIA', claseRes: 'res-victoria' }]
         },
         corinthians: {
-            nombreReal: 'Corinthians FC', carpetaEquipo: 'corinthians', logo: 'Corinthians.png',
+            nombreReal: 'Corinthians FC', carpetaEquipo: 'corinthians', logo: 'corinthians.png',
             plantilla: [
                 { nombre: 'Gabriel Rivadeneira', rol: 'CAPITÁN', foto: 'gr_1.png' },
                 { nombre: 'Oswald Grajales', rol: 'PORTERO', foto: 'og_1.png' },
@@ -826,7 +826,7 @@ function mostrarEquipo(idEquipo) {
             historial: [{ jornada: 'Jornada 1', fecha: 'Viernes 4 de Octubre, 2026', local: 'Dragones FC', logoLocal: 'Dragones_1.png', marcador: '3 - 2', visitante: 'Corinthians FC', logoVisitante: 'Corinthians.png', resultado: 'DERROTA', claseRes: 'res-derrota' }]
         },
         crystal: {
-            nombreReal: 'FC Crystal', carpetaEquipo: 'crystal', logo: 'Crystal.png',
+            nombreReal: 'FC Crystal', carpetaEquipo: 'crystal', logo: 'crystal.png',
             plantilla: [
                 { nombre: 'Rodrigo Almeyda', rol: 'CAPITÁN', foto: 'ra_2.png' },
                 { nombre: 'Kevin Torres', rol: 'PORTERO', foto: 'kt_1.png' },
@@ -844,7 +844,7 @@ function mostrarEquipo(idEquipo) {
             historial: [{ jornada: 'Jornada 1', fecha: 'Viernes 4 de Octubre, 2026', local: 'Atlético Temozón', logoLocal: 'Temozon_1.png', marcador: '9 - 4', visitante: 'FC Crystal', logoVisitante: 'Crystal.png', resultado: 'DERROTA', claseRes: 'res-derrota' }]
         },
         talacheros: {
-            nombreReal: 'Talacheros FC', carpetaEquipo: 'talacheros', logo: 'Talacheros.png',
+            nombreReal: 'Talacheros FC', carpetaEquipo: 'talacheros', logo: 'talacheros.png',
             plantilla: [
                 { nombre: 'Ángel Sánchez', rol: 'CAPITÁN', foto: 'jugador.png' },
                 { nombre: 'Portero Talacheros', rol: 'PORTERO', foto: 'portero.png' },
@@ -859,7 +859,7 @@ function mostrarEquipo(idEquipo) {
             ], historial: []
         },
         sementeros: {
-            nombreReal: 'Sementeros FC', carpetaEquipo: 'sementeros', logo: 'Sementeros_1.png',
+            nombreReal: 'Sementeros FC', carpetaEquipo: 'sementeros', logo: 'sementeros_1.png',
             plantilla: [
                 { nombre: 'Iván Yah', rol: 'PORTERO', foto: 'iy.png' },
                 { nombre: 'Marlon Lopez', rol: 'CAPITÁN', foto: 'jugador.png' },
@@ -879,7 +879,7 @@ function mostrarEquipo(idEquipo) {
             historial: [{ jornada: 'Jornada 1', fecha: 'Viernes 4 de Octubre, 2026', local: 'Sementeros FC', logoLocal: 'Sementeros_1.png', marcador: '4 - 3', visitante: 'Kantulikin FC', logoVisitante: 'Kantulikin.png', resultado: 'VICTORIA', claseRes: 'res-victoria' }]
         },
         sportmatozoides: {
-            nombreReal: 'Sportmatozoides FC', carpetaEquipo: 'sportmatozoides', logo: 'Sportmatozoides.png',
+            nombreReal: 'Sportmatozoides FC', carpetaEquipo: 'sportmatozoides', logo: 'sportmatozoides.png',
             plantilla: [
                 { nombre: 'Jahir Vadillo', rol: 'CAPITÁN', foto: 'jv.png' },
                 { nombre: 'Samuel Lang', rol: 'PORTERO', foto: 'sl.png' },
