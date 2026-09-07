@@ -12,27 +12,182 @@ function renderTablaGeneral() {
     if (!container) return;
 
     const tablaPosiciones = [
-        { pos: 1, equipo: 'Estelares FC', logo: 'Estelares.png', pj: 9, g: 7, e: 1, p: 1, gf: 54, gc: 15, dif: '+39', pts: 22, clasifica: true },
-        { pos: 2, equipo: 'Capuchas FC', logo: 'Capuchas.png', pj: 9, g: 7, e: 0, p: 2, gf: 51, gc: 19, dif: '+32', pts: 21, clasifica: true },
-        { pos: 3, equipo: 'Dragones FC', logo: 'Dragones.png', pj: 9, g: 6, e: 2, p: 1, gf: 46, gc: 19, dif: '+27', pts: 20, clasifica: true },
-        { pos: 4, equipo: 'Milan', logo: 'Milan.png', pj: 9, g: 6, e: 1, p: 2, gf: 57, gc: 26, dif: '+31', pts: 19, clasifica: true },
-        { pos: 5, equipo: 'Galácticos', logo: 'Galacticos.png', pj: 8, g: 5, e: 0, p: 3, gf: 21, gc: 32, dif: '-11', pts: 16, clasifica: true },
-        { pos: 6, equipo: 'Real Caribe FC', logo: 'Real_Caribe.png', pj: 9, g: 5, e: 0, p: 4, gf: 51, gc: 32, dif: '+19', pts: 15, clasifica: true },
-        { pos: 7, equipo: 'Palmeras CF', logo: 'Palmeras.png', pj: 9, g: 5, e: 0, p: 4, gf: 53, gc: 38, dif: '+15', pts: 15, clasifica: true },
-        { pos: 8, equipo: 'Sementeros FC', logo: 'Sementeros.png', pj: 9, g: 4, e: 1, p: 4, gf: 27, gc: 36, dif: '-9', pts: 13, clasifica: true },
-        { pos: 9, equipo: 'Fósiles FC', logo: 'Fosiles.png', pj: 9, g: 3, e: 1, p: 5, gf: 25, gc: 42, dif: '-17', pts: 10, clasifica: false },
-        { pos: 10, equipo: 'Atlético Temozón', logo: 'Atletico_Temozon.png', pj: 9, g: 2, e: 0, p: 7, gf: 14, gc: 39, dif: '-25', pts: 6, clasifica: false },
-        { pos: 11, equipo: 'Perceptrones', logo: 'Perceptrones.png', pj: 9, g: 0, e: 2, p: 7, gf: 18, gc: 66, dif: '-48', pts: 2, clasifica: false },
-        { pos: 12, equipo: 'Wizards', logo: 'Wizards.png', pj: 9, g: 0, e: 1, p: 8, gf: 18, gc: 47, dif: '-29', pts: 1, clasifica: false }
+        {
+            pos: 1,
+            equipo: 'Estelares FC',
+            logo: 'Estelares.png',
+            pj: 1,
+            g: 1,
+            e: 0,
+            p: 0,
+            gf: 6,
+            gc: 4,
+            dif: '+2',
+            pts: 3,
+            clasifica: true
+        },
+        {
+            pos: 2,
+            equipo: 'Capuchas FC',
+            logo: 'Capuchas_1.png',
+            pj: 1,
+            g: 0,
+            e: 0,
+            p: 1,
+            gf: 4,
+            gc: 6,
+            dif: '-2',
+            pts: 0,
+            clasifica: true
+        },
+        {
+            pos: 3,
+            equipo: 'Dragones FC',
+            logo: 'Dragones_1.png',
+            pj: 1,
+            g: 1,
+            e: 0,
+            p: 0,
+            gf: 3,
+            gc: 2,
+            dif: '+1',
+            pts: 3,
+            clasifica: true
+        },
+        {
+            pos: 4,
+            equipo: 'Universo 7',
+            logo: 'Universo7.png',
+            pj: 1,
+            g: 1,
+            e: 0,
+            p: 0,
+            gf: 11,
+            gc: 0,
+            dif: '0',
+            pts: 3,
+            clasifica: true
+        },
+        {
+            pos: 5,
+            equipo: 'Sportmatozoides FC',
+            logo: 'Sportmatozoides.png',
+            pj: 1,
+            g: 0,
+            e: 0,
+            p: 1,
+            gf: 0,
+            gc: 11,
+            dif: '-11',
+            pts: 0,
+            clasifica: true
+        },
+        {
+            pos: 6,
+            equipo: 'Talacheros FC',
+            logo: 'Talacheros.png',
+            pj: 0,
+            g: 0,
+            e: 0,
+            p: 0,
+            gf: 0,
+            gc: 0,
+            dif: '0',
+            pts: 0,
+            clasifica: true
+        },
+        {
+            pos: 7,
+            equipo: 'Kantulikin FC',
+            logo: 'Kantulikin.png',
+            pj: 1,
+            g: 0,
+            e: 0,
+            p: 0,
+            gf: 3,
+            gc: 4,
+            dif: '-1',
+            pts: 0,
+            clasifica: true
+        },
+        {
+            pos: 8,
+            equipo: 'Sementeros FC',
+            logo: 'Sementeros_1.png',
+            pj: 1,
+            g: 1,
+            e: 0,
+            p: 0,
+            gf: 4,
+            gc: 3,
+            dif: '+1',
+            pts: 3,
+            clasifica: true
+        },
+        {
+            pos: 9,
+            equipo: 'Corinthians FC',
+            logo: 'Corinthians.png',
+            pj: 1,
+            g: 0,
+            e: 0,
+            p: 1,
+            gf: 2,
+            gc: 3,
+            dif: '-1',
+            pts: 0,
+            clasifica: false
+        },
+        {
+            pos: 10,
+            equipo: 'Atlético Temozón',
+            logo: 'Temozon_1.png',
+            pj: 1,
+            g: 1,
+            e: 0,
+            p: 0,
+            gf: 9,
+            gc: 4,
+            dif: '+5',
+            pts: 3,
+            clasifica: false
+        },
+        {
+            pos: 11,
+            equipo: 'FC Crystal',
+            logo: 'Crystal.png',
+            pj: 1,
+            g: 0,
+            e: 0,
+            p: 1,
+            gf: 4,
+            gc: 9,
+            dif: '-5',
+            pts: 0,
+            clasifica: false
+        }
     ];
 
-    container.innerHTML = tablaPosiciones.map(fila => {
+    const tablaOrdenada = [...tablaPosiciones].sort((equipoA, equipoB) => {
+        const diferenciaA = equipoA.gf - equipoA.gc;
+        const diferenciaB = equipoB.gf - equipoB.gc;
+
+        return equipoB.pts - equipoA.pts
+            || diferenciaB - diferenciaA
+            || equipoB.gf - equipoA.gf
+            || equipoB.g - equipoA.g;
+    });
+
+    container.innerHTML = tablaOrdenada.map((fila, indice) => {
+        fila.pos = indice + 1;
+        fila.clasifica = indice < 8;
         const filaClase = fila.clasifica ? 'class="zona-clasificacion"' : '';
+        const diferencia = fila.gf - fila.gc;
         return `
             <tr ${filaClase}>
-                <td>${fila.pos}</td>
+                <td>${indice + 1}</td>
                 <td class="text-left team-cell">
-                    <img src="../imagenes_ucaribe/apertura2025/logos_apertura2025/${fila.logo}" alt="${fila.equipo}" class="team-logo-img">
+                    <img src="../imagenes_ucaribe/logos_equipos/${fila.logo}" alt="${fila.equipo}" class="team-logo-img">
                     <strong>${fila.equipo}</strong>
                 </td>
                 <td>${fila.pj}</td>
@@ -41,7 +196,7 @@ function renderTablaGeneral() {
                 <td>${fila.p}</td>
                 <td>${fila.gf}</td>
                 <td>${fila.gc}</td>
-                <td>${fila.dif}</td>
+                <td>${diferencia > 0 ? `+${diferencia}` : diferencia}</td>
                 <td class="pts-cell">${fila.pts}</td>
             </tr>`;
     }).join('');
@@ -53,47 +208,77 @@ function renderCalendario() {
 
     const jornadas = [
         {
-            titulo: 'Jornada 1', estado: 'Completada', claseEstado: '',
+            titulo: 'Jornada 1', estado: 'Completada', claseEstado: 'completada',
             partidos: [
                 {
-                    local: 'Estelares', logoLocal: '../estelares.png', golesLocal: '2', eventosLocal: "<p>Carlos Mendoza (15') ⚽</p><p>Luis Navarro (89') 🟨</p>",
-                    visitante: 'Capuchas', logoVisitante: 'Capuchas.png', golesVisitante: '1', eventosVisitante: "<p>⚽ Javier Ortiz (45')</p><p>🟨 Mateo Silva (30')</p>",
-                    fecha: 'Sábado 12 de Octubre, 2025', hora: '10:00 AM', esPendiente: false, mensajePendiente: ''
+                    local: 'Capuchas FC', logoLocal: 'capuchas_1.png', golesLocal: '4', eventosLocal: "<p>3 ⚽ Diegro Trejo</p><p>⚽ Samuel de la Rosa</p>",
+                    visitante: 'Estelares FC', logoVisitante: 'Estelares.png', golesVisitante: '6', eventosVisitante: "<p>Tomás Estrada ⚽ 4</p><p>Joseph Sánchez ⚽⚽</p>",
+                    fecha: 'Jueves 3 de Octubre, 2026', hora: '16:00 PM', esPendiente: false, mensajePendiente: ''
                 },
                 {
-                    local: 'Dragones', logoLocal: 'Dragones.png', golesLocal: '0', eventosLocal: "<p>🟨 Oscar Pérez (55')</p>",
-                    visitante: 'Tigres', logoVisitante: 'tigres.png', golesVisitante: '3', eventosVisitante: "<p>⚽ Jesús Corona (22', 71')</p><p>⚽ Hugo Sánchez (85')</p>",
-                    fecha: 'Domingo 13 de Octubre, 2025', hora: '12:00 PM', esPendiente: false, mensajePendiente: ''
+                    local: 'Dragones FC', logoLocal: 'Dragones_1.png', golesLocal: '3', eventosLocal: "<p>⚽⚽ Edgar Osalde</p><p>⚽ Arturo Can</p>",
+                    visitante: 'Corinthians FC', logoVisitante: 'corinthians.png', golesVisitante: '2', eventosVisitante: "<p>Jorge Delgadillo ⚽⚽</p>",
+                    fecha: 'Viernes 4 de Octubre, 2026', hora: '15:00 PM', esPendiente: false, mensajePendiente: ''
+                },
+                {
+                    local: 'Universo 7', logoLocal: 'Universo7.png', golesLocal: '11', eventosLocal: "<p>7 ⚽ Alejandro Estrella</p><p>⚽⚽ José Corona</p><p>⚽ Victor Itzá</p><p>⚽ Brian Madrigal</p>",
+                    visitante: 'Sportmatozoides FC', logoVisitante: 'Sportmatozoides.png', golesVisitante: '0', eventosVisitante: "",
+                    fecha: 'Viernes 4 de Octubre, 2026', hora: '16:00 PM', esPendiente: false, mensajePendiente: ''
+                },
+                {
+                    local: 'Sementeros FC', logoLocal: 'Sementeros.png', golesLocal: '4', eventosLocal: "<p>⚽Iván Yah</p><p>⚽ Victor Gutierrez</p><p>⚽ Axel Trejo</p><p>⚽ Giovanni Hernández</p>",
+                    visitante: 'Kantulikin FC', logoVisitante: 'kantulikin.png', golesVisitante: '3', eventosVisitante: "<p>José Meneses ⚽</p><p>Isai López ⚽</p><p>Miguel de la Cruz ⚽</p>",
+                    fecha: 'Viernes 4 de Octubre, 2026', hora: '18:00 PM', esPendiente: false, mensajePendiente: ''
+                },
+                {
+                    local: 'Atlético Temozón', logoLocal: 'Temozon_1.png', golesLocal: '9', eventosLocal: "<p>⚽⚽ Antonio Prado</p><p>4 ⚽ Tomas Soberanis</p><p>⚽ Mauricio Montero</p><p>⚽ Rafael Huchin</p>",
+                    visitante: 'FC Crystal', logoVisitante: 'Crystal.png', golesVisitante: '4', eventosVisitante: "<p>Rodrigo Almeyda ⚽</p><p>Isaac Dominguez⚽</p><p>Brian Pech ⚽</p><p>Luis Uuh Pérez⚽</p>",
+                    fecha: 'Viernes 4 de Octubre, 2026', hora: '19:00 PM', esPendiente: false, mensajePendiente: ''
                 }
             ]
         },
+        // {
+        //     titulo: 'Jornada 2', estado: 'En Curso', claseEstado: 'en-curso',
+        //     partidos: [
+        //         {
+        //             local: 'Capuchas', logoLocal: 'Capuchas.png', golesLocal: '1', eventosLocal: "<p>Mateo Silva (40') ⚽</p>",
+        //             visitante: 'Dragones', logoVisitante: 'Dragones.png', golesVisitante: '1', eventosVisitante: "<p>⚽ Raúl García (65')</p>",
+        //             fecha: 'Sábado 19 de Octubre, 2025', hora: '10:00 AM', esPendiente: false, mensajePendiente: ''
+        //         },
+        //         {
+        //             local: 'Tigres', logoLocal: 'tigres.png', golesLocal: '', eventosLocal: '',
+        //             visitante: 'Estelares', logoVisitante: 'estelares.png', golesVisitante: '', eventosVisitante: '',
+        //             fecha: 'Domingo 20 de Octubre, 2025', hora: '12:00 PM', esPendiente: true, mensajePendiente: 'Partido programado para jugarse el próximo domingo.'
+        //         }
+        //     ]
+        // },
         {
-            titulo: 'Jornada 2', estado: 'En Curso', claseEstado: 'en-curso',
+            titulo: 'Jornada 2', estado: 'Próximamente', claseEstado: 'proximamente',
             partidos: [
                 {
-                    local: 'Capuchas', logoLocal: 'Capuchas.png', golesLocal: '1', eventosLocal: "<p>Mateo Silva (40') ⚽</p>",
-                    visitante: 'Dragones', logoVisitante: 'Dragones.png', golesVisitante: '1', eventosVisitante: "<p>⚽ Raúl García (65')</p>",
-                    fecha: 'Sábado 19 de Octubre, 2025', hora: '10:00 AM', esPendiente: false, mensajePendiente: ''
+                    local: 'Corinthians FC', logoLocal: 'Corinthians.png', golesLocal: '', eventosLocal: '',
+                    visitante: 'Atlético Temozón', logoVisitante: 'Temozon_1.png', golesVisitante: '', eventosVisitante: '',
+                    fecha: 'Viernes 11 de Septiembre, 2026', hora: '18:00 PM', esPendiente: true, mensajePendiente: 'Horario definitivo sujeto a confirmación oficial.'
                 },
                 {
-                    local: 'Tigres', logoLocal: 'tigres.png', golesLocal: '', eventosLocal: '',
-                    visitante: 'Estelares', logoVisitante: 'estelares.png', golesVisitante: '', eventosVisitante: '',
-                    fecha: 'Domingo 20 de Octubre, 2025', hora: '12:00 PM', esPendiente: true, mensajePendiente: 'Partido programado para jugarse el próximo domingo.'
-                }
-            ]
-        },
-        {
-            titulo: 'Jornada 3', estado: 'Próximamente', claseEstado: 'proximamente',
-            partidos: [
-                {
-                    local: 'Estelares', logoLocal: 'estelares.png', golesLocal: '', eventosLocal: '',
-                    visitante: 'Dragones', logoVisitante: 'Dragones.png', golesVisitante: '', eventosVisitante: '',
-                    fecha: 'Sábado 26 de Octubre, 2025', hora: '10:00 AM', esPendiente: true, mensajePendiente: 'Horario definitivo sujeto a confirmación oficial.'
+                    local: 'Estelares FC', logoLocal: 'Estelares.png', golesLocal: '', eventosLocal: '',
+                    visitante: 'Universo 7', logoVisitante: 'Universo7.png', golesVisitante: '', eventosVisitante: '',
+                    fecha: 'Viernes 11 de Septiembre, 2026', hora: '18:00 PM', esPendiente: true, mensajePendiente: 'Horario definitivo sujeto a confirmación oficial.'
                 },
                 {
-                    local: 'Capuchas', logoLocal: 'Capuchas.png', golesLocal: '', eventosLocal: '',
-                    visitante: 'Tigres', logoVisitante: 'tigres.png', golesVisitante: '', eventosVisitante: '',
-                    fecha: 'Domingo 27 de Octubre, 2025', hora: '12:00 PM', esPendiente: true, mensajePendiente: 'Venta de accesos disponible próximamente en campus.'
+                    local: 'FC Crystal', logoLocal: 'Crystal.png', golesLocal: '', eventosLocal: '',
+                    visitante: 'Sementeros FC', logoVisitante: 'Sementeros.png', golesVisitante: '', eventosVisitante: '',
+                    fecha: 'Viernes 11 de Septiembre, 2026', hora: '18:00 PM', esPendiente: true, mensajePendiente: 'Horario definitivo sujeto a confirmación oficial.'
+                },
+                {
+                    local: 'Kantulikin FC', logoLocal: 'Kantulikin.png', golesLocal: '', eventosLocal: '',
+                    visitante: 'Capuchas FC', logoVisitante: 'Capuchas_1.png', golesVisitante: '', eventosVisitante: '',
+                    fecha: 'Viernes 11 de Septiembre, 2026', hora: '18:00 PM', esPendiente: true, mensajePendiente: 'Horario definitivo sujeto a confirmación oficial.'
+                },
+                {
+                    local: 'Sportmatozoides FC', logoLocal: 'Sportmatozoides.png', golesLocal: '', eventosLocal: '',
+                    visitante: 'Talacheros FC', logoVisitante: 'Talacheros.png', golesVisitante: '', eventosVisitante: '',
+                    fecha: 'Viernes 11 de Septiembre, 2026', hora: '18:00 PM', esPendiente: true, mensajePendiente: 'Horario definitivo sujeto a confirmación oficial.'
                 }
             ]
         }
@@ -125,11 +310,11 @@ function renderCalendario() {
                         <div class="match-teams">
                             <div class="team-info home-team">
                                 <span class="team-name">${partido.local}</span>
-                                <img src="../imagenes_ucaribe/logos/${partido.logoLocal}" alt="${partido.local}" class="team-logo-img">
+                                <img src="../imagenes_ucaribe/logos_equipos/${partido.logoLocal}" alt="${partido.local}" class="team-logo-img">
                             </div>
                             ${scoreHTML}
                             <div class="team-info away-team">
-                                <img src="../imagenes_ucaribe/logos/${partido.logoVisitante}" alt="${partido.visitante}" class="team-logo-img">
+                                <img src="../imagenes_ucaribe/logos_equipos/${partido.logoVisitante}" alt="${partido.visitante}" class="team-logo-img">
                                 <span class="team-name">${partido.visitante}</span>
                             </div>
                         </div>
@@ -333,35 +518,34 @@ function renderGoleo() {
     if (!container) return;
 
     const goleadores = [
-        { nombre: 'Tomas Estrada', equipo: 'Estelares FC', goles: '24' },
-        { nombre: 'Jesús Rodríguez', equipo: 'Real Caribe', goles: '17' },
-        { nombre: 'Mauricio Montero', equipo: 'Palmeras CF', goles: '14' },
-        { nombre: 'Antonio Sanchez', equipo: 'Dragones FC', goles: '13' },
-        { nombre: 'Angel Herrera **', equipo: 'Milan', goles: '12' },
-        { nombre: 'Tommas Soberanis **', equipo: 'Palmeras CF', goles: '12' },
-        { nombre: 'Arturo Can', equipo: 'Real Caribe', goles: '12' },
-        { nombre: 'Luis Balam', equipo: 'Milan', goles: '12' },
-        { nombre: 'Eduardo de la Cruz', equipo: 'Capuchas FC', goles: '11' },
-        { nombre: 'Tommas Soberanis', equipo: 'Dragones FC', goles: '10' },
-        { nombre: 'Carlos Yam', equipo: 'Palmeras CF', goles: '9' },
-        { nombre: 'Ramsés Ponce', equipo: 'Estelares FC', goles: '9' },
-        { nombre: 'Jafeth Pacheco', equipo: 'Milan', goles: '8' },
-        { nombre: 'Angel Salvatierra', equipo: 'Galácticos', goles: '8' },
-        { nombre: 'Abraham Castelan', equipo: 'Milan', goles: '7' },
-        { nombre: 'Víctor Itzá', equipo: 'Milan', goles: '7' },
-        { nombre: 'Diego Trejo', equipo: 'Capuchas FC', goles: '7' },
-        { nombre: 'Rafael Berzunza', equipo: 'Real Caribe', goles: '6' },
-        { nombre: 'Diego Lopez', equipo: 'Capuchas FC', goles: '6' },
-        { nombre: 'Eugenio Palomares', equipo: 'Capuchas FC', goles: '6' }
+        { nombre: 'Alejandro Estrella', equipo: 'Universo 7', goles: '7', carpetaEquipo: 'universo7', foto: 'ce.png' },
+        { nombre: 'Tomas Soberanis', equipo: 'Atlético Temozón', goles: '4', carpetaEquipo: 'temozon', foto: 'ts_1.png' },
+        { nombre: 'Tomás Estrada', equipo: 'Estelares FC', goles: '4', carpetaEquipo: 'estelares', foto: 'te_1.png' },
+        { nombre: 'Diego Trejo', equipo: 'Capuchas FC', goles: '3', carpetaEquipo: 'capuchas', foto: 'jugador.png' },
+        { nombre: 'Edgar Osalde', equipo: 'Dragones FC', goles: '2', carpetaEquipo: 'dragones', foto: 'eo_1.png' },
+        { nombre: 'Jorge Delgadillo', equipo: 'Corinthians FC', goles: '2', carpetaEquipo: 'corinthians', foto: 'jd_1.png' },
+        { nombre: 'Antonio Prado', equipo: 'Atlético Temozón', goles: '2', carpetaEquipo: 'temozon', foto: 'ap_1.png' },
+        { nombre: 'Joseph Sanchez', equipo: 'Estelares FC', goles: '2', carpetaEquipo: 'estelares', foto: 'js_1.png' },
+        { nombre: 'José Corona', equipo: 'Universo 7', goles: '2', carpetaEquipo: 'universo7', foto: 'jc.png' },
+        { nombre: 'Arturo Can', equipo: 'Dragones FC', goles: '1', carpetaEquipo: 'dragones', foto: 'ac_1.png' }
     ];
 
-    const lider = goleadores[0];
+    const goleadoresOrdenados = [...goleadores].sort((jugadorA, jugadorB) => {
+        return Number(jugadorB.goles) - Number(jugadorA.goles);
+    });
+
+    const lider = goleadoresOrdenados[0];
+    
+    
+    const archivoFotoLider = !lider.foto || lider.foto.trim() === "" ? "jugador.png" : lider.foto;
+    const rutaLider = `../imagenes_ucaribe/plantillas/${lider.carpetaEquipo}/${archivoFotoLider}`;
+
     let html = `
         <div class="leader-podium">
             <div class="stats-card-vertical leader-card">
                 <div class="stats-img-wrapper">
                     <div class="stats-pos-badge" style="color: #ffd700; border-color: #ffd700;">1</div>
-                    <img src="../imagenes_ucaribe/apertura2025/goleo_apertura2025/jugador.png" class="stats-player-img" alt="Líder Goleo">
+                    <img src="${rutaLider}" class="stats-player-img" alt="Líder Goleo">
                 </div>
                 <div class="stats-info-centered">
                     <h3>${lider.nombre}</h3>
@@ -373,21 +557,26 @@ function renderGoleo() {
         <div class="players-grid-stats-goleo">
     `;
 
-    goleadores.slice(1).forEach((jugador, index) => {
+    goleadoresOrdenados.slice(1).forEach((jugador, index) => {
         let colorMedalla = 'color: #ffffff; border-color: rgba(255,255,255,0.3);';
         if (index === 0) { colorMedalla = 'color: #c0c0c0; border-color: #c0c0c0;'; }
         else if (index === 1) { colorMedalla = 'color: #cd7f32; border-color: #cd7f32;'; }
+
+        
+        const archivoFotoJugador = !jugador.foto || jugador.foto.trim() === "" ? "jugador.png" : jugador.foto;
+        const rutaJugador = `../imagenes_ucaribe/plantillas/${jugador.carpetaEquipo}/${archivoFotoJugador}`;
+        const golesTexto = !jugador.goles || jugador.goles.trim() === "" ? 'SIN GOLES' : `${jugador.goles} GOLES`;
 
         html += `
             <div class="stats-card-vertical">
                 <div class="stats-img-wrapper">
                     <div class="stats-pos-badge" style="${colorMedalla}">${index + 2}</div>
-                    <img src="../imagenes_ucaribe/apertura2025/goleo_apertura2025/jugador.png" alt="${jugador.nombre}" class="stats-player-img">
+                    <img src="${rutaJugador}" alt="${jugador.nombre}" class="stats-player-img">
                 </div>
                 <div class="stats-info-centered">
                     <h3>${jugador.nombre}</h3>
                     <p>${jugador.equipo}</p>
-                    <span class="badge-stats">${jugador.goles} GOLES</span>
+                    <span class="badge-stats">${golesTexto}</span>
                 </div>
             </div>
         `;
@@ -401,62 +590,84 @@ function renderPorteros() {
     const container = document.getElementById('contenedor-porteros');
     if (!container) return;
 
+    
     const porteros = [
-        { nombre: 'Ian Cisneros', equipo: 'Dragones FC', efectividad: '19 GOLES EN 9 PARTIDOS' },
-        { nombre: 'Emerick Lang', equipo: 'Palmeras CF', efectividad: '38 GOLES EN 9 PARTIDOS' },
-        { nombre: 'Jorge Soberanes', equipo: 'Perceptrones', efectividad: '66 GOLES EN 9 PARTIDOS' },
-        { nombre: 'Moisés Vieyra', equipo: 'Estelares FC', efectividad: '10 GOLES EN 8 PARTIDOS' },
-        { nombre: 'Adrián Paxtian', equipo: 'Real Caribe', efectividad: '26 GOLES EN 7 PARTIDOS' },
-        { nombre: 'Fabián Castro', equipo: 'Fósiles FC', efectividad: '29 GOLES EN 7 PARTIDOS' },
-        { nombre: 'Mario Hoil', equipo: 'Galácticos', efectividad: '32 GOLES EN 7 PARTIDOS' },
-        { nombre: 'Erick Reyes', equipo: 'Wizards', efectividad: '42 GOLES EN 7 PARTIDOS' },
-        { nombre: 'José Cohuo', equipo: 'Milan', efectividad: '16 GOLES EN 6 PARTIDOS' },
-        { nombre: 'Luis Guzmán', equipo: 'Atlético Temozón', efectividad: '22 GOLES EN 6 PARTIDOS' },
-        { nombre: 'José Prado', equipo: 'Capuchas FC', efectividad: '8 GOLES EN 5 PARTIDOS' },
-        { nombre: 'Gilberto de la Cruz', equipo: 'Capuchas FC', efectividad: '11 GOLES EN 4 PARTIDOS' },
-        { nombre: 'Alan Soto', equipo: 'Sementeros FC', efectividad: '16 GOLES EN 4 PARTIDOS' },
-        { nombre: 'Uriel Hernández', equipo: 'Atlético Temozón', efectividad: '17 GOLES EN 3 PARTIDOS' },
-        { nombre: 'Jorge Campos', equipo: 'Milan', efectividad: '9 GOLES EN 2 PARTIDOS' },
-        { nombre: 'Erick Osorio', equipo: 'Milan', efectividad: '1 GOLES EN 1 PARTIDOS' },
-        { nombre: 'Isai López', equipo: 'Wizards', efectividad: '2 GOLES EN 1 PARTIDOS' },
-        { nombre: 'Karl Suárez', equipo: 'Estelares FC', efectividad: '5 GOLES EN 1 PARTIDOS' },
-        { nombre: 'Aram Martínez', equipo: 'Wizards', efectividad: '5 GOLES EN 1 PARTIDOS' },
-        { nombre: 'Alejandro Yah', equipo: 'Sementeros FC', efectividad: '10 GOLES EN 1 PARTIDOS' }
+        { nombre: 'Ian Cisneros', equipo: 'Universo 7', golesRecibidos: 0, partidos: 1, carpetaEquipo: 'universo7', foto: 'ic.png' },
+        { nombre: 'Jaziel Nava', equipo: 'Dragones FC', golesRecibidos: 2, partidos: 1, carpetaEquipo: 'dragones', foto: 'portero.png' },
+        { nombre: 'Oswald Grajales', equipo: 'Corinthians FC', golesRecibidos: 3, partidos: 1, carpetaEquipo: 'corinthians', foto: 'og_1.png' },
+        { nombre: 'Iván Yah', equipo: 'Sementeros FC', golesRecibidos: 3, partidos: 1, carpetaEquipo: 'sementeros', foto: 'iy.png' },
+        { nombre: 'Uriel Hernández', equipo: 'Atlético Temozón', golesRecibidos: 4, partidos: 1, carpetaEquipo: 'temozon', foto: 'uh.png' },
+        { nombre: 'Adrián Paxtian', equipo: 'Estelares FC', golesRecibidos: 4, partidos: 1, carpetaEquipo: 'estelares', foto: 'ap_1.png' },
+        { nombre: 'Enrique Soberanis', equipo: 'Kantulikin FC', golesRecibidos: 4, partidos: 1, carpetaEquipo: 'kantulikin', foto: 'portero.png' },
+        { nombre: 'Moisés Vieyra', equipo: 'Capuchas FC', golesRecibidos: 6, partidos: 1, carpetaEquipo: 'capuchas', foto: 'mv_1.png' },
+        { nombre: 'Kevin Torres', equipo: 'FC Crystal', golesRecibidos: 9, partidos: 1, carpetaEquipo: 'crystal', foto: 'kt_1.png' },
+        { nombre: 'Samuel Lang', equipo: 'Sportmatozoides FC', golesRecibidos: 11, partidos: 1, carpetaEquipo: 'sportmatozoides', foto: 'sl.png' }
     ];
 
-    const liderPortero = porteros[0];
+    const mayorPromedioGoles = Math.max(...porteros.map(portero => (
+        portero.partidos > 0 ? portero.golesRecibidos / portero.partidos : 0
+    )));
+
+    porteros.forEach(portero => {
+        const promedioGoles = portero.partidos > 0
+            ? portero.golesRecibidos / portero.partidos
+            : mayorPromedioGoles;
+
+        portero.efectividad = mayorPromedioGoles > 0
+            ? Math.max(0, Math.min(100, (1 - promedioGoles / mayorPromedioGoles) * 100))
+            : 100;
+    });
+
+    const porterosOrdenados = [...porteros].sort((porteroA, porteroB) => {
+        return porteroB.efectividad - porteroA.efectividad
+            || porteroB.partidos - porteroA.partidos
+            || porteroA.golesRecibidos - porteroB.golesRecibidos;
+    });
+
+    const liderPortero = porterosOrdenados[0];
+    
+    
+    const archivoFotoLider = !liderPortero.foto || liderPortero.foto.trim() === "" ? "portero.png" : liderPortero.foto;
+    const rutaLider = `../imagenes_ucaribe/plantillas/${liderPortero.carpetaEquipo}/${archivoFotoLider}`;
+
     let html = `
         <div class="leader-podium">
             <div class="stats-card-vertical leader-card">
                 <div class="stats-img-wrapper">
                     <div class="stats-pos-badge" style="color: #ffd700; border-color: #ffd700;">1</div>
-                    <img src="../imagenes_ucaribe/apertura2025/porteros_apertura2025/portero.png" class="stats-player-img" alt="Líder Portero">
+                    <img src="${rutaLider}" class="stats-player-img" alt="Líder Portero">
                 </div>
                 <div class="stats-info-centered">
                     <h3>${liderPortero.nombre}</h3>
                     <p>${liderPortero.equipo}</p>
-                    <span class="badge-stats">${liderPortero.efectividad} EFECTIVIDAD</span>
+                    <p class="stats-subtext">${liderPortero.golesRecibidos} goles en ${liderPortero.partidos} partidos</p>
+                    <span class="badge-stats">${liderPortero.efectividad.toFixed(1)}% EFECTIVIDAD</span>
                 </div>
             </div>
         </div>
         <div class="players-grid-stats-porteros">
     `;
 
-    porteros.slice(1).forEach((portero, index) => {
+    porterosOrdenados.slice(1).forEach((portero, index) => {
         let colorMedalla = 'color: #ffffff; border-color: rgba(255,255,255,0.3);';
         if (index === 0) { colorMedalla = 'color: #c0c0c0; border-color: #c0c0c0;'; }
         else if (index === 1) { colorMedalla = 'color: #cd7f32; border-color: #cd7f32;'; }
+
+        
+        const archivoFotoPortero = !portero.foto || portero.foto.trim() === "" ? "portero.png" : portero.foto;
+        const rutaPortero = `../imagenes_ucaribe/plantillas/${portero.carpetaEquipo}/${archivoFotoPortero}`;
 
         html += `
             <div class="stats-card-vertical">
                 <div class="stats-img-wrapper">
                     <div class="stats-pos-badge" style="${colorMedalla}">${index + 2}</div>
-                    <img src="../imagenes_ucaribe/apertura2025/porteros_apertura2025/portero.png" alt="${portero.nombre}" class="stats-player-img">
+                    <img src="${rutaPortero}" alt="${portero.nombre}" class="stats-player-img">
                 </div>
                 <div class="stats-info-centered">
                     <h3>${portero.nombre}</h3>
                     <p>${portero.equipo}</p>
-                    <span class="badge-stats">${portero.efectividad} EFECTIVIDAD</span>
+                    <p class="stats-subtext">${portero.golesRecibidos} goles en ${portero.partidos} partidos</p>
+                    <span class="badge-stats">${portero.efectividad.toFixed(1)}% EFECTIVIDAD</span>
                 </div>
             </div>
         `;
@@ -466,7 +677,7 @@ function renderPorteros() {
     container.innerHTML = html;
 }
 
-function mostrarEquipo(nombreEquipo) {
+function mostrarEquipo(idEquipo) {
     document.getElementById('vista-principal-torneo').style.display = 'none';
     document.getElementById('vista-equipo').style.display = 'block';
 
@@ -491,46 +702,225 @@ function mostrarEquipo(nombreEquipo) {
     window.scrollTo(0, 0);
 
     const baseDatosEquipos = {
-        'Estelares': {
-            logo: 'estelares.png',
+        estelares: {
+            nombreReal: 'Estelares FC', carpetaEquipo: 'estelares', logo: 'Estelares.png',
             plantilla: [
-                { nombre: 'Carlos Mendoza', dorsal: '10', rol: 'CAPITÁN', foto: 'foto_jugador.jpg' },
-                { nombre: 'Luis Navarro', dorsal: '01', rol: 'PORTERO', foto: 'foto_jugador.jpg' },
-                { nombre: 'Mateo Silva', dorsal: '04', rol: 'JUGADOR', foto: 'foto_jugador.jpg' }
+                { nombre: 'Tomás Estrada', rol: 'CAPITÁN', foto: 'te_1.png' },
+                { nombre: 'Adrián Paxtian', rol: 'PORTERO', foto: 'ap_1.png' },
+                { nombre: 'Zammer Rosas', rol: 'JUGADOR', foto: 'zr_1.png' },
+                { nombre: 'Karl Suarez', rol: 'JUGADOR', foto: 'ks_1.png' },
+                { nombre: 'Abraham Castelan', rol: 'JUGADOR', foto: 'ac_1.png' },
+                { nombre: 'Derek', rol: 'JUGADOR', foto: 'd_1.png' },
+                { nombre: 'Joseph Sanchez', rol: 'JUGADOR', foto: 'js_1.png' },
+                { nombre: 'Alexander Flores', rol: 'JUGADOR', foto: 'af.png' },
+                { nombre: 'Ramses Ponce', rol: 'JUGADOR', foto: 'rp_1.png' },
+                { nombre: 'Carlos Yam', rol: 'JUGADOR', foto: 'cy.png' },
+                { nombre: 'Quevedo', rol: 'JUGADOR', foto: 'jugador.png' },
+                { nombre: 'Miranda', rol: 'JUGADOR', foto: 'jugador.png' }
             ],
-            historial: [
-                { jornada: 'Jornada 1', fecha: '12 Oct 2025', local: 'Estelares', logoLocal: 'estelares.png', marcador: '2 - 1', visitante: 'Capuchas', logoVisitante: 'Capuchas.png', resultado: 'VICTORIA', claseRes: 'res-victoria' },
-                { jornada: 'Jornada 3', fecha: '26 Oct 2025', local: 'Estelares', logoLocal: 'estelares.png', marcador: '0 - 2', visitante: 'Tigres', logoVisitante: 'tigres.png', resultado: 'DERROTA', claseRes: 'res-derrota' }
-            ]
+            historial: [{ jornada: 'Jornada 1', fecha: 'Jueves 3 de Octubre, 2026', local: 'Capuchas FC', logoLocal: 'Capuchas_1.png', marcador: '4 - 6', visitante: 'Estelares FC', logoVisitante: 'Estelares.png', resultado: 'VICTORIA', claseRes: 'res-victoria' }]
         },
-        'Cuervos': {
-            logo: 'cuervos.png',
+        capuchas: {
+            nombreReal: 'Capuchas FC', carpetaEquipo: 'capuchas', logo: 'Capuchas_1.png',
             plantilla: [
-                { nombre: 'Javier Ortiz', dorsal: '09', rol: 'CAPITÁN', foto: 'foto_jugador.jpg' },
-                { nombre: 'Alan Ruiz', dorsal: '07', rol: 'MEDIO', foto: 'foto_jugador.jpg' }
+                { nombre: 'Eugenio Palomares', rol: 'CAPITÁN', foto: 'ep_1.png' },
+                { nombre: 'Moisés Vieyra', rol: 'PORTERO', foto: 'mv_1.png' },
+                { nombre: 'Alexis Huerta', rol: 'JUGADOR', foto: 'ah_1.png' },
+                { nombre: 'Fernando Maya', rol: 'JUGADOR', foto: 'fm_1.png' },
+                { nombre: 'Omar Bautista', rol: 'JUGADOR', foto: 'oba_1.png' },
+                { nombre: 'Felipe Cruz', rol: 'JUGADOR', foto: 'fc.png' },
+                { nombre: 'Angel Salvatierra', rol: 'JUGADOR', foto: 'as_1.png' },
+                { nombre: 'Emmanuel Figueroa', rol: 'JUGADOR', foto: 'ef_1.png' },
+                { nombre: 'Gilberto De La Cruz', rol: 'JUGADOR', foto: 'gdc_1.png' },
+                { nombre: 'Diego Lopez', rol: 'JUGADOR', foto: 'dl.png' },
+                { nombre: 'Diego Trejo', rol: 'JUGADOR', foto: 'jugador.png' },
+                { nombre: 'Emilio Rodriguez', rol: 'JUGADOR', foto: 'jugador.png' },
+                { nombre: 'Samuel De La Rosa', rol: 'JUGADOR', foto: 'jugador.png' }
             ],
-            historial: [
-                { jornada: 'Jornada 1', fecha: '12 Oct 2025', local: 'Estelares', logoLocal: 'estelares.png', marcador: '2 - 1', visitante: 'Cuervos', logoVisitante: 'cuervos.png', resultado: 'DERROTA', claseRes: 'res-derrota' }
-            ]
+            historial: [{ jornada: 'Jornada 1', fecha: 'Jueves 3 de Octubre, 2026', local: 'Capuchas FC', logoLocal: 'Capuchas_1.png', marcador: '4 - 6', visitante: 'Estelares FC', logoVisitante: 'Estelares.png', resultado: 'DERROTA', claseRes: 'res-derrota' }]
+        },
+        dragones: {
+            nombreReal: 'Dragones FC', carpetaEquipo: 'dragones', logo: 'Dragones_1.png',
+            plantilla: [
+                { nombre: 'Aarón Martínez', rol: 'CAPITÁN', foto: 'am_1.png' },
+                { nombre: 'Jaziel Nava', rol: 'PORTERO', foto: 'portero.png' },
+                { nombre: 'Yordi González', rol: 'PORTERO', foto: 'yg.png' },
+                { nombre: 'Antonio Duran', rol: 'JUGADOR', foto: 'ad_1.png' },
+                { nombre: 'Diego Couoh', rol: 'JUGADOR', foto: 'dc_1.png' },
+                { nombre: 'Edgar Osalde', rol: 'JUGADOR', foto: 'eo_1.png' },
+                { nombre: 'Jacob Montaño', rol: 'JUGADOR', foto: 'jm.png' },
+                { nombre: 'Antonio Sanchez', rol: 'JUGADOR', foto: 'as_1.png' },
+                { nombre: 'Arturo Can', rol: 'JUGADOR', foto: 'ac_1.png' },
+                { nombre: 'Edwin Sadrac', rol: 'JUGADOR', foto: 'Edwin Sadrac1.png' },
+                { nombre: 'Manuel Marana', rol: 'JUGADOR', foto: 'mm.png' },
+                { nombre: 'Alvaro Madrazo', rol: 'JUGADOR', foto: 'ama.png' },
+                { nombre: 'Eduardo Canche', rol: 'JUGADOR', foto: 'ec_1.png' },
+                { nombre: 'Anthony "Zeyken" Pozo', rol: 'JUGADOR', foto: 'ap.png' }
+            ],
+            historial: [{ jornada: 'Jornada 1', fecha: 'Viernes 4 de Octubre, 2026', local: 'Dragones FC', logoLocal: 'Dragones_1.png', marcador: '3 - 2', visitante: 'Corinthians FC', logoVisitante: 'Corinthians.png', resultado: 'VICTORIA', claseRes: 'res-victoria' }]
+        },
+        universo7: {
+            nombreReal: 'Universo 7', carpetaEquipo: 'universo7', logo: 'Universo7.png',
+            plantilla: [
+                { nombre: 'Ian Cisneros', rol: 'CAPITÁN', foto: 'ic.png' },
+                { nombre: 'Francisco Arellano', rol: 'JUGADOR', foto: 'fa.png' },
+                { nombre: 'Jared Ramirez', rol: 'JUGADOR', foto: 'jr.png' },
+                { nombre: 'Edgar Dzib', rol: 'JUGADOR', foto: 'ed.png' },
+                { nombre: 'Alejandro Estrella', rol: 'JUGADOR', foto: 'ce.png' },
+                { nombre: 'Jonathan Bacab', rol: 'JUGADOR', foto: 'jb.png' },
+                { nombre: 'José Corona', rol: 'JUGADOR', foto: 'jc.png' },
+                { nombre: 'Victor Itzá', rol: 'JUGADOR', foto: 'vi.png' },
+                { nombre: 'Alexis Loeza', rol: 'JUGADOR', foto: 'jugador.png' },
+                { nombre: 'Israel Corona', rol: 'JUGADOR', foto: 'jugador.png' },
+                { nombre: 'Axel Ocampo', rol: 'JUGADOR', foto: 'jugador.png' },
+                { nombre: 'Hector Cabrera', rol: 'JUGADOR', foto: 'jugador.png' },
+                { nombre: 'Brian Madrigal', rol: 'JUGADOR', foto: 'jugador.png' }
+            ],
+            historial: [{ jornada: 'Jornada 1', fecha: 'Viernes 4 de Octubre, 2026', local: 'Universo 7', logoLocal: 'Universo7.png', marcador: '11 - 0', visitante: 'Sportmatozoides FC', logoVisitante: 'Sportmatozoides.png', resultado: 'VICTORIA', claseRes: 'res-victoria' }]
+        },
+        kantulikin: {
+            nombreReal: 'Kantulikin FC', carpetaEquipo: 'kantulikin', logo: 'Kantulikin.png',
+            plantilla: [
+                { nombre: 'Braiam Hernández', rol: 'CAPITÁN', foto: 'jugador.png' }
+            ],
+            historial: [{ jornada: 'Jornada 1', fecha: 'Viernes 4 de Octubre, 2026', local: 'Sementeros FC', logoLocal: 'Sementeros_1.png', marcador: '4 - 3', visitante: 'Kantulikin FC', logoVisitante: 'Kantulikin.png', resultado: 'DERROTA', claseRes: 'res-derrota' }]
+        },
+        temozon: {
+            nombreReal: 'Atlético Temozón', carpetaEquipo: 'temozon', logo: 'Temozon_1.png',
+            plantilla: [
+                { nombre: 'Uriel Hernández', rol: 'CAPITÁN', foto: 'uh.png' },
+                { nombre: 'Luis Guzman', rol: 'PORTERO', foto: 'lg_1.png' },
+                { nombre: 'Wilberth Pech', rol: 'JUGADOR', foto: 'wp.png' },
+                { nombre: 'Victor Cen', rol: 'JUGADOR', foto: 'vc_1.png' },
+                { nombre: 'Kevin Garcia', rol: 'JUGADOR', foto: 'kg.png' },
+                { nombre: 'Rafael Huchin', rol: 'JUGADOR', foto: 'rh.png' },
+                { nombre: 'Miguel Espinoza', rol: 'JUGADOR', foto: 'jugador.png' },
+                { nombre: 'Antonio Prado', rol: 'JUGADOR', foto: 'ap_1.png' },
+                { nombre: 'Osvaldo Pacheco', rol: 'JUGADOR', foto: 'op.png' },
+                { nombre: 'Arturo Herrera', rol: 'JUGADOR', foto: 'ah_1.png' },
+                { nombre: 'Rodrigo', rol: 'JUGADOR', foto: 'r.png' },
+                { nombre: 'Luis Balam', rol: 'JUGADOR', foto: 'lb.png' },
+                { nombre: 'Tomas Soberanis', rol: 'JUGADOR', foto: 'ts_1.png' },
+                { nombre: 'Mauricio Montero', rol: 'JUGADOR', foto: 'mm_1.png' }
+            ],
+            historial: [{ jornada: 'Jornada 1', fecha: 'Viernes 4 de Octubre, 2026', local: 'Atlético Temozón', logoLocal: 'Temozon_1.png', marcador: '9 - 4', visitante: 'FC Crystal', logoVisitante: 'Crystal.png', resultado: 'VICTORIA', claseRes: 'res-victoria' }]
+        },
+        corinthians: {
+            nombreReal: 'Corinthians FC', carpetaEquipo: 'corinthians', logo: 'Corinthians.png',
+            plantilla: [
+                { nombre: 'Gabriel Rivadeneira', rol: 'CAPITÁN', foto: 'gr_1.png' },
+                { nombre: 'Oswald Grajales', rol: 'PORTERO', foto: 'og_1.png' },
+                { nombre: 'Williams Laines', rol: 'JUGADOR', foto: 'wl.png' },
+                { nombre: 'Cristobal Camelo', rol: 'JUGADOR', foto: 'cc_1.png' },
+                { nombre: 'Cristhian Aguilar', rol: 'JUGADOR', foto: 'ca.png' },
+                { nombre: 'Kenneth Aguirre', rol: 'JUGADOR', foto: 'ka_1.png' },
+                { nombre: 'Dereck Soriano', rol: 'JUGADOR', foto: 'ds_1.png' },
+                { nombre: 'Jorge Delgadillo', rol: 'JUGADOR', foto: 'jd_1.png' },
+                { nombre: 'Antuan De La Rosa', rol: 'JUGADOR', foto: 'adr_1.png' },
+                { nombre: 'Vicente Ramon', rol: 'JUGADOR', foto: 'vr_1.png' },
+                { nombre: 'Erik Osorio', rol: 'JUGADOR', foto: 'eo_1.png' },
+                { nombre: 'Edilberto Izquierdo', rol: 'JUGADOR', foto: 'ei.png' },
+                { nombre: 'Diego Juarez', rol: 'JUGADOR', foto: 'jugador.png' },
+                { nombre: 'Diego Bernal', rol: 'JUGADOR', foto: 'jugador.png' }
+            ],
+            historial: [{ jornada: 'Jornada 1', fecha: 'Viernes 4 de Octubre, 2026', local: 'Dragones FC', logoLocal: 'Dragones_1.png', marcador: '3 - 2', visitante: 'Corinthians FC', logoVisitante: 'Corinthians.png', resultado: 'DERROTA', claseRes: 'res-derrota' }]
+        },
+        crystal: {
+            nombreReal: 'FC Crystal', carpetaEquipo: 'crystal', logo: 'Crystal.png',
+            plantilla: [
+                { nombre: 'Rodrigo Almeyda', rol: 'CAPITÁN', foto: 'ra_2.png' },
+                { nombre: 'Kevin Torres', rol: 'PORTERO', foto: 'kt_1.png' },
+                { nombre: 'Alan Soto', rol: 'PORTERO', foto: 'as_1.png' },
+                { nombre: 'Angel Ordoñez', rol: 'JUGADOR', foto: 'ao_1.png' },
+                { nombre: 'Omar Torres', rol: 'JUGADOR', foto: 'ot_1.png' },
+                { nombre: 'Luis Cordova', rol: 'JUGADOR', foto: 'lc_2.png' },
+                { nombre: 'Juan Manuel Noh', rol: 'JUGADOR', foto: 'jm_1.png' },
+                { nombre: 'Luis Uuh Perez', rol: 'JUGADOR', foto: 'lup.png' },
+                { nombre: 'Sebastian Lopez', rol: 'JUGADOR', foto: 'sl.png' },
+                { nombre: 'Isaac Dominguez', rol: 'JUGADOR', foto: 'id_1.png' },
+                { nombre: 'Brian Pech', rol: 'JUGADOR', foto: 'bp_1.png' },
+                { nombre: 'Diego Zavala', rol: 'JUGADOR', foto: 'dz.png' }
+            ],
+            historial: [{ jornada: 'Jornada 1', fecha: 'Viernes 4 de Octubre, 2026', local: 'Atlético Temozón', logoLocal: 'Temozon_1.png', marcador: '9 - 4', visitante: 'FC Crystal', logoVisitante: 'Crystal.png', resultado: 'DERROTA', claseRes: 'res-derrota' }]
+        },
+        talacheros: {
+            nombreReal: 'Talacheros FC', carpetaEquipo: 'talacheros', logo: 'Talacheros.png',
+            plantilla: [
+                { nombre: 'Ángel Sánchez', rol: 'CAPITÁN', foto: 'jugador.png' },
+                { nombre: 'Portero Talacheros', rol: 'PORTERO', foto: 'portero.png' },
+                { nombre: 'Iker Andrade', rol: 'JUGADOR', foto: 'jugador.png' },
+                { nombre: 'Jeshua Soto', rol: 'JUGADOR', foto: 'jugador.png' },
+                { nombre: 'Carlos Avila', rol: 'JUGADOR', foto: 'jugador.png' },
+                { nombre: 'José Nájera', rol: 'JUGADOR', foto: 'jugador.png' },
+                { nombre: 'Kevin Silveira', rol: 'JUGADOR', foto: 'jugador.png' },
+                { nombre: 'Nestor Chuc', rol: 'JUGADOR', foto: 'jugador.png' },
+                { nombre: 'Edy Gomez', rol: 'JUGADOR', foto: 'jugador.png' },
+                { nombre: 'Osiris Garfias', rol: 'JUGADOR', foto: 'jugador.png' }
+            ], historial: []
+        },
+        sementeros: {
+            nombreReal: 'Sementeros FC', carpetaEquipo: 'sementeros', logo: 'Sementeros_1.png',
+            plantilla: [
+                { nombre: 'Iván Yah', rol: 'PORTERO', foto: 'iy.png' },
+                { nombre: 'Marlon Lopez', rol: 'CAPITÁN', foto: 'jugador.png' },
+                { nombre: 'Cristian Valdés', rol: 'JUGADOR', foto: 'cv.png' },
+                { nombre: 'Eber', rol: 'JUGADOR', foto: 'e.png' },
+                { nombre: 'Victor Gutierrez', rol: 'JUGADOR', foto: 'vg.png' },
+                { nombre: 'Jan Pool', rol: 'JUGADOR', foto: 'j.png' },
+                { nombre: 'Luis Chan', rol: 'JUGADOR', foto: 'l.png' },
+                { nombre: 'Jaip', rol: 'JUGADOR', foto: 'j.png' },
+                { nombre: 'Edwin Romo', rol: 'JUGADOR', foto: 'er.png' },
+                { nombre: 'Jonathan Carrillo', rol: 'JUGADOR', foto: 'jugador.png' },
+                { nombre: 'Axel Trejo', rol: 'JUGADOR', foto: 'jugador.png' },
+                { nombre: 'Iñaki Rello', rol: 'JUGADOR', foto: 'jugador.png' },
+                { nombre: 'Francisco Peraza', rol: 'JUGADOR', foto: 'jugador.png' },
+                { nombre: 'Giovanni Hernández', rol: 'JUGADOR', foto: 'jugador.png' }
+            ],
+            historial: [{ jornada: 'Jornada 1', fecha: 'Viernes 4 de Octubre, 2026', local: 'Sementeros FC', logoLocal: 'Sementeros_1.png', marcador: '4 - 3', visitante: 'Kantulikin FC', logoVisitante: 'Kantulikin.png', resultado: 'VICTORIA', claseRes: 'res-victoria' }]
+        },
+        sportmatozoides: {
+            nombreReal: 'Sportmatozoides FC', carpetaEquipo: 'sportmatozoides', logo: 'Sportmatozoides.png',
+            plantilla: [
+                { nombre: 'Jahir Vadillo', rol: 'CAPITÁN', foto: 'jv.png' },
+                { nombre: 'Samuel Lang', rol: 'PORTERO', foto: 'sl.png' },
+                { nombre: 'Ivan Guzman', rol: 'JUGADOR', foto: 'ig.png' },
+                { nombre: 'Julio Mukul', rol: 'JUGADOR', foto: 'jm.png' },
+                { nombre: 'Emiliano', rol: 'JUGADOR', foto: 'e.png' },
+                { nombre: 'Guillermo Rivas', rol: 'JUGADOR', foto: 'gr.png' },
+                { nombre: 'Travis Sanchez', rol: 'JUGADOR', foto: 'ts.png' },
+                { nombre: 'Victor Ruiz', rol: 'JUGADOR', foto: 'vr.png' },
+                { nombre: 'Yashar Gamboa', rol: 'JUGADOR', foto: 'yg.png' },
+                { nombre: 'Angel Sanchez', rol: 'JUGADOR', foto: 'as.png' },
+                { nombre: 'Omar Nava', rol: 'JUGADOR', foto: 'on.png' },
+                { nombre: 'Leonel Uitzil', rol: 'JUGADOR', foto: 'lu.png' },
+                { nombre: 'Luis Mex', rol: 'JUGADOR', foto: 'lm.png' }
+            ],
+            historial: [{ jornada: 'Jornada 1', fecha: 'Viernes 4 de Octubre, 2026', local: 'Universo 7', logoLocal: 'Universo7.png', marcador: '11 - 0', visitante: 'Sportmatozoides FC', logoVisitante: 'Sportmatozoides.png', resultado: 'DERROTA', claseRes: 'res-derrota' }]
         }
     };
 
-    const equipo = baseDatosEquipos[nombreEquipo] || { logo: nombreEquipo.toLowerCase() + '.png', plantilla: [], historial: [] };
+    const equipo = baseDatosEquipos[idEquipo] || {
+        nombreReal: idEquipo,
+        carpetaEquipo: '',
+        logo: 'jugador.png',
+        plantilla: [],
+        historial: []
+    };
 
-    document.getElementById('titulo-equipo-dinamico').innerText = nombreEquipo;
-    document.getElementById('logo-equipo-dinamico').src = '../imagenes_ucaribe/logos/' + equipo.logo;
+    document.getElementById('titulo-equipo-dinamico').innerText = equipo.nombreReal;
+    document.getElementById('logo-equipo-dinamico').src = '../imagenes_ucaribe/logos_equipos/' + equipo.logo;
 
     let htmlPlantilla = '';
     if (equipo.plantilla.length === 0) {
         htmlPlantilla = '<p style="color:var(--text-secondary); grid-column: 1/-1; text-align:center;">No hay jugadores registrados aún.</p>';
     } else {
         equipo.plantilla.forEach(jugador => {
+            const rutaFoto = `../imagenes_ucaribe/plantillas/${equipo.carpetaEquipo}/${jugador.foto}`;
             htmlPlantilla += `
                 <div class="player-card-pro">
-                    <div class="player-img-left"><img src="${jugador.foto}" alt="${jugador.nombre}"></div>
+                    <div class="player-img-left"><img src="${rutaFoto}" alt="${jugador.nombre}" onerror="this.onerror=null;this.src='../imagenes_ucaribe/apertura2025/goleo_apertura2025/jugador.png';"></div>
                     <div class="player-info-right">
                         <h3>${jugador.nombre}</h3>
-                        <p class="role-tag">Dorsal: ${jugador.dorsal}</p>
                         <span class="badge-role">${jugador.rol}</span>
                     </div>
                 </div>`;
@@ -541,19 +931,21 @@ function mostrarEquipo(nombreEquipo) {
     let htmlHistorial = '';
     if (equipo.historial.length === 0) {
         htmlHistorial = '<tr><td colspan="6" style="color:var(--text-secondary); text-align:center; padding: 20px;">No hay partidos registrados en el historial.</td></tr>';
-    } else {
+    } 
+    else {
         equipo.historial.forEach(partido => {
-            const htmlLocal = partido.local === nombreEquipo ? `<strong>${partido.local}</strong>` : partido.local;
-            const htmlVisitante = partido.visitante === nombreEquipo ? `<strong>${partido.visitante}</strong>` : partido.visitante;
+            
+            const htmlLocal = partido.local === equipo.nombreReal ? `<strong>${partido.local}</strong>` : partido.local;
+            const htmlVisitante = partido.visitante === equipo.nombreReal ? `<strong>${partido.visitante}</strong>` : partido.visitante;
             const colorRojo = partido.claseRes === 'res-derrota' ? "style='color: #ef4444;'" : '';
 
             htmlHistorial += `
                 <tr>
                     <td>${partido.jornada}</td>
                     <td class="text-muted">${partido.fecha}</td>
-                    <td class="text-left team-cell"><img src="../imagenes_ucaribe/logos/${partido.logoLocal}" class="team-logo-img"> ${htmlLocal}</td>
+                    <td class="text-left team-cell"><img src="../imagenes_ucaribe/logos_equipos/${partido.logoLocal}" class="team-logo-img"> ${htmlLocal}</td>
                     <td class="pts-cell text-teal" ${colorRojo}>${partido.marcador}</td>
-                    <td class="text-left team-cell"><img src="../imagenes_ucaribe/logos/${partido.logoVisitante}" class="team-logo-img"> ${htmlVisitante}</td>
+                    <td class="text-left team-cell"><img src="../imagenes_ucaribe/logos_equipos/${partido.logoVisitante}" class="team-logo-img"> ${htmlVisitante}</td>
                     <td><span class="badge-resultado ${partido.claseRes}">${partido.resultado}</span></td>
                 </tr>`;
         });
