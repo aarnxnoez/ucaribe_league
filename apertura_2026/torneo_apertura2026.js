@@ -84,8 +84,8 @@ function renderTablaGeneral() {
         },
         {
             pos: 6,
-            equipo: 'Talacheros FC',
-            logo: 'talacheros.png',
+            equipo: 'Cow Boyz FC',
+            logo: 'cowboyz.png',
             pj: 0,
             g: 0,
             e: 0,
@@ -277,7 +277,7 @@ function renderCalendario() {
                 },
                 {
                     local: 'Sportmatozoides FC', logoLocal: 'sportmatozoides.png', golesLocal: '', eventosLocal: '',
-                    visitante: 'Talacheros FC', logoVisitante: 'talacheros.png', golesVisitante: '', eventosVisitante: '',
+                    visitante: 'Cow boyz FC', logoVisitante: 'cowboyz.png', golesVisitante: '', eventosVisitante: '',
                     fecha: 'Viernes 11 de Septiembre, 2026', hora: '18:00 PM', esPendiente: true, mensajePendiente: 'Horario definitivo sujeto a confirmación oficial.'
                 }
             ]
@@ -715,8 +715,8 @@ function mostrarEquipo(idEquipo) {
                 { nombre: 'Alexander Flores', rol: 'JUGADOR', foto: 'af.png' },
                 { nombre: 'Ramses Ponce', rol: 'JUGADOR', foto: 'rp_1.png' },
                 { nombre: 'Carlos Yam', rol: 'JUGADOR', foto: 'cy.png' },
-                { nombre: 'Quevedo', rol: 'JUGADOR', foto: 'jugador.png' },
-                { nombre: 'Miranda', rol: 'JUGADOR', foto: 'jugador.png' }
+                { nombre: 'Kike Rodas', rol: 'JUGADOR', foto: 'kr_1.png' },
+                { nombre: 'Juan Carlos', rol: 'JUGADOR', foto: 'jugador.png' }
             ],
             historial: [{ jornada: 'Jornada 1', fecha: 'Jueves 3 de Octubre, 2026', local: 'Capuchas FC', logoLocal: 'capuchas_1.png', marcador: '4 - 6', visitante: 'Estelares FC', logoVisitante: 'estelares.png', resultado: 'VICTORIA', claseRes: 'res-victoria' }]
         },
@@ -835,7 +835,7 @@ function mostrarEquipo(idEquipo) {
                 { nombre: 'Omar Torres', rol: 'JUGADOR', foto: 'ot_1.png' },
                 { nombre: 'Luis Cordova', rol: 'JUGADOR', foto: 'lc_2.png' },
                 { nombre: 'Juan Manuel Noh', rol: 'JUGADOR', foto: 'jm_1.png' },
-                { nombre: 'Luis Uuh Perez', rol: 'JUGADOR', foto: 'lup.png' },
+                { nombre: 'Luis Uuh Perez', rol: 'JUGADOR', foto: 'lup_1.png' },
                 { nombre: 'Sebastian Lopez', rol: 'JUGADOR', foto: 'sl.png' },
                 { nombre: 'Isaac Dominguez', rol: 'JUGADOR', foto: 'id_1.png' },
                 { nombre: 'Brian Pech', rol: 'JUGADOR', foto: 'bp_1.png' },
@@ -843,19 +843,19 @@ function mostrarEquipo(idEquipo) {
             ],
             historial: [{ jornada: 'Jornada 1', fecha: 'Viernes 4 de Octubre, 2026', local: 'Atlético Temozón', logoLocal: 'temozon_1.png', marcador: '9 - 4', visitante: 'FC Crystal', logoVisitante: 'crystal.png', resultado: 'DERROTA', claseRes: 'res-derrota' }]
         },
-        talacheros: {
-            nombreReal: 'Talacheros FC', carpetaEquipo: 'talacheros', logo: 'talacheros.png',
+        cowboyz: {
+            nombreReal: 'Cowboyz FC', carpetaEquipo: 'cowboyz', logo: 'cowboyz.png',
             plantilla: [
-                { nombre: 'Ángel Sánchez', rol: 'CAPITÁN', foto: 'jugador.png' },
-                { nombre: 'Portero Talacheros', rol: 'PORTERO', foto: 'portero.png' },
-                { nombre: 'Iker Andrade', rol: 'JUGADOR', foto: 'jugador.png' },
-                { nombre: 'Jeshua Soto', rol: 'JUGADOR', foto: 'jugador.png' },
-                { nombre: 'Carlos Avila', rol: 'JUGADOR', foto: 'jugador.png' },
-                { nombre: 'José Nájera', rol: 'JUGADOR', foto: 'jugador.png' },
-                { nombre: 'Kevin Silveira', rol: 'JUGADOR', foto: 'jugador.png' },
-                { nombre: 'Nestor Chuc', rol: 'JUGADOR', foto: 'jugador.png' },
-                { nombre: 'Edy Gomez', rol: 'JUGADOR', foto: 'jugador.png' },
-                { nombre: 'Osiris Garfias', rol: 'JUGADOR', foto: 'jugador.png' }
+                { nombre: 'Ángel Sánchez', rol: 'CAPITÁN', foto: 'as.png' },
+                { nombre: 'Kevin Silveria', rol: 'PORTERO', foto: 'ks.png' },
+                { nombre: 'Iker Andrade', rol: 'JUGADOR', foto: 'ia.png' },
+                { nombre: 'Jeshua Soto', rol: 'JUGADOR', foto: 'js.png' },
+                { nombre: 'Carlos Avila', rol: 'JUGADOR', foto: 'ca.png' },
+                { nombre: 'José Nájera', rol: 'JUGADOR', foto: 'jn.png' },
+                { nombre: 'Nestor Chuc', rol: 'JUGADOR', foto: 'nc.png' },
+                { nombre: 'Edy Gomez', rol: 'JUGADOR', foto: 'eg.png' },
+                { nombre: 'Osiris Garfias', rol: 'JUGADOR', foto: 'og.png' },
+                { nombre: 'Emmanuel Murillo', rol: 'JUGADOR', foto: 'em.png' },
             ], historial: []
         },
         sementeros: {
