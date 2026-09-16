@@ -192,8 +192,7 @@
 .jornada-status-badge { font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: 6px; background: rgba(34, 197, 94, 0.12); color: #22c55e; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 8px; }
 .jornada-status-badge::after { content: '▲'; font-size: 0.7rem; transition: transform var(--transition-fast); }
 .jornada-wrapper:not([open]) .jornada-status-badge::after { transform: rotate(180deg); }
-.jornada-status-badge.en-curso { background: rgba(79, 172, 254, 0.12); color: #4facfe; }
-.jornada-status-badge.proximamente { background: rgba(139, 148, 158, 0.12); color: var(--text-secondary); }
+.jornada-status-badge.proximamente { background: rgba(139, 148, 158, 0.12); color: #4facfe; }
 .jornada-wrapper[open] .match-list { padding: 20px; background: rgba(0, 0, 0, 0.15); border-top: 1px solid var(--border-light); }
 
 .match-list { display: flex; flex-direction: column; gap: 15px; }
