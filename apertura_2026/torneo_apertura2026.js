@@ -109,8 +109,8 @@ function renderCalendario() {
             titulo: 'Jornada 1', estado: 'Completada', claseEstado: 'completada',
             partidos: [
                 {
-                    local: 'Capuchas FC', logoLocal: 'capuchas_1.png', golesLocal: '4', eventosLocal: "<p>3 ⚽ Diegro Trejo</p><p>⚽ Samuel de la Rosa</p>",
-                    visitante: 'Estelares FC', logoVisitante: 'estelares.png', golesVisitante: '6', eventosVisitante: "<p>Tomás Estrada ⚽ 4</p><p>Joseph Sánchez ⚽⚽</p>",
+                    local: 'Capuchas FC', logoLocal: 'capuchas_1.png', golesLocal: '4', eventosLocal: "<p>3x ⚽ Diego Trejo</p><p>⚽ Samuel de la Rosa</p>",
+                    visitante: 'Estelares FC', logoVisitante: 'estelares.png', golesVisitante: '6', eventosVisitante: "<p>Tomás Estrada ⚽ x4</p><p>Joseph Sánchez ⚽⚽</p>",
                     fecha: 'Jueves 3 de Octubre, 2026', hora: '16:00 PM', esPendiente: false, mensajePendiente: ''
                 },
                 {
@@ -119,7 +119,7 @@ function renderCalendario() {
                     fecha: 'Viernes 4 de Octubre, 2026', hora: '15:00 PM', esPendiente: false, mensajePendiente: ''
                 },
                 {
-                    local: 'Universo 7', logoLocal: 'universo7.png', golesLocal: '11', eventosLocal: "<p>7 ⚽ Alejandro Estrella</p><p>⚽⚽ José Corona</p><p>⚽ Victor Itzá</p><p>⚽ Brian Madrigal</p>",
+                    local: 'Universo 7', logoLocal: 'universo7.png', golesLocal: '11', eventosLocal: "<p>7x ⚽ Alejandro Estrella</p><p>⚽⚽ José Corona</p><p>⚽ Victor Itzá</p><p>⚽ Brian Madrigal</p>",
                     visitante: 'Sportmatozoides FC', logoVisitante: 'sportmatozoides.png', golesVisitante: '0', eventosVisitante: "",
                     fecha: 'Viernes 4 de Octubre, 2026', hora: '16:00 PM', esPendiente: false, mensajePendiente: ''
                 },
@@ -129,27 +129,12 @@ function renderCalendario() {
                     fecha: 'Viernes 4 de Octubre, 2026', hora: '18:00 PM', esPendiente: false, mensajePendiente: ''
                 },
                 {
-                    local: 'Atlético Temozón', logoLocal: 'temozon_1.png', golesLocal: '9', eventosLocal: "<p>⚽⚽ Antonio Prado</p><p>4 ⚽ Tomas Soberanis</p><p>⚽ Mauricio Montero</p><p>⚽ Rafael Huchin</p>",
+                    local: 'Atlético Temozón', logoLocal: 'temozon_1.png', golesLocal: '9', eventosLocal: "<p>⚽⚽ Antonio Prado</p><p>4x ⚽ Tomas Soberanis</p><p>⚽ Mauricio Montero</p><p>⚽ Rafael Huchin</p>",
                     visitante: 'FC Crystal', logoVisitante: 'crystal.png', golesVisitante: '4', eventosVisitante: "<p>Rodrigo Almeyda ⚽</p><p>Isaac Dominguez⚽</p><p>Brian Pech ⚽</p><p>Luis Uuh Pérez⚽</p>",
                     fecha: 'Viernes 4 de Octubre, 2026', hora: '19:00 PM', esPendiente: false, mensajePendiente: ''
                 }
             ]
         },
-        // {
-        //     titulo: 'Jornada 2', estado: 'En Curso', claseEstado: 'en-curso',
-        //     partidos: [
-        //         {
-        //             local: 'Capuchas', logoLocal: 'Capuchas.png', golesLocal: '1', eventosLocal: "<p>Mateo Silva (40') ⚽</p>",
-        //             visitante: 'Dragones', logoVisitante: 'Dragones.png', golesVisitante: '1', eventosVisitante: "<p>⚽ Raúl García (65')</p>",
-        //             fecha: 'Sábado 19 de Octubre, 2025', hora: '10:00 AM', esPendiente: false, mensajePendiente: ''
-        //         },
-        //         {
-        //             local: 'Tigres', logoLocal: 'tigres.png', golesLocal: '', eventosLocal: '',
-        //             visitante: 'Estelares', logoVisitante: 'estelares.png', golesVisitante: '', eventosVisitante: '',
-        //             fecha: 'Domingo 20 de Octubre, 2025', hora: '12:00 PM', esPendiente: true, mensajePendiente: 'Partido programado para jugarse el próximo domingo.'
-        //         }
-        //     ]
-        // },
         // {
         //     titulo: 'Jornada 2', estado: 'Próximamente', claseEstado: 'proximamente',
         //     partidos: [
@@ -501,7 +486,7 @@ function extraerGoleadores(etiquetas, equipo) {
         const texto = etiqueta.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
         if (!texto.includes('⚽')) return;
 
-        const cantidadDespues = texto.match(/x\s*(\d+)/i);
+        const cantidadDespues = texto.match(/⚽\s*x\s*(\d+)/i);
         const cantidadAntes = texto.match(/^(\d+)\s*x?\s*⚽/i);
         const cantidadBalones = (texto.match(/⚽/g) || []).length;
         const cantidad = cantidadDespues
@@ -620,16 +605,16 @@ function renderPorteros() {
 
     
     const porteros = [
-        { nombre: 'Ian Cisneros', equipo: 'Universo 7', golesRecibidos: 0, partidos: 1, carpetaEquipo: 'universo7', foto: 'ic.png' },
+        { nombre: 'Uriel Hernández', equipo: 'Atlético Temozón', golesRecibidos: 2, partidos: 1, carpetaEquipo: 'temozon', foto: 'uh.png' },
         { nombre: 'Jaziel Nava', equipo: 'Dragones FC', golesRecibidos: 2, partidos: 1, carpetaEquipo: 'dragones', foto: 'portero.png' },
-        { nombre: 'Oswald Grajales', equipo: 'Corinthians FC', golesRecibidos: 3, partidos: 1, carpetaEquipo: 'corinthians', foto: 'og_1.png' },
-        { nombre: 'Iván Yah', equipo: 'Sementeros FC', golesRecibidos: 3, partidos: 1, carpetaEquipo: 'sementeros', foto: 'iy.png' },
-        { nombre: 'Uriel Hernández', equipo: 'Atlético Temozón', golesRecibidos: 4, partidos: 1, carpetaEquipo: 'temozon', foto: 'uh.png' },
-        { nombre: 'Adrián Paxtian', equipo: 'Estelares FC', golesRecibidos: 4, partidos: 1, carpetaEquipo: 'estelares', foto: 'ap_1.png' },
-        { nombre: 'Enrique Soberanis', equipo: 'Kantulikin FC', golesRecibidos: 4, partidos: 1, carpetaEquipo: 'kantulikin', foto: 'portero.png' },
-        { nombre: 'Moisés Vieyra', equipo: 'Capuchas FC', golesRecibidos: 6, partidos: 1, carpetaEquipo: 'capuchas', foto: 'mv_1.png' },
-        { nombre: 'Kevin Torres', equipo: 'FC Crystal', golesRecibidos: 9, partidos: 1, carpetaEquipo: 'crystal', foto: 'kt_1.png' },
-        { nombre: 'Samuel Lang', equipo: 'Sportmatozoides FC', golesRecibidos: 11, partidos: 1, carpetaEquipo: 'sportmatozoides', foto: 'sl.png' }
+        { nombre: 'Antuan de la Rosa', equipo: 'Corinthians FC', golesRecibidos: 2, partidos: 1, carpetaEquipo: 'corinthians', foto: 'adr_1.png' },
+        { nombre: 'Kevin Silveira', equipo: 'Cow Boyz', golesRecibidos: 3, partidos: 1, carpetaEquipo: 'cowboyz', foto: 'ks.png' },
+        { nombre: 'Luis Guzmán', equipo: 'Atlético Temozón', golesRecibidos: 4, partidos: 2, carpetaEquipo: 'temozon', foto: 'lg.png' },
+        { nombre: 'Moises Vieyra', equipo: 'Capuchas FC', golesRecibidos: 6, partidos: 2, carpetaEquipo: 'capuchas', foto: 'mv_1.png' },
+        { nombre: 'Adrián Paxtian', equipo: 'Estelares FC', golesRecibidos: 7, partidos: 2, carpetaEquipo: 'estelares', foto: 'ap_1.png' },
+        { nombre: 'Ian Cisneros', equipo: 'Universo 7', golesRecibidos: 8, partidos: 2, carpetaEquipo: 'universo7', foto: 'ic.png' },
+        { nombre: 'Tristán Hernández', equipo: 'Sementeros FC', golesRecibidos: 8, partidos: 2, carpetaEquipo: 'sementeros', foto: 'portero.png' },
+        { nombre: 'Gilberto de la Cruz', equipo: 'Kantulikin FC', golesRecibidos: 8, partidos: 1, carpetaEquipo: 'capuchas', foto: 'gdc_1.png' }
     ];
 
     const mayorPromedioGoles = Math.max(...porteros.map(portero => (
@@ -646,11 +631,22 @@ function renderPorteros() {
             : 100;
     });
 
-    const porterosOrdenados = [...porteros].sort((porteroA, porteroB) => {
-        return porteroB.efectividad - porteroA.efectividad
-            || porteroB.partidos - porteroA.partidos
-            || porteroA.golesRecibidos - porteroB.golesRecibidos;
-    });
+    const ordenPorteros = [
+        'uriel hernández',
+        'jaziel nava',
+        'antuan de la rosa',
+        'kevin silveira',
+        'luis guzmán',
+        'moises vieyra',
+        'adrián paxtian',
+        'ian cisneros',
+        'tristán hernández',
+        'gilberto de la cruz'
+    ];
+    const prioridadPortero = nombre => ordenPorteros.indexOf(nombre.toLocaleLowerCase('es'));
+    const porterosOrdenados = [...porteros].sort((porteroA, porteroB) => (
+        prioridadPortero(porteroA.nombre) - prioridadPortero(porteroB.nombre)
+    ));
 
     const liderPortero = porterosOrdenados[0];
     
