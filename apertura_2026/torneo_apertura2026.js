@@ -18,7 +18,7 @@ const equipos = [
     { equipo: 'Atlético Temozón', logo: 'temozon_1.png' },
     { equipo: 'Corinthians FC', logo: 'corinthians.png' },
     { equipo: 'FC Crystal', logo: 'crystal.png' },
-    { equipo: 'Cow Boyz FC', logo: 'cowboyz.png' },
+    { equipo: 'Cow Boyz', logo: 'cowboyz.png' },
     { equipo: 'Sementeros FC', logo: 'sementeros_1.png' },
     { equipo: 'Sportmatozoides FC', logo: 'sportmatozoides.png' }
 ];
@@ -73,13 +73,48 @@ function tablaPosiciones(jornadas) {
     });
 }
 
+function normalizarNombreEquipo(nombre) {
+    return nombre.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
+function obtenerHistorialEquipo(nombreEquipo) {
+    const equipoNormalizado = normalizarNombreEquipo(nombreEquipo);
+
+    return jornadas.flatMap(jornada => jornada.partidos.flatMap(partido => {
+        if (partido.esPendiente || String(partido.golesLocal ?? '').trim() === '' || String(partido.golesVisitante ?? '').trim() === '') return [];
+
+        const golesLocal = Number(partido.golesLocal);
+        const golesVisitante = Number(partido.golesVisitante);
+        if (!Number.isFinite(golesLocal) || !Number.isFinite(golesVisitante)) return [];
+
+        const esLocal = normalizarNombreEquipo(partido.local) === equipoNormalizado;
+        const esVisitante = normalizarNombreEquipo(partido.visitante) === equipoNormalizado;
+        if (!esLocal && !esVisitante) return [];
+
+        const esEmpate = golesLocal === golesVisitante;
+        const equipoGano = esLocal ? golesLocal > golesVisitante : golesVisitante > golesLocal;
+
+        return [{
+            jornada: jornada.titulo,
+            fecha: partido.fecha,
+            local: partido.local,
+            logoLocal: partido.logoLocal,
+            marcador: `${golesLocal} - ${golesVisitante}`,
+            visitante: partido.visitante,
+            logoVisitante: partido.logoVisitante,
+            resultado: esEmpate ? 'EMPATE' : equipoGano ? 'VICTORIA' : 'DERROTA',
+            claseRes: esEmpate ? 'res-empate' : equipoGano ? 'res-victoria' : 'res-derrota'
+        }];
+    }));
+}
+
 function renderTablaGeneral() {
     const container = document.getElementById('tabla-general-body');
     if (!container) return;
 
     const tabla = tablaPosiciones(jornadas);
     container.innerHTML = tabla.map((fila, indice) => {
-        const filaClase = indice < 8 ? 'class="zona-clasificacion"' : '';
+        const filaClase = indice < 6 ? 'class="zona-clasificacion"' : '';
         const diferencia = fila.gf - fila.gc;
         return `
             <tr ${filaClase}>
@@ -160,7 +195,7 @@ function renderCalendario() {
         //         },
         //         {
         //             local: 'Sportmatozoides FC', logoLocal: 'sportmatozoides.png', golesLocal: '', eventosLocal: '',
-        //             visitante: 'Cow boyz FC', logoVisitante: 'cowboyz.png', golesVisitante: '', eventosVisitante: '',
+        //             visitante: 'Cow Boyz', logoVisitante: 'cowboyz.png', golesVisitante: '', eventosVisitante: '',
         //             fecha: 'Viernes 11 de Septiembre, 2026', hora: '18:00 PM', esPendiente: true, mensajePendiente: 'Horario definitivo sujeto a confirmación oficial.'
         //         }
         //     ]
@@ -180,7 +215,7 @@ function renderCalendario() {
                 },
                 {
                     local: 'Sportmatozoides FC', logoLocal: 'sportmatozoides.png', golesLocal: '3', eventosLocal: '<p>⚽ Luis Mex</p><p>⚽ Alejandro Olán</p><p>⚽ Jesús Ackerman</p><p>🟨 Jeyder Vázquez</p>',
-                    visitante: 'Cow Boyz FC', logoVisitante: 'cowboyz.png', golesVisitante: '6', eventosVisitante: '<p>Eber Andrade ⚽</p><p>Emiliano Nájera ⚽</p><p>Carlos Ávila ⚽</p><p>Angel Sánchez ⚽⚽</p><p>Josué Gómez ⚽</p>',
+                    visitante: 'Cow Boyz', logoVisitante: 'cowboyz.png', golesVisitante: '6', eventosVisitante: '<p>Eber Andrade ⚽</p><p>Emiliano Nájera ⚽</p><p>Carlos Ávila ⚽</p><p>Angel Sánchez ⚽⚽</p><p>Josué Gómez ⚽</p>',
                     fecha: 'Viernes 11 de Septiembre, 2026', hora: '16:00 PM', esPendiente: false, mensajePendiente: ''
                 },
                 {
@@ -196,34 +231,68 @@ function renderCalendario() {
             ]
         },
         {
-            titulo: 'Jornada 3', estado: 'Proximamente', claseEstado: 'proximamente',
+            titulo: 'Jornada 3', estado: 'Completada', claseEstado: 'completada',
             partidos: [
                 {
-                    local: 'Atlético Temozón', logoLocal: 'temozon_1.png', golesLocal: '', eventosLocal: '',
-                    visitante: 'Kantulikin FC', logoVisitante: 'kantulikin.png', golesVisitante: '', eventosVisitante: '',
-                    fecha: 'Viernes 18 de Septiembre, 2026', hora: '18:00 PM', esPendiente: true, mensajePendiente: 'Horario definitivo sujeto a confirmación oficial.'
+                    local: 'Atlético Temozón', logoLocal: 'temozon_1.png', golesLocal: '18', eventosLocal: '<p>⚽⚽ Luis Guzman</p><p>⚽ Emmanuel Solorzano</p><p>⚽ Arturo Herrera</p><p>6x ⚽ Tomas Soberanis</p><p>⚽ Kevin García</p><p>⚽⚽ Mauricio Montero</p><p>3x ⚽ Rafael Huchin</p><p>⚽ Miguel Espinoza</p><p>⚽ Luis Balam</p>',
+                    visitante: 'Kantulikin FC', logoVisitante: 'kantulikin.png', golesVisitante: '0', eventosVisitante: '',
+                    fecha: 'Jueves 17 de Septiembre, 2026', hora: '18:00 PM', esPendiente: false, mensajePendiente: ''
                 },
                 {
-                    local: 'Capuchas FC', logoLocal: 'capuchas_1.png', golesLocal: '', eventosLocal: '',
-                    visitante: 'Sportmatozoides FC', logoVisitante: 'sportmatozoides.png', golesVisitante: '', eventosVisitante: '',
-                    fecha: 'Viernes 18 de Septiembre, 2026', hora: '18:00 PM', esPendiente: true, mensajePendiente: 'Horario definitivo sujeto a confirmación oficial.'
+                    local: 'Cow Boyz', logoLocal: 'cowboyz.png', golesLocal: '2', eventosLocal: '<p>⚽⚽ Esteban González</p>',
+                    visitante: 'Dragones FC', logoVisitante: 'dragones_1.png', golesVisitante: '4', eventosVisitante: '<p>Álvaro Madrazo ⚽⚽</p><p>Antonio Sanchez ⚽</p><p>Manuel Marana ⚽</p>',
+                    fecha: 'Viernes 18 de Septiembre, 2026', hora: '16:00 PM', esPendiente: false, mensajePendiente: ''
                 },
                 {
-                    local: 'Corinthians FC', logoLocal: 'corinthians.png', golesLocal: '', eventosLocal: '',
-                    visitante: 'FC Crystal', logoVisitante: 'crystal.png', golesVisitante: '', eventosVisitante: '',
-                    fecha: 'Viernes 18 de Septiembre, 2026', hora: '18:00 PM', esPendiente: true, mensajePendiente: 'Horario definitivo sujeto a confirmación oficial.'
+                    local: 'Capuchas FC', logoLocal: 'capuchas_1.png', golesLocal: '8', eventosLocal: '<p>4x ⚽ Angel Salvatierra</p><p>4x ⚽ Emilio Rodriguez</p>',
+                    visitante: 'Sportmatozoides FC', logoVisitante: 'sportmatozoides.png', golesVisitante: '1', eventosVisitante: '<p>Emiliano ⚽</p>',
+                    fecha: 'Viernes 18 de Septiembre, 2026', hora: '17:00 PM', esPendiente: false, mensajePendiente: ''
                 },
                 {
-                    local: 'Cow Boyz FC', logoLocal: 'cowboyz.png', golesLocal: '', eventosLocal: '',
-                    visitante: 'Dragones FC', logoVisitante: 'dragones_1.png', golesVisitante: '', eventosVisitante: '',
-                    fecha: 'Viernes 18 de Septiembre, 2026', hora: '18:00 PM', esPendiente: false, mensajePendiente: 'Horario definitivo sujeto a confirmación oficial.'
+                    local: 'Corinthians FC', logoLocal: 'corinthians.png', golesLocal: '3', eventosLocal: '<p>⚽ Gabriel Rivadeneira</p><p>⚽ Dereck Soriano</p><p>⚽ Eduardo Eredia</p>',
+                    visitante: 'FC Crystal', logoVisitante: 'crystal.png', golesVisitante: '2', eventosVisitante: '<p>Brian Pech ⚽⚽</p>',
+                    fecha: 'Viernes 18 de Septiembre, 2026', hora: '18:00 PM', esPendiente: false, mensajePendiente: ''
                 },
                 {
-                    local: 'Sementeros FC', logoLocal: 'sementeros.png', golesLocal: '', eventosLocal: '',
-                    visitante: 'Estelares FC', logoVisitante: 'estelares.png', golesVisitante: '', eventosVisitante: '',
-                    fecha: 'Viernes 18 de Septiembre, 2026', hora: '18:00 PM', esPendiente: true, mensajePendiente: 'Horario definitivo sujeto a confirmación oficial.'
+                    local: 'Sementeros FC', logoLocal: 'sementeros.png', golesLocal: '0', eventosLocal: '',
+                    visitante: 'Estelares FC', logoVisitante: 'estelares.png', golesVisitante: '11', eventosVisitante: '<p>Tomás Estrada ⚽ x4</p><p>Zammer Rosas ⚽</p><p>Joseph Sánchez ⚽ x5</p><p>Miranda ⚽</p>',
+                    fecha: 'Viernes 18 de Septiembre, 2026', hora: '19:00 PM', esPendiente: false, mensajePendiente: ''
                 }
             ]
+        },
+        {
+            titulo: 'Jornada 4', estado: 'Completada', claseEstado: 'completada',
+            partidos: [
+                {
+                    local: 'Sportmatozoides FC', logoLocal: 'sportmatozoides.png', golesLocal: '', eventosLocal: '',
+                    visitante: 'Atlético Temozón', logoVisitante: 'temozon_1.png', golesVisitante: '', eventosVisitante: '',
+                    fecha: 'Viernes 25 de Septiembre, 2026', hora: '15:00 PM', esPendiente: true, mensajePendiente: 'Resultado y goleadores por confirmar.'
+                },
+                {
+                    local: 'Dragones FC', logoLocal: 'dragones_1.png', golesLocal: '', eventosLocal: '',
+                    visitante: 'Universo 7', logoVisitante: 'universo7.png', golesVisitante: '', eventosVisitante: '',
+                    fecha: 'Viernes 25 de Septiembre, 2026', hora: '16:00 PM', esPendiente: true, mensajePendiente: 'Resultado y goleadores por confirmar.'
+                },
+                {
+                    local: 'Cow Boyz', logoLocal: 'cowboyz.png', golesLocal: '', eventosLocal: '',
+                    visitante: 'Capuchas FC', logoVisitante: 'capuchas.png', golesVisitante: '', eventosVisitante: '',
+                    fecha: 'Viernes 25 de Septiembre, 2026', hora: '17:00 PM', esPendiente: true, mensajePendiente: 'Resultado y goleadores por confirmar.'
+                },
+                {
+                    local: 'Estelares FC', logoLocal: 'estelares.png', golesLocal: '', eventosLocal: '',
+                    visitante: 'Corinthians FC', logoVisitante: 'corinthians.png', golesVisitante: '', eventosVisitante: '',
+                    fecha: 'Viernes 25 de Septiembre, 2026', hora: '18:00 PM', esPendiente: true, mensajePendiente: 'Resultado y goleadores por confirmar.'
+                },
+                {
+                    local: 'Kantulikin FC', logoLocal: 'kantulikin.png', golesLocal: '', eventosLocal: '',
+                    visitante: 'FC Crystal', logoVisitante: 'crystal.png', golesVisitante: '', eventosVisitante: '',
+                    fecha: 'Viernes 25 de Septiembre, 2026', hora: '19:00 PM', esPendiente: true, mensajePendiente: 'Resultado y goleadores por confirmar.'
+                }
+            ]
+        },
+        {
+            titulo: 'Jornada 5', estado: 'Próximamente', claseEstado: 'proximamente',
+            partidos: []
         }
     ];
 
@@ -742,7 +811,6 @@ function mostrarEquipo(idEquipo) {
                 { nombre: 'Kike Rodas', rol: 'JUGADOR', foto: 'kr_1.png' },
                 { nombre: 'Juan Carlos', rol: 'JUGADOR', foto: 'jugador.png' }
             ],
-            historial: [{ jornada: 'Jornada 1', fecha: 'Jueves 3 de Octubre, 2026', local: 'Capuchas FC', logoLocal: 'capuchas_1.png', marcador: '4 - 6', visitante: 'Estelares FC', logoVisitante: 'estelares.png', resultado: 'VICTORIA', claseRes: 'res-victoria' }]
         },
         capuchas: {
             nombreReal: 'Capuchas FC', carpetaEquipo: 'capuchas', logo: 'capuchas_1.png',
@@ -761,7 +829,6 @@ function mostrarEquipo(idEquipo) {
                 { nombre: 'Emilio Rodriguez', rol: 'JUGADOR', foto: 'jugador.png' },
                 { nombre: 'Samuel De La Rosa', rol: 'JUGADOR', foto: 'jugador.png' }
             ],
-            historial: [{ jornada: 'Jornada 1', fecha: 'Jueves 3 de Octubre, 2026', local: 'Capuchas FC', logoLocal: 'capuchas_1.png', marcador: '4 - 6', visitante: 'Estelares FC', logoVisitante: 'estelares.png', resultado: 'DERROTA', claseRes: 'res-derrota' }]
         },
         dragones: {
             nombreReal: 'Dragones FC', carpetaEquipo: 'dragones', logo: 'dragones_1.png',
@@ -781,7 +848,6 @@ function mostrarEquipo(idEquipo) {
                 { nombre: 'Eduardo Canche', rol: 'JUGADOR', foto: 'ec_1.png' },
                 { nombre: 'Anthony "Zeyken" Pozo', rol: 'JUGADOR', foto: 'ap.png' }
             ],
-            historial: [{ jornada: 'Jornada 1', fecha: 'Viernes 4 de Octubre, 2026', local: 'Dragones FC', logoLocal: 'dragones_1.png', marcador: '3 - 2', visitante: 'Corinthians FC', logoVisitante: 'corinthians.png', resultado: 'VICTORIA', claseRes: 'res-victoria' }]
         },
         universo7: {
             nombreReal: 'Universo 7', carpetaEquipo: 'universo7', logo: 'universo7.png',
@@ -790,7 +856,7 @@ function mostrarEquipo(idEquipo) {
                 { nombre: 'Francisco Arellano', rol: 'JUGADOR', foto: 'fa.png' },
                 { nombre: 'Jared Ramirez', rol: 'JUGADOR', foto: 'jr.png' },
                 { nombre: 'Edgar Dzib', rol: 'JUGADOR', foto: 'ed.png' },
-                { nombre: 'Alejandro Estrella', rol: 'JUGADOR', foto: 'ce.png' },
+                { nombre: 'Alejandro Estrella', rol: 'JUGADOR', foto: 'ae.png' },
                 { nombre: 'Jonathan Bacab', rol: 'JUGADOR', foto: 'jb.png' },
                 { nombre: 'José Corona', rol: 'JUGADOR', foto: 'jc.png' },
                 { nombre: 'Victor Itzá', rol: 'JUGADOR', foto: 'vi.png' },
@@ -800,14 +866,12 @@ function mostrarEquipo(idEquipo) {
                 { nombre: 'Hector Cabrera', rol: 'JUGADOR', foto: 'jugador.png' },
                 { nombre: 'Brian Madrigal', rol: 'JUGADOR', foto: 'jugador.png' }
             ],
-            historial: [{ jornada: 'Jornada 1', fecha: 'Viernes 4 de Octubre, 2026', local: 'Universo 7', logoLocal: 'universo7.png', marcador: '11 - 0', visitante: 'Sportmatozoides FC', logoVisitante: 'sportmatozoides.png', resultado: 'VICTORIA', claseRes: 'res-victoria' }]
         },
         kantulikin: {
             nombreReal: 'Kantulikin FC', carpetaEquipo: 'kantulikin', logo: 'kantulikin.png',
             plantilla: [
                 { nombre: 'Braiam Hernández', rol: 'CAPITÁN', foto: 'jugador.png' }
             ],
-            historial: [{ jornada: 'Jornada 1', fecha: 'Viernes 4 de Octubre, 2026', local: 'Sementeros FC', logoLocal: 'sementeros_1.png', marcador: '4 - 3', visitante: 'Kantulikin FC', logoVisitante: 'kantulikin.png', resultado: 'DERROTA', claseRes: 'res-derrota' }]
         },
         temozon: {
             nombreReal: 'Atlético Temozón', carpetaEquipo: 'temozon', logo: 'temozon_1.png',
@@ -827,7 +891,6 @@ function mostrarEquipo(idEquipo) {
                 { nombre: 'Tomas Soberanis', rol: 'JUGADOR', foto: 'ts_1.png' },
                 { nombre: 'Mauricio Montero', rol: 'JUGADOR', foto: 'mm_1.png' }
             ],
-            historial: [{ jornada: 'Jornada 1', fecha: 'Viernes 4 de Octubre, 2026', local: 'Atlético Temozón', logoLocal: 'temozon_1.png', marcador: '9 - 4', visitante: 'FC Crystal', logoVisitante: 'crystal.png', resultado: 'VICTORIA', claseRes: 'res-victoria' }]
         },
         corinthians: {
             nombreReal: 'Corinthians FC', carpetaEquipo: 'corinthians', logo: 'corinthians.png',
@@ -847,7 +910,6 @@ function mostrarEquipo(idEquipo) {
                 { nombre: 'Diego Juarez', rol: 'JUGADOR', foto: 'jugador.png' },
                 { nombre: 'Diego Bernal', rol: 'JUGADOR', foto: 'jugador.png' }
             ],
-            historial: [{ jornada: 'Jornada 1', fecha: 'Viernes 4 de Octubre, 2026', local: 'Dragones FC', logoLocal: 'dragones_1.png', marcador: '3 - 2', visitante: 'Corinthians FC', logoVisitante: 'corinthians.png', resultado: 'DERROTA', claseRes: 'res-derrota' }]
         },
         crystal: {
             nombreReal: 'FC Crystal', carpetaEquipo: 'crystal', logo: 'crystal.png',
@@ -865,10 +927,9 @@ function mostrarEquipo(idEquipo) {
                 { nombre: 'Brian Pech', rol: 'JUGADOR', foto: 'bp_1.png' },
                 { nombre: 'Diego Zavala', rol: 'JUGADOR', foto: 'dz.png' }
             ],
-            historial: [{ jornada: 'Jornada 1', fecha: 'Viernes 4 de Octubre, 2026', local: 'Atlético Temozón', logoLocal: 'temozon_1.png', marcador: '9 - 4', visitante: 'FC Crystal', logoVisitante: 'crystal.png', resultado: 'DERROTA', claseRes: 'res-derrota' }]
         },
         cowboyz: {
-            nombreReal: 'Cowboyz FC', carpetaEquipo: 'cowboyz', logo: 'cowboyz.png',
+            nombreReal: 'Cow Boyz', carpetaEquipo: 'cowboyz', logo: 'cowboyz.png',
             plantilla: [
                 { nombre: 'Ángel Sánchez', rol: 'CAPITÁN', foto: 'as.png' },
                 { nombre: 'Kevin Silveria', rol: 'PORTERO', foto: 'ks.png' },
@@ -880,7 +941,7 @@ function mostrarEquipo(idEquipo) {
                 { nombre: 'Edy Gomez', rol: 'JUGADOR', foto: 'eg.png' },
                 { nombre: 'Osiris Garfias', rol: 'JUGADOR', foto: 'og.png' },
                 { nombre: 'Emmanuel Murillo', rol: 'JUGADOR', foto: 'em.png' },
-            ], historial: []
+            ]
         },
         sementeros: {
             nombreReal: 'Sementeros FC', carpetaEquipo: 'sementeros', logo: 'sementeros_1.png',
@@ -900,7 +961,6 @@ function mostrarEquipo(idEquipo) {
                 { nombre: 'Francisco Peraza', rol: 'JUGADOR', foto: 'jugador.png' },
                 { nombre: 'Giovanni Hernández', rol: 'JUGADOR', foto: 'jugador.png' }
             ],
-            historial: [{ jornada: 'Jornada 1', fecha: 'Viernes 4 de Octubre, 2026', local: 'Sementeros FC', logoLocal: 'sementeros_1.png', marcador: '4 - 3', visitante: 'Kantulikin FC', logoVisitante: 'kantulikin.png', resultado: 'VICTORIA', claseRes: 'res-victoria' }]
         },
         sportmatozoides: {
             nombreReal: 'Sportmatozoides FC', carpetaEquipo: 'sportmatozoides', logo: 'sportmatozoides.png',
@@ -919,7 +979,6 @@ function mostrarEquipo(idEquipo) {
                 { nombre: 'Leonel Uitzil', rol: 'JUGADOR', foto: 'lu.png' },
                 { nombre: 'Luis Mex', rol: 'JUGADOR', foto: 'lm.png' }
             ],
-            historial: [{ jornada: 'Jornada 1', fecha: 'Viernes 4 de Octubre, 2026', local: 'Universo 7', logoLocal: 'universo7.png', marcador: '11 - 0', visitante: 'Sportmatozoides FC', logoVisitante: 'sportmatozoides.png', resultado: 'DERROTA', claseRes: 'res-derrota' }]
         }
     };
 
@@ -927,8 +986,7 @@ function mostrarEquipo(idEquipo) {
         nombreReal: idEquipo,
         carpetaEquipo: '',
         logo: 'jugador.png',
-        plantilla: [],
-        historial: []
+        plantilla: []
     };
 
     document.getElementById('titulo-equipo-dinamico').innerText = equipo.nombreReal;
@@ -952,15 +1010,16 @@ function mostrarEquipo(idEquipo) {
     }
     document.getElementById('contenedor-plantilla-dinamica').innerHTML = htmlPlantilla;
 
+    const historial = obtenerHistorialEquipo(equipo.nombreReal);
     let htmlHistorial = '';
-    if (equipo.historial.length === 0) {
+    if (historial.length === 0) {
         htmlHistorial = '<tr><td colspan="6" style="color:var(--text-secondary); text-align:center; padding: 20px;">No hay partidos registrados en el historial.</td></tr>';
     } 
     else {
-        equipo.historial.forEach(partido => {
+        historial.forEach(partido => {
             
-            const htmlLocal = partido.local === equipo.nombreReal ? `<strong>${partido.local}</strong>` : partido.local;
-            const htmlVisitante = partido.visitante === equipo.nombreReal ? `<strong>${partido.visitante}</strong>` : partido.visitante;
+            const htmlLocal = normalizarNombreEquipo(partido.local) === normalizarNombreEquipo(equipo.nombreReal) ? `<strong>${partido.local}</strong>` : partido.local;
+            const htmlVisitante = normalizarNombreEquipo(partido.visitante) === normalizarNombreEquipo(equipo.nombreReal) ? `<strong>${partido.visitante}</strong>` : partido.visitante;
             const colorRojo = partido.claseRes === 'res-derrota' ? "style='color: #ef4444;'" : '';
 
             htmlHistorial += `
